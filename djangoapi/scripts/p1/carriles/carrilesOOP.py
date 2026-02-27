@@ -1,6 +1,7 @@
 from psycopg.rows import dict_row
 from myLib.connect import connect
 from myLib.p1Settings import EPSG_CODE
+import datetime
 
 class CarrilesOOP():
     def __init__(self):
@@ -12,12 +13,8 @@ class CarrilesOOP():
         self.conn.close()
 
     def insert(self, d):
-        # Requisito: Diccionario de respuesta
         resultado = {"ok": False, "message": "", "data": None}
-        
         try:
-            # Requisito: Validar que no se crucen (Intersects)
-            # Usamos st_geometryFromText como hace el profesor en su ejemplo
             cons_val = """
             SELECT EXISTS (
                 SELECT 1 FROM carriles_bici 
@@ -30,18 +27,19 @@ class CarrilesOOP():
                 self.disconnect()
                 return resultado
 
-            # Inserción siguiendo el estilo exacto del profesor
+            # Inserción adaptada a los campos de Open Data
             cons = """
             INSERT INTO carriles_bici 
-                (nombre_calle, longitud_metros, geometria)
+                (objectid, tipo, longitud_metros, fecha_actualizacion, geometria)
             VALUES
-                (%s, %s, st_snapToGrid(st_geometryFromText(%s, %s), 0.0001))
+                (%s, %s, %s, %s, st_snapToGrid(st_geometryFromText(%s, %s), 0.0001))
             RETURNING id
             """
-            # El snapToGrid cumple el requisito de redondear a 0.0001
             self.cur.execute(cons, [
-                d['nombre'], 
+                d['objectid'], 
+                d['tipo'], 
                 d['longitud'], 
+                d.get('fecha', datetime.datetime.now()), # Si no hay fecha, pone la actual
                 d['geometria_wkt'], 
                 EPSG_CODE
             ])
@@ -58,32 +56,88 @@ class CarrilesOOP():
             resultado["message"] = str(e)
         finally:
             self.disconnect()
-            print("Inserted") # Como en el ejemplo del profe
+            print("Inserted")
             
         return resultado
 
     def selectAsDicts(self, d):
         resultado = {"ok": False, "message": "", "data": None}
         try:
-            # Estilo profesor: row_factory para dicts
             self.cur = self.conn.cursor(row_factory=dict_row)
-            
-            cons = """
-            SELECT id, nombre_calle, longitud_metros, st_astext(geometria) as geom
-            FROM carriles_bici 
-            WHERE id = %s
-            """
+            cons = "SELECT id, objectid, tipo, longitud_metros, fecha_actualizacion, st_astext(geometria) as geom FROM carriles_bici WHERE id = %s"
             self.cur.execute(cons, [d['id']])
             l = self.cur.fetchall()
-            
-            resultado["ok"] = True
-            resultado["message"] = "Data retrieved"
-            resultado["data"] = l
-            
+            if l:
+                resultado["ok"] = True
+                resultado["message"] = "Data retrieved"
+                resultado["data"] = l
+            else:
+                resultado["message"] = "ID not found"
+                resultado["data"] = []
         except Exception as e:
             resultado["message"] = str(e)
         finally:
             self.disconnect()
-            print("Selected")
-            
+        return resultado
+
+    def selectAsTuples(self, d):
+        resultado = {"ok": False, "message": "", "data": None}
+        try:
+            self.cur = self.conn.cursor()
+            cons = "SELECT id, objectid, tipo, longitud_metros, fecha_actualizacion, st_astext(geometria) FROM carriles_bici WHERE id = %s"
+            self.cur.execute(cons, [d['id']])
+            l = self.cur.fetchall()
+            if l:
+                resultado["ok"] = True
+                resultado["message"] = "Data retrieved"
+                resultado["data"] = l
+            else:
+                resultado["message"] = "ID not found"
+                resultado["data"] = []
+        except Exception as e:
+            resultado["message"] = str(e)
+        finally:
+            self.disconnect()
+        return resultado
+
+    def delete(self, d):
+        resultado = {"ok": False, "message": "", "data": None}
+        try:
+            self.cur = self.conn.cursor()
+            cons = "DELETE FROM carriles_bici WHERE id = %s"
+            self.cur.execute(cons, [d['id']])
+            borrados = self.cur.rowcount 
+            self.conn.commit()
+            resultado["ok"] = True
+            resultado["message"] = "Data deleted"
+            resultado["data"] = [{"rows_deleted": borrados}]
+        except Exception as e:
+            self.conn.rollback()
+            resultado["message"] = str(e)
+        finally:
+            self.disconnect()
+        return resultado
+
+    def update(self, d):
+        resultado = {"ok": False, "message": "", "data": None}
+        try:
+            self.cur = self.conn.cursor()
+            # En el update actualizamos el tipo, longitud y la fecha
+            cons = "UPDATE carriles_bici SET tipo = %s, longitud_metros = %s, fecha_actualizacion = %s WHERE id = %s"
+            self.cur.execute(cons, [
+                d['tipo'], 
+                d['longitud'], 
+                d.get('fecha', datetime.datetime.now()), 
+                d['id']
+            ])
+            actualizados = self.cur.rowcount
+            self.conn.commit()
+            resultado["ok"] = True
+            resultado["message"] = "Data updated"
+            resultado["data"] = [{"rows_updated": actualizados}]
+        except Exception as e:
+            self.conn.rollback()
+            resultado["message"] = str(e)
+        finally:
+            self.disconnect()
         return resultado

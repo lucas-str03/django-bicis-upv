@@ -14,10 +14,9 @@ class BarriosOOP():
     def insert(self, d):
         resultado = {"ok": False, "message": "", "data": None}
         try:
-            # Requisito: Reject polygons that intersects with other polygons
             cons_val = """
             SELECT EXISTS (
-                SELECT 1 FROM zonas_bajas_emisiones 
+                SELECT 1 FROM barrios 
                 WHERE st_intersects(geometria, st_geometryFromText(%s, %s))
             )
             """
@@ -28,11 +27,21 @@ class BarriosOOP():
                 return resultado
 
             cons = """
-            INSERT INTO zonas_bajas_emisiones (nombre, geometria)
-            VALUES (%s, st_snapToGrid(st_geometryFromText(%s, %s), 0.0001))
+            INSERT INTO barrios 
+                (codigo_distrito_barrio, nombre_barrio, codigo_distrito, codigo_barrio, area_m2, geometria)
+            VALUES 
+                (%s, %s, %s, %s, %s, st_snapToGrid(st_geometryFromText(%s, %s), 0.0001))
             RETURNING id
             """
-            self.cur.execute(cons, [d['nombre'], d['geometria_wkt'], EPSG_CODE])
+            self.cur.execute(cons, [
+                d['codigo_distrito_barrio'], 
+                d['nombre'], 
+                d['codigo_distrito'], 
+                d['codigo_barrio'], 
+                d['area'], 
+                d['geometria_wkt'], 
+                EPSG_CODE
+            ])
             self.conn.commit()
             l = self.cur.fetchall()
             
@@ -46,4 +55,97 @@ class BarriosOOP():
         finally:
             self.disconnect()
             print("Inserted")
+        return resultado
+
+    def selectAsDicts(self, d):
+        resultado = {"ok": False, "message": "", "data": None}
+        try:
+            self.cur = self.conn.cursor(row_factory=dict_row)
+            cons = """
+            SELECT id, codigo_distrito_barrio, nombre_barrio, codigo_distrito, codigo_barrio, area_m2, st_astext(geometria) as geom 
+            FROM barrios WHERE id = %s
+            """
+            self.cur.execute(cons, [d['id']])
+            l = self.cur.fetchall()
+            if l:
+                resultado["ok"] = True
+                resultado["message"] = "Data retrieved"
+                resultado["data"] = l
+            else:
+                resultado["message"] = "ID not found"
+                resultado["data"] = []
+        except Exception as e:
+            resultado["message"] = str(e)
+        finally:
+            self.disconnect()
+        return resultado
+
+    def selectAsTuples(self, d):
+        resultado = {"ok": False, "message": "", "data": None}
+        try:
+            self.cur = self.conn.cursor()
+            cons = """
+            SELECT id, codigo_distrito_barrio, nombre_barrio, codigo_distrito, codigo_barrio, area_m2, st_astext(geometria) 
+            FROM barrios WHERE id = %s
+            """
+            self.cur.execute(cons, [d['id']])
+            l = self.cur.fetchall()
+            if l:
+                resultado["ok"] = True
+                resultado["message"] = "Data retrieved"
+                resultado["data"] = l
+            else:
+                resultado["message"] = "ID not found"
+                resultado["data"] = []
+        except Exception as e:
+            resultado["message"] = str(e)
+        finally:
+            self.disconnect()
+        return resultado
+
+    def delete(self, d):
+        resultado = {"ok": False, "message": "", "data": None}
+        try:
+            self.cur = self.conn.cursor()
+            cons = "DELETE FROM barrios WHERE id = %s"
+            self.cur.execute(cons, [d['id']])
+            borrados = self.cur.rowcount 
+            self.conn.commit()
+            resultado["ok"] = True
+            resultado["message"] = "Data deleted"
+            resultado["data"] = [{"rows_deleted": borrados}]
+        except Exception as e:
+            self.conn.rollback()
+            resultado["message"] = str(e)
+        finally:
+            self.disconnect()
+        return resultado
+
+    def update(self, d):
+        resultado = {"ok": False, "message": "", "data": None}
+        try:
+            self.cur = self.conn.cursor()
+            cons = """
+            UPDATE barrios 
+            SET codigo_distrito_barrio = %s, nombre_barrio = %s, codigo_distrito = %s, codigo_barrio = %s, area_m2 = %s 
+            WHERE id = %s
+            """
+            self.cur.execute(cons, [
+                d['codigo_distrito_barrio'], 
+                d['nombre'], 
+                d['codigo_distrito'], 
+                d['codigo_barrio'], 
+                d['area'], 
+                d['id']
+            ])
+            actualizados = self.cur.rowcount
+            self.conn.commit()
+            resultado["ok"] = True
+            resultado["message"] = "Data updated"
+            resultado["data"] = [{"rows_updated": actualizados}]
+        except Exception as e:
+            self.conn.rollback()
+            resultado["message"] = str(e)
+        finally:
+            self.disconnect()
         return resultado
