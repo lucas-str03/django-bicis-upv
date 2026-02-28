@@ -19,7 +19,14 @@ class EstacionesOOP():
             lat = round(d['lat'], 4)
             punto_texto = f"POINT({lon} {lat})"
 
-            # Validación: Que caiga dentro de un barrio
+            # NUEVO: 1. Validación de geometría (ST_IsValid)
+            cons_valid = "SELECT ST_IsValid(ST_GeometryFromText(%s, %s))"
+            self.cur.execute(cons_valid, [punto_texto, EPSG_CODE])
+            if not self.cur.fetchone()[0]:
+                self.disconnect()
+                return {"ok": False, "message": "Reject: Geometría inválida (ST_IsValid)", "data": None}
+
+            # 2. Validación de polígono (ST_Within)
             cons_val = """
             SELECT EXISTS (
                 SELECT 1 FROM barrios 
@@ -31,6 +38,7 @@ class EstacionesOOP():
                 self.disconnect()
                 return {"ok": False, "message": "Reject: Point must be inside a polygon (st_within)", "data": None}
 
+            # 3. Inserción
             cons = """
             INSERT INTO estaciones_valenbisi 
                 (numero, direccion, activo, bicis_disponibles, espacios_libres, espacios_totales, fecha_actualizacion, geometria)
@@ -43,7 +51,6 @@ class EstacionesOOP():
                 d['espacios_libres'], d['espacios_totales'], 
                 d.get('fecha', datetime.datetime.now()), punto_texto, EPSG_CODE
             ])
-            
             self.conn.commit()
             l = self.cur.fetchall()
             resultado["ok"] = True
@@ -118,15 +125,21 @@ class EstacionesOOP():
         resultado = {"ok": False, "message": "", "data": None}
         try:
             self.cur = self.conn.cursor()
-            # Un update en tiempo real suele cambiar bicis, huecos y si está activa
+            
+            # NUEVO: El update también redondea y guarda la posición
+            lon = round(d['lon'], 4)
+            lat = round(d['lat'], 4)
+            punto_texto = f"POINT({lon} {lat})"
+
             cons = """
             UPDATE estaciones_valenbisi 
-            SET activo = %s, bicis_disponibles = %s, espacios_libres = %s, fecha_actualizacion = %s
+            SET activo = %s, bicis_disponibles = %s, espacios_libres = %s, fecha_actualizacion = %s,
+                geometria = st_geometryFromText(%s, %s)
             WHERE id = %s
             """
             self.cur.execute(cons, [
                 d['activo'], d['bicis'], d['espacios_libres'], 
-                d.get('fecha', datetime.datetime.now()), d['id']
+                d.get('fecha', datetime.datetime.now()), punto_texto, EPSG_CODE, d['id']
             ])
             self.conn.commit()
             resultado["ok"] = True

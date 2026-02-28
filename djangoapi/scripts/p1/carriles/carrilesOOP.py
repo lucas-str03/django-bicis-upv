@@ -15,6 +15,14 @@ class CarrilesOOP():
     def insert(self, d):
         resultado = {"ok": False, "message": "", "data": None}
         try:
+            # NUEVO: 1. Validación de geometría (ST_IsValid)
+            cons_valid = "SELECT ST_IsValid(st_geometryFromText(%s, %s))"
+            self.cur.execute(cons_valid, [d['geometria_wkt'], EPSG_CODE])
+            if not self.cur.fetchone()[0]:
+                self.disconnect()
+                return {"ok": False, "message": "Reject: Geometría inválida (ST_IsValid)", "data": None}
+
+            # 2. Validación de cruces (ST_Intersects)
             cons_val = """
             SELECT EXISTS (
                 SELECT 1 FROM carriles_bici 
@@ -23,11 +31,10 @@ class CarrilesOOP():
             """
             self.cur.execute(cons_val, [d['geometria_wkt'], EPSG_CODE])
             if self.cur.fetchone()[0]:
-                resultado["message"] = "Reject linestrings than intersects"
                 self.disconnect()
-                return resultado
+                return {"ok": False, "message": "Reject linestrings than intersects", "data": None}
 
-            # Inserción adaptada a los campos de Open Data
+            # 3. Inserción adaptada a Open Data con redondeo
             cons = """
             INSERT INTO carriles_bici 
                 (objectid, tipo, longitud_metros, fecha_actualizacion, geometria)
@@ -36,17 +43,11 @@ class CarrilesOOP():
             RETURNING id
             """
             self.cur.execute(cons, [
-                d['objectid'], 
-                d['tipo'], 
-                d['longitud'], 
-                d.get('fecha', datetime.datetime.now()), # Si no hay fecha, pone la actual
-                d['geometria_wkt'], 
-                EPSG_CODE
+                d['objectid'], d['tipo'], d['longitud'], 
+                d.get('fecha', datetime.datetime.now()), d['geometria_wkt'], EPSG_CODE
             ])
-            
             self.conn.commit()
             l = self.cur.fetchall()
-            
             resultado["ok"] = True
             resultado["message"] = "Data inserted"
             resultado["data"] = [{"id": l[0][0]}]
@@ -56,8 +57,6 @@ class CarrilesOOP():
             resultado["message"] = str(e)
         finally:
             self.disconnect()
-            print("Inserted")
-            
         return resultado
 
     def selectAsDicts(self, d):
@@ -122,13 +121,16 @@ class CarrilesOOP():
         resultado = {"ok": False, "message": "", "data": None}
         try:
             self.cur = self.conn.cursor()
-            # En el update actualizamos el tipo, longitud y la fecha
-            cons = "UPDATE carriles_bici SET tipo = %s, longitud_metros = %s, fecha_actualizacion = %s WHERE id = %s"
+            # NUEVO: El update ahora actualiza la línea redondeada a 4 decimales
+            cons = """
+            UPDATE carriles_bici 
+            SET tipo = %s, longitud_metros = %s, fecha_actualizacion = %s,
+                geometria = st_snapToGrid(st_geometryFromText(%s, %s), 0.0001)
+            WHERE id = %s
+            """
             self.cur.execute(cons, [
-                d['tipo'], 
-                d['longitud'], 
-                d.get('fecha', datetime.datetime.now()), 
-                d['id']
+                d['tipo'], d['longitud'], d.get('fecha', datetime.datetime.now()), 
+                d['geometria_wkt'], EPSG_CODE, d['id']
             ])
             actualizados = self.cur.rowcount
             self.conn.commit()

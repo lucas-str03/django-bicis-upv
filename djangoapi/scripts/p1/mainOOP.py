@@ -47,13 +47,15 @@ def main():
             print(e.selectAsTuples({"id": 1}))
             
         elif functionName == "update":
-            # 🚲 DATOS ACTUALIZADOS (Alguien ha alquilado bicis)
+            # 🚲 DATOS ACTUALIZADOS
             datos_nuevos = {
                 "id": 1, 
                 "activo": "T",
                 "bicis": 10, 
                 "espacios_libres": 10, 
-                "fecha": "2026-02-27 21:00:00"
+                "fecha": "2026-02-27 21:00:00",
+                "lon": -0.3768, 
+                "lat": 39.4699
             }
             print(e.update(datos_nuevos))
             
@@ -85,7 +87,11 @@ def main():
             
         elif functionName == "update":
             datos_actualizados = {
-                "id": 1, "tipo": "Carril Bici Segregado", "longitud": 150.5, "fecha": "2026-02-27 11:30:00"
+                "id": 1, 
+                "tipo": "Carril Bici Segregado", 
+                "longitud": 150.5, 
+                "fecha": "2026-02-27 11:30:00",
+                "geometria_wkt": "LINESTRING(-0.3732 39.4683, -0.3689 39.4701)"
             }
             print(c.update(datos_actualizados))
             
@@ -120,8 +126,13 @@ def main():
             
         elif functionName == "update":
             datos_actualizados = {
-                "id": 1, "codigo_distrito_barrio": 1195, "nombre": "El Palmar (Actualizado)",
-                "codigo_distrito": 19, "codigo_barrio": 5, "area": 25000.50
+                "id": 1, 
+                "codigo_distrito_barrio": 1195, 
+                "nombre": "El Palmar (Actualizado)",
+                "codigo_distrito": 19, 
+                "codigo_barrio": 5, 
+                "area": 25000.50,
+                "geometria_wkt": "POLYGON((-0.3800 39.4750, -0.3700 39.4750, -0.3700 39.4650, -0.3800 39.4650, -0.3800 39.4750))"
             }
             print(z.update(datos_actualizados))
             
