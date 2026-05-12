@@ -1,0 +1,80 @@
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px); /* Centrado vertical debajo del menú */
+  width: 100%;
+}
+
+form.form {
+  /* Usamos los colores verdes fijos (Tema Marsh) */
+  background: linear-gradient(225deg, #8dc26f 16%, #76b852 100%);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  color: white;
+
+  h1 { font-size: 28px; margin: 0 0 10px 0; font-weight: 600; color: white; }
+  p { font-size: 14px; opacity: 0.9; margin-bottom: 30px; color: white; }
+
+  .input-wrapper {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%; /* Contenedor al 100% */
+
+    input {
+      width: 100%; /* La barra ocupa el 100% de su padre */
+      background-color: rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      color: white;
+      padding: 15px 45px 15px 15px; /* Relleno a la derecha para el icono */
+      font-size: 16px;
+      outline: none;
+      display: block; /* Evita comportamientos raros de línea */
+
+      &:focus {
+        background-color: rgba(0,0,0,0.25);
+        border-color: #fff;
+      }
+    }
+
+    i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,0.6);
+      font-size: 22px;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    background: #518336; /* Un verde más oscuro para el botón */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    margin-top: 10px;
+
+    &:hover { background: #3e6629; }
+    i { margin-left: 10px; }
+  }
+
+  .error-msg {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffdada; /* Rojo clarito para que resalte en el verde */
+  }
+}

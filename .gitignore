@@ -104,3 +104,7 @@ migrations/*
 djangoapi/.dotnet
 djangoapi/.vscode-server
 djangoapi/.ash_history
+
+
+# Tu entorno virtual específico
+venv_linux/

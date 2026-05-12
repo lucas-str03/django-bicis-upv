@@ -1,0 +1,24 @@
+<div class="login-wrapper">
+  <form class="form" [formGroup]="controlsGroup">
+    <h1>Welcome Back</h1>
+    <p>Enter your credentials to continue.</p>
+
+    <div class="input-wrapper">
+      <input type="text" placeholder="Username" formControlName="username" />
+      <i class="bx bxs-user-circle"></i>
+    </div>
+
+    <div class="input-wrapper">
+      <input type="password" placeholder="Password" formControlName="password" />
+      <i class="bx bx-key"></i>
+    </div>
+
+    <button type="submit" (click)="login()">
+      Sign In <i class="bx bx-right-arrow-alt"></i>
+    </button>
+
+    @if(serverMessage){
+      <p class="error-msg">{{serverMessage}}</p>
+    }
+  </form>
+</div>

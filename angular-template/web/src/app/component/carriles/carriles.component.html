@@ -1,0 +1,42 @@
+<div style="padding: 20px; max-width: 600px; margin: auto;">
+  <h2 style="color: #ff9800;">Formulario de Carriles Bici</h2>
+
+  <form [formGroup]="carrilForm" style="display: flex; flex-direction: column; gap: 15px;">
+    
+    <div style="display: flex; gap: 15px;">
+      <mat-form-field appearance="outline" style="flex: 1;">
+        <mat-label>ID del Carril</mat-label>
+        <input matInput formControlName="id" type="number" placeholder="Ej: 1">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" style="flex: 2;">
+        <mat-label>Tipo de Carril</mat-label>
+        <input matInput formControlName="tipo" placeholder="Ej: Ciclocalle o Carril-bici">
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Longitud (metros)</mat-label>
+      <input matInput formControlName="longitud" type="number" step="0.01">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Geometría (MULTILINESTRING WKT)</mat-label>
+      <textarea matInput formControlName="geom" rows="3" placeholder="Ej: MULTILINESTRING((Lon Lat, Lon Lat))"></textarea>
+    </mat-form-field>
+
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+      <button type="button" mat-raised-button color="primary" (click)="insert()">Insertar</button>
+      <button type="button" mat-raised-button color="accent" (click)="selectOne()">Select One</button>
+      <button type="button" mat-raised-button color="accent" (click)="selectAll()">Select All</button>
+      <button type="button" mat-raised-button style="background-color: #ff9800; color: white;" (click)="update()">Actualizar</button>
+      <button type="button" mat-raised-button color="warn" (click)="delete()">Borrar</button>
+      <button type="button" mat-stroked-button (click)="clean()">Limpiar</button>
+    </div>
+
+  </form>
+
+  <div *ngIf="mensaje" style="margin-top: 20px; padding: 10px; background: #fff3e0; border-radius: 5px; color: #e65100;">
+    <strong>Estado:</strong> {{ mensaje }}
+  </div>
+</div>

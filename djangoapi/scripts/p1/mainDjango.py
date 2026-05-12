@@ -7,7 +7,7 @@ def run(*args):
     if len(args) < 2:
         print("Faltan parámetros. Usa: <tabla> <operacion>")
         return
-
+    # En django el parámetro 0 no es el nombre del .py como en OOP, ya em`pieza con la tabla
     tableName = args[0]
     functionName = args[1]
 
@@ -19,14 +19,14 @@ def run(*args):
         
         if functionName == "insert":
             datos = {
-                "numero": 50, 
-                "direccion": "Estación Django - Plaza Redonda",
+                "numero": 100, 
+                "direccion": "Estación Django - Prueba",
                 "activo": "T",
                 "bicis": 15, 
                 "espacios_libres": 5, 
                 "espacios_totales": 20,
-                "lon": -0.3768, # Coordenadas dentro de nuestro barrio gigante
-                "lat": 39.4699
+                "lon": -3.7000, 
+                "lat": 40.4000
             }
             print(e.insert(datos))
             
@@ -46,7 +46,7 @@ def run(*args):
             print(e.update(datos_nuevos))
             
         elif functionName == "delete":
-            print(e.delete({"id": 1}))
+            print(e.delete({"id": 1})) # Lo mismo del id al borar, hay q ifjarse bien en cual queremos borrar.
 
     # ==========================================
     # 2. Lógica para BARRIOS (Django ORM)
@@ -56,13 +56,13 @@ def run(*args):
         
         if functionName == "insert":
             datos = {
-                "codigo_distrito_barrio": 1195, 
+                "codigo_distrito_barrio": 999, 
                 "nombre": "Barrio Django Gigante",
                 "codigo_distrito": 19, 
                 "codigo_barrio": 5, 
                 "area": 25000.50,
                 # Este polígono contiene nuestras coordenadas de la estación
-                "geometria_wkt": "POLYGON((-0.3800 39.4750, -0.3700 39.4750, -0.3700 39.4650, -0.3800 39.4650, -0.3800 39.4750))"
+                "geometria_wkt": "POLYGON((1.0 39.0, 2.0 39.0, 2.0 40.0, 1.0 40.0, 1.0 39.0))"
             }
             print(z.insert(datos))
             
@@ -82,7 +82,7 @@ def run(*args):
             print(z.update(datos_actualizados))
             
         elif functionName == "delete":
-            print(z.delete({"id": 1}))
+            print(z.delete({"id": 2}))
 
     
     # ==========================================
@@ -93,15 +93,15 @@ def run(*args):
         
         if functionName == "insert":
             datos = {
-                "objectid": 1001, 
+                "objectid": 999, 
                 "tipo": "Ciclocalle Django", 
                 "longitud": 150.5, 
-                "geometria_wkt": "LINESTRING(-0.3732 39.4683, -0.3689 39.4701)"
+                "geometria_wkt": "LINESTRING(1.1 39.1, 1.2 39.2)"
             }
             print(c.insert(datos))
             
         elif functionName == "selectAsDicts":
-            print(c.selectAsDicts({"id": 1}))
+            print(c.selectAsDicts({"id": 3}))
             
         elif functionName == "update":
             datos_actualizados = {

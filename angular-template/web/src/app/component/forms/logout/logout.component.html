@@ -1,0 +1,11 @@
+<div style="padding: 20px; text-align: center; max-width: 400px; margin: auto;">
+  <h1>Cerrar Sesión</h1>
+  <p>Presiona el botón para salir de tu cuenta de forma segura.</p>
+  
+  <button mat-raised-button color="warn" (click)="logout()">
+    Logout
+  </button>
+
+  <br><br>
+  <p *ngIf="serverMessage">{{serverMessage}}</p>
+</div>
