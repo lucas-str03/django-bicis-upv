@@ -31,7 +31,7 @@ export class EstacionesComponent {
         capacidad: new FormControl(0),
         bicis_disponibles: new FormControl(0),
         bornes_libres: new FormControl(0),
-        geom: new FormControl('', [Validators.required]) // <--- ¡AQUÍ ESTÁ EL NUEVO!
+        geom: new FormControl('', [Validators.required]) 
       });
     }
 
@@ -46,11 +46,9 @@ export class EstacionesComponent {
           if (res.ok && res.data.length > 0) {
             const estacion = res.data[0];
 
-            // 💡 EL TRUCO: Si la geometría viene como objeto (GeoJSON), 
-            // la convertimos a texto WKT para que se vea bien en el input
+
             if (estacion.geom && typeof estacion.geom === 'object') {
               const coords = estacion.geom.coordinates;
-              // Ojo: GeoJSON suele ser [Lon, Lat], lo pasamos a POINT(Lon Lat)
               estacion.geom = `POINT(${coords[0]} ${coords[1]})`;
             }
 

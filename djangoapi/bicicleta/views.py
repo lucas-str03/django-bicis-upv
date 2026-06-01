@@ -62,7 +62,7 @@ class CarrilBiciView(View):
     def dispatch(self, request, *args, **kwargs):
         return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
     
-# --- FUNCIONES DE AUTENTICACIÓN (Bloque 9.15) ---
+# --- FUNCIONES DE AUTENTICACIÓN  ---
 
 @csrf_exempt
 def login_view(request):

@@ -10,7 +10,6 @@ import { ServerAnswerModel } from '../../../models/server-answer.model';
 @Component({
   selector: 'app-logout',
   standalone: true,
-  // IMPORTANTE: Solo un array de imports con todo dentro
   imports: [CommonModule, MatButtonModule], 
   templateUrl: './logout.component.html',
   styleUrl: './logout.component.scss'

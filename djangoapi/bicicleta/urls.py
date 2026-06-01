@@ -10,7 +10,7 @@ urlpatterns = [
     path('barrios/', BarrioView.as_view(), name='barrios'),
     path('carriles/', CarrilBiciView.as_view(), name='carriles'),
     
-    # Rutas para la autenticación (Bloque 9.15 del PDF)
+    # Rutas para la autenticación 
     # Importante: Ponemos 'core/' delante para que coincida con lo que pusimos en Angular
     path('core/login/', login_view, name='login'),
     path('core/logout/', logout_view, name='logout'),

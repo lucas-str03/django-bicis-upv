@@ -1,8 +1,7 @@
 from django.contrib.gis import admin
 from .models import Barrio, CarrilBici, EstacionBicicleta
 
-# Al usar admin.GISModelAdmin, Django nos mostrará un mapa de OpenStreetMap 
-# en el panel de control para que podamos ver las geometrías.
+
 
 @admin.register(Barrio)
 class BarrioAdmin(admin.GISModelAdmin):
