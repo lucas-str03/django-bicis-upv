@@ -4,12 +4,55 @@ from django.views import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import EstacionBicicleta, Barrio, CarrilBici
 from .serializers import EstacionBicicletaSerializer, BarrioSerializer, CarrilBiciSerializer
 
-# Función genérica para el CRUD de las tablas
+
+# --- MIXIN DE CONTROL DE ROLES ---
+
+class RoleRequiredMixin:
+    """
+    Mixin que controla el acceso a las vistas según el grupo del usuario.
+    - Sin sesión activa → 401 Unauthorized
+    - Con sesión pero sin grupo válido → 403 Forbidden
+    - Grupo 'reader' → solo GET permitido
+    - Grupo 'editor' → GET, POST, PUT, DELETE permitidos
+    """
+    def dispatch(self, request, *args, **kwargs):
+        # 1. Comprobar si hay sesión activa
+        if not request.user.is_authenticated:
+            return JsonResponse(
+                {"ok": False, "message": "No hay sesión activa. Acceso denegado.", "data": []},
+                status=401
+            )
+
+        # 2. Obtener los grupos del usuario
+        user_groups = list(request.user.groups.values_list('name', flat=True))
+
+        # 3. Comprobar si pertenece a algún grupo válido
+        is_reader = 'reader' in user_groups
+        is_editor = 'editor' in user_groups
+
+        if not is_reader and not is_editor:
+            return JsonResponse(
+                {"ok": False, "message": "El usuario no pertenece a ningún grupo con acceso.", "data": []},
+                status=403
+            )
+
+        # 4. Los reader solo pueden hacer GET
+        if is_reader and not is_editor and request.method not in ('GET',):
+            return JsonResponse(
+                {"ok": False, "message": "El rol 'reader' solo tiene permisos de lectura.", "data": []},
+                status=403
+            )
+
+        # 5. Acceso permitido
+        return super().dispatch(request, *args, **kwargs)
+
+
+# --- FUNCIÓN GENÉRICA PARA EL CRUD ---
+
 def get_crud_response(model_class, serializer_class, request, pk_field='id'):
     try:
         if request.method == 'GET':
@@ -23,7 +66,7 @@ def get_crud_response(model_class, serializer_class, request, pk_field='id'):
             data = request.POST.dict() if request.method == 'POST' else QueryDict(request.body).dict()
         else:
             data = json.loads(request.body)
-        
+
         if request.method == 'POST':
             ser = serializer_class(data=data)
             if ser.is_valid():
@@ -51,34 +94,28 @@ def get_crud_response(model_class, serializer_class, request, pk_field='id'):
 # --- VISTAS PROTEGIDAS DE LAS TABLAS ---
 
 @method_decorator(csrf_exempt, name='dispatch')
-class EstacionBicicletaView(LoginRequiredMixin, View):
-    raise_exception = True  # Devuelve 403 Forbidden en lugar de redirigir si no hay sesión
-    
+class EstacionBicicletaView(RoleRequiredMixin, View):
     def get(self, request, *args, **kwargs): return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
     def post(self, request, *args, **kwargs): return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
     def put(self, request, *args, **kwargs): return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
     def delete(self, request, *args, **kwargs): return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
 
 @method_decorator(csrf_exempt, name='dispatch')
-class BarrioView(LoginRequiredMixin, View):
-    raise_exception = True
-    
+class BarrioView(RoleRequiredMixin, View):
     def get(self, request, *args, **kwargs): return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
     def post(self, request, *args, **kwargs): return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
     def put(self, request, *args, **kwargs): return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
     def delete(self, request, *args, **kwargs): return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
 
 @method_decorator(csrf_exempt, name='dispatch')
-class CarrilBiciView(LoginRequiredMixin, View):
-    raise_exception = True
-    
+class CarrilBiciView(RoleRequiredMixin, View):
     def get(self, request, *args, **kwargs): return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
     def post(self, request, *args, **kwargs): return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
     def put(self, request, *args, **kwargs): return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
     def delete(self, request, *args, **kwargs): return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
 
-    
-# --- FUNCIONES DE AUTENTICACIÓN  ---
+
+# --- FUNCIONES DE AUTENTICACIÓN ---
 
 @csrf_exempt
 def login_view(request):
@@ -91,11 +128,12 @@ def login_view(request):
 
             username = data.get('username')
             password = data.get('password')
-            
+
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return JsonResponse({"ok": True, "message": "¡Bienvenido!", "data": [{"username": user.username}]})
+                groups = list(user.groups.values_list('name', flat=True))
+                return JsonResponse({"ok": True, "message": "¡Bienvenido!", "data": [{"username": user.username, "groups": groups}]})
             else:
                 return JsonResponse({"ok": False, "message": "Credenciales incorrectas", "data": []}, status=401)
         except Exception as e:
@@ -109,5 +147,6 @@ def logout_view(request):
 @csrf_exempt
 def is_logged_in_view(request):
     if request.user.is_authenticated:
-        return JsonResponse({"ok": True, "message": "Sesión activa", "data": [{"username": request.user.username}]})
+        groups = list(request.user.groups.values_list('name', flat=True))
+        return JsonResponse({"ok": True, "message": "Sesión activa", "data": [{"username": request.user.username, "groups": groups}]})
     return JsonResponse({"ok": False, "message": "No hay sesión activa", "data": []})
