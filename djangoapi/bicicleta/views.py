@@ -4,6 +4,7 @@ from django.views import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import EstacionBicicleta, Barrio, CarrilBici
 from .serializers import EstacionBicicletaSerializer, BarrioSerializer, CarrilBiciSerializer
@@ -46,21 +47,36 @@ def get_crud_response(model_class, serializer_class, request, pk_field='id'):
     except Exception as e:
         return JsonResponse({"ok": False, "message": str(e), "data": []}, status=400)
 
-# Vistas de las tablas
-@method_decorator(csrf_exempt, name='dispatch')
-class EstacionBicicletaView(View):
-    def dispatch(self, request, *args, **kwargs):
-        return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
+
+# --- VISTAS PROTEGIDAS DE LAS TABLAS ---
 
 @method_decorator(csrf_exempt, name='dispatch')
-class BarrioView(View):
-    def dispatch(self, request, *args, **kwargs):
-        return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
+class EstacionBicicletaView(LoginRequiredMixin, View):
+    raise_exception = True  # Devuelve 403 Forbidden en lugar de redirigir si no hay sesión
+    
+    def get(self, request, *args, **kwargs): return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
+    def post(self, request, *args, **kwargs): return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
+    def put(self, request, *args, **kwargs): return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
+    def delete(self, request, *args, **kwargs): return get_crud_response(EstacionBicicleta, EstacionBicicletaSerializer, request, pk_field='numero')
 
 @method_decorator(csrf_exempt, name='dispatch')
-class CarrilBiciView(View):
-    def dispatch(self, request, *args, **kwargs):
-        return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
+class BarrioView(LoginRequiredMixin, View):
+    raise_exception = True
+    
+    def get(self, request, *args, **kwargs): return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
+    def post(self, request, *args, **kwargs): return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
+    def put(self, request, *args, **kwargs): return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
+    def delete(self, request, *args, **kwargs): return get_crud_response(Barrio, BarrioSerializer, request, pk_field='codigo_barrio')
+
+@method_decorator(csrf_exempt, name='dispatch')
+class CarrilBiciView(LoginRequiredMixin, View):
+    raise_exception = True
+    
+    def get(self, request, *args, **kwargs): return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
+    def post(self, request, *args, **kwargs): return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
+    def put(self, request, *args, **kwargs): return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
+    def delete(self, request, *args, **kwargs): return get_crud_response(CarrilBici, CarrilBiciSerializer, request, pk_field='id')
+
     
 # --- FUNCIONES DE AUTENTICACIÓN  ---
 
@@ -68,7 +84,6 @@ class CarrilBiciView(View):
 def login_view(request):
     if request.method == 'POST':
         try:
-            # Detectamos si viene como Formulario o como JSON
             if request.content_type == 'application/x-www-form-urlencoded':
                 data = request.POST.dict()
             else:
