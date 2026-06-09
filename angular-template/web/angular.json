@@ -63,6 +63,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "allowedHosts": [
+              "streitenberger.geomaticaupv.es"
+            ]
+          },
           "configurations": {
             "production": {
               "buildTarget": "web:build:production"
