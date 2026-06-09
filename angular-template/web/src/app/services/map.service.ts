@@ -15,13 +15,17 @@ export class MapService {
   map: Map;
   myLayersGroup: LayerGroup;
 
+  // EXTRACCIÓN CRÍTICA: Variables para que los botones sepan dónde dibujar
+  barriosVectorSource = new VectorSource();
+  carrilesVectorSource = new VectorSource();
+  estacionesVectorSource = new VectorSource();
+
   constructor(public settingsService: SettingsService) {
     this.myLayersGroup = this.createMyLayers();
     this.map = this.createMap();
   }
 
   createMyLayers(): LayerGroup {
-    // Definimos los parámetros comunes para que GeoServer entienda la proyección
     const wmsParams = {
       'VERSION': '1.3.0',
       'TILED': true,
@@ -58,16 +62,16 @@ export class MapService {
       properties: { title: 'Mis Capas' },
       layers: [
         barriosWMS, carrilesWMS, estacionesWMS,
-        new VectorLayer({ source: new VectorSource(), properties: { title: 'Barrios vector' } }),
-        new VectorLayer({ source: new VectorSource(), properties: { title: 'Carriles vector' } }),
-        new VectorLayer({ source: new VectorSource(), properties: { title: 'Estaciones vector' } })
+        // Ahora inyectamos las variables que hemos creado arriba
+        new VectorLayer({ source: this.barriosVectorSource, properties: { title: 'Barrios vector' } }),
+        new VectorLayer({ source: this.carrilesVectorSource, properties: { title: 'Carriles vector' } }),
+        new VectorLayer({ source: this.estacionesVectorSource, properties: { title: 'Estaciones vector' } })
       ]
     });
     return myLayersGroup;
   }
 
   createMap(): Map {
-    // Definimos la proyección de Valencia (EPSG:25830)
     const epsg25830 = new Projection({
       code: 'EPSG:25830',
       extent: [-729785.76, 3715125.82, 945351.10, 9522561.39],

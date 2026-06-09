@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; // ¡NUEVO! Importamos OnInit
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpParams } from '@angular/common/http';
 import { ApiService } from '../../services/api.service';
+import { ActivatedRoute } from '@angular/router'; // ¡NUEVO! Importamos el lector de rutas
 
 @Component({
   selector: 'app-carriles',
@@ -20,16 +21,33 @@ import { ApiService } from '../../services/api.service';
   templateUrl: './carriles.component.html',
   styleUrl: './carriles.component.scss'
 })
-export class CarrilesComponent {
+export class CarrilesComponent implements OnInit { // ¡NUEVO! Añadimos implements OnInit
   carrilForm: FormGroup;
   mensaje: string = '';
 
-  constructor(private api: ApiService) {
+  // ¡NUEVO! Inyectamos "private route: ActivatedRoute" en el constructor
+  constructor(private api: ApiService, private route: ActivatedRoute) {
     this.carrilForm = new FormGroup({
       id: new FormControl(''), // Clave primaria por defecto en Django
       tipo: new FormControl(''),
       longitud: new FormControl(0),
       geom: new FormControl('', [Validators.required]) // MultiLineString
+    });
+  }
+
+  // ¡NUEVO! Añadimos la función que se ejecuta al abrir la pantalla
+  ngOnInit() {
+    // Leemos la barra de direcciones
+    this.route.queryParams.subscribe(params => {
+      const coordenadaWKT = params['geom'];
+      
+      if (coordenadaWKT) {
+        // Si hay una coordenada en la URL, la pegamos automáticamente en el formulario
+        this.carrilForm.patchValue({
+          geom: coordenadaWKT
+        });
+        this.mensaje = "Coordenadas del mapa cargadas correctamente.";
+      }
     });
   }
 

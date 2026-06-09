@@ -1,0 +1,26 @@
+.draw-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Icono y texto más juntos */
+  background-color: white;
+  border: 1.5px solid #ccc; /* Borde ligeramente más fino */
+  border-radius: 6px;
+  padding: 5px 8px; /* Botón más estrecho y bajito */
+  font-size: 12px; /* Letra más pequeña */
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  &.active {
+    background-color: #e0f7fa;
+    border-color: #00bcd4;
+    color: #0097a7;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  }
+}

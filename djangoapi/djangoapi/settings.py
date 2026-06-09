@@ -87,6 +87,11 @@ if DEBUG:
 else:
     CORS_ALLOWED_ORIGINS = [WEB_URL]
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:4200',
+    'http://127.0.0.1:4200',
+]
+
 SESSION_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SAMESITE = 'Lax'
 SESSION_COOKIE_HTTPONLY = True

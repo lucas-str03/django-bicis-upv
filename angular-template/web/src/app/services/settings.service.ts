@@ -4,26 +4,27 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SettingsService {
-  // Cambiamos a mode = 2 para compilar en Producción hacia el VPS
-  public mode = 2; 
+  // mode = 1 → local | mode = 2 → producción VPS
+  public mode = 2;
 
-  // Inicializamos con string vacío para evitar el error TS2564
-  public API_URL: string = '';
+  public API_URL: string = '';         // URL base de la API (para core/login, core/isloggedin)
+  public API_BICICLETA_URL: string = ''; // URL específica para los endpoints de bicicleta
   public GEOSERVER_URL: string = '';
+  public GEOSERVER_WMS_URL: string = '';
   public WEB_URL: string = '';
 
-  constructor() { 
+  constructor() {
     if (this.mode == 1) {
-      // Configuración local original
-      this.API_URL = 'http://localhost:8000/';
+      this.API_URL = 'http://localhost:8033';
+      this.API_BICICLETA_URL = 'http://localhost:8033/bicicleta';
       this.GEOSERVER_URL = 'http://localhost:8080/geoserver/';
+      this.GEOSERVER_WMS_URL = 'http://localhost:8080/geoserver/streitenberger/wms';
       this.WEB_URL = 'http://localhost:4200/';
-
     } else {
-      // Configuración de Producción en el VPS 
-      // Si no es 1, aplicamos siempre la producción
-      this.API_URL = 'https://streitenberger.geomaticaupv.es/api/bicicleta/'; 
+      this.API_URL = 'https://streitenberger.geomaticaupv.es/api';
+      this.API_BICICLETA_URL = 'https://streitenberger.geomaticaupv.es/api/bicicleta';
       this.GEOSERVER_URL = 'https://streitenberger.geomaticaupv.es/geoserver/';
+      this.GEOSERVER_WMS_URL = 'https://geomaticaupv.es/geoserver/streitenberger/wms';
       this.WEB_URL = 'https://streitenberger.geomaticaupv.es/';
     }
   }

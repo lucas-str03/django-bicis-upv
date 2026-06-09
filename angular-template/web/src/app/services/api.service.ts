@@ -12,13 +12,18 @@ export class ApiService {
   });
 
   constructor(
-    public settingsService: SettingsService, 
+    public settingsService: SettingsService,
     private httpClient: HttpClient
   ) { }
 
-  // Función interna para no repetir código y evitar el lío de las barras
+  // URL para endpoints de bicicleta: /api/bicicleta/estaciones/
   private buildUrl(endPointUrl: string): string {
-    // Quitamos barras sobrantes al principio y final para que no se dupliquen
+    const cleanEndPoint = endPointUrl.replace(/^\/|\/$/g, '');
+    return `${this.settingsService.API_BICICLETA_URL}/${cleanEndPoint}/`;
+  }
+
+  // URL para endpoints de core: /api/core/login/
+  private buildCoreUrl(endPointUrl: string): string {
     const cleanEndPoint = endPointUrl.replace(/^\/|\/$/g, '');
     return `${this.settingsService.API_URL}/${cleanEndPoint}/`;
   }
@@ -28,13 +33,16 @@ export class ApiService {
       headers: this.headers,
       responseType: 'json',
       params: getParams,
-      withCredentials: true 
+      withCredentials: true
     });
   }
 
   post(endPointUrl: string, postParams: any = {}) {
+    const url = endPointUrl.startsWith('core/')
+      ? this.buildCoreUrl(endPointUrl)
+      : this.buildUrl(endPointUrl);
     const postData = this.generarHttpParamsDesdeObjeto(postParams);
-    return this.httpClient.post<any>(this.buildUrl(endPointUrl), postData, {
+    return this.httpClient.post<any>(url, postData, {
       headers: this.headers,
       responseType: 'json',
       withCredentials: true
@@ -54,7 +62,7 @@ export class ApiService {
     const postData = this.generarHttpParamsDesdeObjeto(postParams);
     return this.httpClient.delete<any>(this.buildUrl(endPointUrl), {
       headers: this.headers,
-      body: postData, 
+      body: postData,
       withCredentials: true
     });
   }

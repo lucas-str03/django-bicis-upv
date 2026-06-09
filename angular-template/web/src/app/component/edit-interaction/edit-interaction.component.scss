@@ -1,0 +1,26 @@
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #37474f;
+  border: 1.5px solid #263238;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #455a64;
+  }
+
+  &.active {
+    background-color: #e0f7fa;
+    border-color: #00bcd4;
+    color: #0097a7;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  }
+}

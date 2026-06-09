@@ -1,8 +1,24 @@
-#map {
-    position: relative;
-    background-color: #add8e6; /* Fondo azul claro */
-    z-index: 0;
-    overflow: hidden;
-    width: 100%;
-    height: calc(100vh - 150px);
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  /* Restamos espacio para que no haga scroll raro con el menú y footer. Ajusta a tu gusto */
+  height: calc(100vh - 160px); 
+  min-height: 500px;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e3df; /* Un color de fondo por si tardan en cargar las capas */
+}
+
+.draw-controls-panel {
+  position: absolute;
+  top: 15px;
+  left: 60px; 
+  z-index: 1000; 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
