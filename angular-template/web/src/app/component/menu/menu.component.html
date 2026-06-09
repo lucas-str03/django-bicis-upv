@@ -1,20 +1,27 @@
-<nav style="display: flex; gap: 10px; padding: 10px; background: #f5f5f5; align-items: center;">
-  
-  <button mat-button routerLink="estaciones">Estaciones</button>
-  <button mat-button routerLink="barrios">Barrios</button>
-  <button mat-button routerLink="carriles">Carriles</button>
+<nav class="modern-header">
+  <div class="nav-links">
+    <button mat-button routerLink="map"><mat-icon>map</mat-icon> Mapa</button>
+    <button mat-button routerLink="estaciones"><mat-icon>pedal_bike</mat-icon> Estaciones</button>
+    <button mat-button routerLink="barrios"><mat-icon>location_city</mat-icon> Barrios</button>
+    <button mat-button routerLink="carriles"><mat-icon>route</mat-icon> Carriles</button>
+  </div>
 
-  <span style="flex: 1 1 auto;"></span> @if(authService.isAuthenticated) {
-    <span style="margin-right: 10px; font-weight: bold; color: #3f51b5;">
-      {{authService.username}}
-    </span>
-    <button mat-icon-button color="warn" routerLink="logout-form" title="Cerrar sesión">
-      <mat-icon>logout</mat-icon>
-    </button>
-  } @else {
-    <span>No has iniciado sesión</span>
-    <button mat-icon-button color="primary" routerLink="login-form" title="Iniciar sesión">
-      <mat-icon>login</mat-icon>
-    </button>
-  }
+  <span class="spacer"></span>
+
+  <div class="auth-section">
+    @if(authService.isAuthenticated) {
+      <div class="user-badge">
+        <mat-icon class="user-icon">account_circle</mat-icon>
+        <span class="username">{{authService.username}}</span>
+      </div>
+      <button mat-icon-button color="warn" routerLink="logout-form" title="Cerrar sesión">
+        <mat-icon>logout</mat-icon>
+      </button>
+    } @else {
+      <span class="login-text">No has iniciado sesión</span>
+      <button mat-icon-button color="primary" routerLink="login-form" title="Iniciar sesión">
+        <mat-icon>login</mat-icon>
+      </button>
+    }
+  </div>
 </nav>

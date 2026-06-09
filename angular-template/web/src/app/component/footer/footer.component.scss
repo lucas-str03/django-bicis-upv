@@ -1,0 +1,86 @@
+
+.modern-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.02);
+
+  .footer-logo {
+    height: 45px;
+    width: auto;
+    transition: transform 0.2s;
+    &:hover { transform: scale(1.05); }
+  }
+
+  /* Contenedor central que une el texto y el mapa */
+  .footer-center {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Separación entre las letras y el mapa */
+
+    .brand-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; /* Alineamos el texto pegado al mapa */
+      
+      .title {
+        color: #1d1d1f;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+      }
+      .subtitle {
+        color: #86868b;
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-top: 2px;
+      }
+    }
+  }
+}
+
+/* ========================================= */
+/* ESTILOS DEL MINIMAPA DE LA COMUNIDAD      */
+/* ========================================= */
+
+.cv-minimap {
+  display: grid;
+  /* 26 columnas y 65 filas de 2px cada una */
+  grid-template-columns: repeat(26, 2px);
+  grid-template-rows: repeat(65, 2px);
+  gap: 1px; /* Separación de 1px entre cada bolita */
+
+  /* Celda vacía */
+  .c { width: 2px; height: 2px; } 
+  
+  /* Celda pintada (Estado base: Gris clarito) */
+  .d { 
+    width: 2px; 
+    height: 2px; 
+    border-radius: 50%; 
+    background: #e8e8ed; 
+  }
+
+  .dC { animation: aC 3.5s linear infinite; }
+  .dV { animation: aV 3.5s linear infinite; }
+  .dA { animation: aA 3.5s linear infinite; }
+}
+
+/* Keyframes adaptados para fondos blancos */
+@keyframes aC { 
+  0% { background: #c8a97a; box-shadow: 0 0 3px #c8a97a; } 
+  100% { background: #e8e8ed; box-shadow: none; } 
+}
+@keyframes aV { 
+  0% { background: #5bbfcf; box-shadow: 0 0 3px #5bbfcf; } 
+  100% { background: #e8e8ed; box-shadow: none; } 
+}
+@keyframes aA { 
+  0% { background: #f0196e; box-shadow: 0 0 3px #f0196e; } 
+  100% { background: #e8e8ed; box-shadow: none; } 
+}

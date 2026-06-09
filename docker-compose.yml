@@ -71,7 +71,7 @@ services:
     volumes:
       - ./djangoapi:/usr/src/app
     ports:
-      - 8000:8000
+      - 8033:8000
       #puerto para depuración remota, al poner djangoapi.settings.REMOTE_DEBUG = True
       - 127.0.0.1:6789:6789
     env_file:

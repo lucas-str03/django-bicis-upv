@@ -1,0 +1,56 @@
+.modern-header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 64px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* La sombra mágica */
+  position: relative;
+  z-index: 1000; /* Asegura que flote sobre el mapa */
+
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    
+    button {
+      font-weight: 500;
+      color: #333;
+      mat-icon {
+        margin-right: 5px;
+        color: #666;
+      }
+    }
+  }
+
+  .spacer {
+    flex: 1 1 auto; /* Empuja los elementos a los lados */
+  }
+
+  .auth-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .user-badge {
+      display: flex;
+      align-items: center;
+      background: #f0f4f8;
+      padding: 5px 15px;
+      border-radius: 20px;
+      
+      .user-icon {
+        margin-right: 8px;
+        color: #3f51b5;
+      }
+      .username {
+        font-weight: bold;
+        color: #2c3e50;
+      }
+    }
+
+    .login-text {
+      color: #666;
+      font-size: 0.9rem;
+    }
+  }
+}
