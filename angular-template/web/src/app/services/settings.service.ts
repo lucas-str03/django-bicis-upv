@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SettingsService {
   // mode = 1 → local (híbrido) | mode = 2 → producción VPS completada
-  public mode = 1;
+  public mode = 2;
 
   public API_URL: string = '';         // URL base de la API (para core/login, core/isloggedin)
   public API_BICICLETA_URL: string = ''; // URL específica para los endpoints de bicicleta
