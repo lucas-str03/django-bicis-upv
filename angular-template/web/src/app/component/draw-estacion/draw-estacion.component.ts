@@ -16,7 +16,7 @@ import WKT from 'ol/format/WKT';
 export class DrawEstacionComponent implements OnInit, OnDestroy {
   isActive: boolean = false;
   private sub!: Subscription;
-  readonly TOOL_NAME = 'draw-estacion';
+  readonly TOOL_NAME = 'draw-estacion'; // Nombre clave exclusivo para las estaciones
   private drawInteraction!: Draw;
 
   constructor(
@@ -26,11 +26,14 @@ export class DrawEstacionComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    // A diferencia de los barrios (Polígonos) o carriles (LineString), 
+    // las estaciones se configuran como 'Point' (Punto).
     this.drawInteraction = new Draw({
-      source: this.mapService.estacionesVectorSource,
-      type: 'Point'
+      source: this.mapService.estacionesVectorSource, // Se dibuja en la capa correcta
+      type: 'Point' 
     });
 
+    // Suscripción al EventService: si otro botón dice "soy yo", me apago.
     this.sub = this.eventService.currentInteraction$.subscribe((activeTool: string) => {
       if (activeTool !== this.TOOL_NAME) {
         this.isActive = false;
@@ -38,16 +41,19 @@ export class DrawEstacionComponent implements OnInit, OnDestroy {
       }
     });
 
+    // Evento de fin de dibujo
     this.drawInteraction.on('drawend', (event) => {
       const geometry = event.feature.getGeometry();
       const wktFormat = new WKT();
       
       if (geometry) {
+        // Convierte el punto a formato POINT(x y)
         const wktString = wktFormat.writeGeometry(geometry);
         console.log('Punto dibujado en WKT:', wktString);
 
-        this.toggleDraw();
+        this.toggleDraw(); // Desactiva el botón
 
+        // Navega a la ruta de estaciones llevando el WKT por parámetro
         this.router.navigate(['/estaciones'], {
           queryParams: { geom: wktString }
         });
@@ -55,6 +61,7 @@ export class DrawEstacionComponent implements OnInit, OnDestroy {
     });
   }
 
+  // Gestión del clic en el botón HTML
   toggleDraw() {
     this.isActive = !this.isActive;
     if (this.isActive) {
@@ -66,6 +73,7 @@ export class DrawEstacionComponent implements OnInit, OnDestroy {
     }
   }
 
+  // Limpieza de memoria (Obligatorio en Angular cuando usamos Subscriptions o interacciones externas)
   ngOnDestroy() {
     if (this.sub) this.sub.unsubscribe();
     this.mapService.map.removeInteraction(this.drawInteraction);

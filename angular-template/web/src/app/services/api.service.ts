@@ -29,13 +29,17 @@ export class ApiService {
   }
 
   get(endPointUrl: string, getParams: HttpParams = new HttpParams({})) {
-    return this.httpClient.get<any>(this.buildUrl(endPointUrl), {
-      headers: this.headers,
-      responseType: 'json',
-      params: getParams,
-      withCredentials: true
-    });
-  }
+  const url = endPointUrl.startsWith('core/')
+    ? this.buildCoreUrl(endPointUrl)
+    : this.buildUrl(endPointUrl);
+  return this.httpClient.get<any>(url, {
+    headers: this.headers,
+    responseType: 'json',
+    params: getParams,
+    withCredentials: true
+  });
+}
+
 
   post(endPointUrl: string, postParams: any = {}) {
     const url = endPointUrl.startsWith('core/')

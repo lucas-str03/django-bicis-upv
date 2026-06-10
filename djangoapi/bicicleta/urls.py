@@ -1,18 +1,21 @@
 from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
 from .views import (
-    EstacionBicicletaView, BarrioView, CarrilBiciView, 
-    login_view, logout_view, is_logged_in_view
+    EstacionBicicletaView, BarrioView, CarrilBiciView,
+    login_view, logout_view, is_logged_in_view,
+    selectall_view, actualizar_estaciones_view
 )
 
 urlpatterns = [
-    # Rutas para las tablas (CRUD)
+    # Capas GIS
     path('estaciones/', EstacionBicicletaView.as_view(), name='estaciones'),
     path('barrios/', BarrioView.as_view(), name='barrios'),
     path('carriles/', CarrilBiciView.as_view(), name='carriles'),
-    
-    # Rutas para la autenticación 
-    # Importante: Ponemos 'core/' delante para que coincida con lo que pusimos en Angular
-    path('core/login/', login_view, name='login'),
-    path('core/logout/', logout_view, name='logout'),
-    path('core/isloggedin/', is_logged_in_view, name='isloggedin'),
+    path('selectall/', selectall_view, name='selectall'),
+    path('actualizar-estaciones/', actualizar_estaciones_view, name='actualizar_estaciones'),
+
+    # Autenticación (Rutas limpias, sin el prefijo 'core/')
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('isloggedin/', csrf_exempt(is_logged_in_view), name='isloggedin'),
 ]

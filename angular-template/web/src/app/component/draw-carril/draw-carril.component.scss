@@ -1,12 +1,12 @@
 .draw-btn {
   display: flex;
   align-items: center;
-  gap: 6px; /* Icono y texto más juntos */
+  gap: 6px;
   background-color: white;
-  border: 1.5px solid #ccc; /* Borde ligeramente más fino */
+  border: 1.5px solid #ccc;
   border-radius: 6px;
-  padding: 5px 8px; /* Botón más estrecho y bajito */
-  font-size: 12px; /* Letra más pequeña */
+  padding: 5px 8px;
+  font-size: 12px;
   font-weight: bold;
   color: #333;
   cursor: pointer;
@@ -24,3 +24,4 @@
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
   }
 }
+

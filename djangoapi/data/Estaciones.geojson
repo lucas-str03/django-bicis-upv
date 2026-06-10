@@ -1,0 +1,5738 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 902338,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.393015461057326, 39.4520822672713]
+      },
+      "properties": {
+        "gid": 902338,
+        "name": "209_AVDA_GASPAR_AGUILAR_ESQ_CALLE_MUSICO_PENELLA",
+        "number": 209,
+        "address": "Gaspar Aguilar - Músico Penella",
+        "open": "T",
+        "available": 0,
+        "free": 0,
+        "total": 18,
+        "ticket": "F",
+        "updated_at": "17/01/2026 00:06:23",
+        "update_jcd": 1768545672000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902209,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.365667341958355, 39.4849733630734]
+      },
+      "properties": {
+        "gid": 902209,
+        "name": "77_C/ MOLINELL",
+        "number": 77,
+        "address": "Molinell - Calderón de la Barca",
+        "open": "T",
+        "available": 6,
+        "free": 14,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "14/05/2026 20:22:33",
+        "update_jcd": 1774587736000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902139,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.379185395297292, 39.4748723359365]
+      },
+      "properties": {
+        "gid": 902139,
+        "name": "007_PZA_DEL_MERCADO_TAULA_DE_CANVIS",
+        "number": 7,
+        "address": "Plaza del Mercado - Taula de Canvis",
+        "open": "T",
+        "available": 0,
+        "free": 19,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120296000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902140,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.375298284714353, 39.4738812236606]
+      },
+      "properties": {
+        "gid": 902140,
+        "name": "008_PLAZA_DE_LA_REINA_ESQUINA_CALLE_DEL_MAR",
+        "number": 8,
+        "address": "Plaza de la Reina - Mar",
+        "open": "T",
+        "available": 6,
+        "free": 3,
+        "total": 9,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120735000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902150,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.373129379873735, 39.4681913115139]
+      },
+      "properties": {
+        "gid": 902150,
+        "name": "018_COLON II",
+        "number": 18,
+        "address": "Colón 20-22",
+        "open": "T",
+        "available": 13,
+        "free": 10,
+        "total": 24,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120747000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902157,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.388610433340802, 39.4677293165626]
+      },
+      "properties": {
+        "gid": 902157,
+        "name": "025_CALLE_DEL_ALBERIC",
+        "number": 25,
+        "address": "Alberique, 18 (Abastos)",
+        "open": "T",
+        "available": 2,
+        "free": 21,
+        "total": 23,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120344000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902161,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.36529935252796, 39.4701123136465]
+      },
+      "properties": {
+        "gid": 902161,
+        "name": "029_PLAZA AMERICA",
+        "number": 29,
+        "address": "Plaza América - Cirilo Amorós - Sorní",
+        "open": "T",
+        "available": 20,
+        "free": 0,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120287000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902168,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.375436379858104, 39.4790723488609]
+      },
+      "properties": {
+        "gid": 902168,
+        "name": "036_PZA_LOS_FUEROS_CONDE_TRENOR",
+        "number": 36,
+        "address": "Plaza de los Fueros - Conde Trenor",
+        "open": "T",
+        "available": 5,
+        "free": 19,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120617000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902176,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.363014354525762, 39.456429267686]
+      },
+      "properties": {
+        "gid": 902176,
+        "name": "44_AVDA. GRAL. URRUTIA",
+        "number": 44,
+        "address": "General Urrutia - Av. de la Plata",
+        "open": "T",
+        "available": 9,
+        "free": 10,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120489000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902261,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.370210358642677, 39.4832383600816]
+      },
+      "properties": {
+        "gid": 902261,
+        "name": "130_C/ CONVENTO CARMELITAS",
+        "number": 130,
+        "address": "Convento Carmelitas - Alboraya",
+        "open": "T",
+        "available": 6,
+        "free": 8,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120734000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902273,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.389659426179435, 39.481920365016]
+      },
+      "properties": {
+        "gid": 902273,
+        "name": "142_C/ GREGORIO GEA (PEATONAL)",
+        "number": 142,
+        "address": "Gregorio Gea - Profesor Beltrán Báguena",
+        "open": "T",
+        "available": 0,
+        "free": 25,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120496000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902274,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.390936432417082, 39.4795373575288]
+      },
+      "properties": {
+        "gid": 902274,
+        "name": "143_AVDA. MENENDEZ PIDAL",
+        "number": 143,
+        "address": "Pio XII - Menéndez PIdal (Nuevo Centro)",
+        "open": "T",
+        "available": 0,
+        "free": 30,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120706000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902136,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.375342380894589, 39.4767473408315]
+      },
+      "properties": {
+        "gid": 902136,
+        "name": "004_PLAZA_DE_LA_VIRGEN_CALLE_BAILIA",
+        "number": 4,
+        "address": "Plaza de la Virgen - Bailía",
+        "open": "T",
+        "available": 2,
+        "free": 22,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120659000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902155,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.386178421696759, 39.4716283287485]
+      },
+      "properties": {
+        "gid": 902155,
+        "name": "023_GRAN_VIA_FERNANDO_EL_CATOLICO",
+        "number": 23,
+        "address": "Fernando el Católico - Erudito Orellana",
+        "open": "T",
+        "available": 2,
+        "free": 17,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120396000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902159,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.381851413710266, 39.4633622993056]
+      },
+      "properties": {
+        "gid": 902159,
+        "name": "027_CALLE_SAN_VICENTE_MARTIR_129",
+        "number": 27,
+        "address": "San Vicente Martir - Doctor Vilá Barberá",
+        "open": "T",
+        "available": 11,
+        "free": 9,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120247000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902178,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.358787340871609, 39.4555092617623]
+      },
+      "properties": {
+        "gid": 902178,
+        "name": "46_AVDA. INSTITUTO OBRERO DE VALENCIA",
+        "number": 46,
+        "address": "Pintor Luis Arcas - Inst. Obrero Valenciano",
+        "open": "T",
+        "available": 14,
+        "free": 5,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120378000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.371646289410789, 39.4692132213195]
+      },
+      "properties": {
+        "gid": 902202,
+        "name": "70_CALLE_COLON_ESQ_ALMIRANTE_ROGER_DE_LAURIA",
+        "number": 70,
+        "address": "Colón, 44",
+        "open": "T",
+        "available": 1,
+        "free": 15,
+        "total": 17,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120726000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902204,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.346446281962142, 39.4672572011624]
+      },
+      "properties": {
+        "gid": 902204,
+        "name": "072_RAMIRO MAETZU",
+        "number": 72,
+        "address": "Ramiro de Maeztu - Peris Brell",
+        "open": "T",
+        "available": 8,
+        "free": 6,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120715000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902227,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.346119279396685, 39.4798353373436]
+      },
+      "properties": {
+        "gid": 902227,
+        "name": "95_AVDA. DE LOS NARANJOS",
+        "number": 95,
+        "address": "Naranjos (Magisterio)",
+        "open": "T",
+        "available": 24,
+        "free": 8,
+        "total": 33,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120353000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902229,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.34313227396488, 39.4730683127661]
+      },
+      "properties": {
+        "gid": 902229,
+        "name": "097_AVDA. BLASCO IBAÑEZ 7",
+        "number": 97,
+        "address": "Blasco Ibañez 121",
+        "open": "T",
+        "available": 8,
+        "free": 15,
+        "total": 23,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120570000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.37343436811822, 39.4852863679378]
+      },
+      "properties": {
+        "gid": 902263,
+        "name": "132_C/ RUAYA",
+        "number": 132,
+        "address": "Platero Suárez - Milagrosa",
+        "open": "T",
+        "available": 11,
+        "free": 4,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120352000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902271,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.389600420654225, 39.4880043849404]
+      },
+      "properties": {
+        "gid": 902271,
+        "name": "140_AVENIDA_CAMPANAR",
+        "number": 140,
+        "address": "Campanar - Nicasio Benlloch",
+        "open": "T",
+        "available": 4,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120733000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902322,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.386718436578698, 39.4551462744348]
+      },
+      "properties": {
+        "gid": 902322,
+        "name": "193_CALLE_CARTEROS",
+        "number": 193,
+        "address": "Uruguay - Carteros",
+        "open": "T",
+        "available": 5,
+        "free": 15,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120313000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902401,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.332190231153852, 39.4806233333947]
+      },
+      "properties": {
+        "gid": 902401,
+        "name": "272_VICENTE_LA_RODA_C_INGENIERO_FAUSTO_ELIO",
+        "number": 272,
+        "address": "Vicente la Roda - Ingeniero Fausto Elio",
+        "open": "T",
+        "available": 14,
+        "free": 1,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120316000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902137,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.371140366139911, 39.4768953391238]
+      },
+      "properties": {
+        "gid": 902137,
+        "name": "005_PINTOR_LOPEZ_PZA_POETA_LLORENTE",
+        "number": 5,
+        "address": "Plaza Poeta Llorente",
+        "open": "T",
+        "available": 5,
+        "free": 9,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120621000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902141,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.369930364882644, 39.4743553301687]
+      },
+      "properties": {
+        "gid": 902141,
+        "name": "009_PLAZA_TETUAN_4",
+        "number": 9,
+        "address": "Plaza de Tetuán",
+        "open": "T",
+        "available": 13,
+        "free": 11,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120284000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902166,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.369961372990921, 39.4641222965491]
+      },
+      "properties": {
+        "gid": 902166,
+        "name": "34_AVDA. ANTIGUO REINO DE VALENCIA",
+        "number": 34,
+        "address": "Regne de Valencia - Doctor Sumsi",
+        "open": "T",
+        "available": 11,
+        "free": 6,
+        "total": 17,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120756000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902170,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.370249377369363, 39.4594020492769]
+      },
+      "properties": {
+        "gid": 902170,
+        "name": "38_AVDA. PERIS Y VALERO",
+        "number": 38,
+        "address": "Peris y Valero - Cabo Jubi",
+        "open": "T",
+        "available": 3,
+        "free": 12,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120415000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902172,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.374824383718328, 39.470466319702]
+      },
+      "properties": {
+        "gid": 902172,
+        "name": "40_CALLE_BARCAS_FRENTE _TEATRO_PRINCIPAL",
+        "number": 40,
+        "address": "Barcas, 11",
+        "open": "T",
+        "available": 14,
+        "free": 12,
+        "total": 26,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120295000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902174,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.358658337880589, 39.458781273296]
+      },
+      "properties": {
+        "gid": 902174,
+        "name": "42_AVDA. DE LA PLATA",
+        "number": 42,
+        "address": "Av. de la Plata (Museo Fallero)",
+        "open": "T",
+        "available": 12,
+        "free": 8,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120631000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902293,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.323401213618458, 39.4644372752553]
+      },
+      "properties": {
+        "gid": 902293,
+        "name": "163_PASEO NEPTUNO",
+        "number": 163,
+        "address": "Paseo Neptuno 32-34",
+        "open": "T",
+        "available": 8,
+        "free": 12,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120492000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902268,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.379896387371293, 39.4890333834483]
+      },
+      "properties": {
+        "gid": 902268,
+        "name": "137_CALLE_ECONOMISTA_GAY",
+        "number": 137,
+        "address": "Economista Gay - Luis Crumiere",
+        "open": "T",
+        "available": 2,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120387000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902269,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.384222402074828, 39.4881903828458]
+      },
+      "properties": {
+        "gid": 902269,
+        "name": "138_SAN_PANCRACIO",
+        "number": 138,
+        "address": "San Pancracio - Periodista Llorente",
+        "open": "T",
+        "available": 10,
+        "free": 10,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120496000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902138,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.384083413938711, 39.4727983314781]
+      },
+      "properties": {
+        "gid": 902138,
+        "name": "006_GUILLEN_CASTRO_CON_CALLE_SAN_PEDRO_PASCUAL",
+        "number": 6,
+        "address": "Guillem de Castro - San Pedro Pascual",
+        "open": "T",
+        "available": 1,
+        "free": 13,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120608000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902191,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.354549321354206, 39.4630882856676]
+      },
+      "properties": {
+        "gid": 902191,
+        "name": "059_AVDA. DE BALEARES I",
+        "number": 59,
+        "address": "Baleares - Río Escalona",
+        "open": "T",
+        "available": 7,
+        "free": 8,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120633000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902275,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.395480448040801, 39.4787793569025]
+      },
+      "properties": {
+        "gid": 902275,
+        "name": "144_CALLE_MARQUES_DE_SAN_JUAN",
+        "number": 144,
+        "address": "Marqués de San Juan - Diputat Lluís Lucía",
+        "open": "T",
+        "available": 3,
+        "free": 12,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120701000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902196,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.354195317249593, 39.4665182970671]
+      },
+      "properties": {
+        "gid": 902196,
+        "name": "064_AVDA. DEL PUERTO II",
+        "number": 64,
+        "address": "Av. Puerto 61-63",
+        "open": "T",
+        "available": 14,
+        "free": 6,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120737000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902198,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.34626129165259, 39.4642712853234]
+      },
+      "properties": {
+        "gid": 902198,
+        "name": "066_GUILLEN DE ANGLESOLA",
+        "number": 66,
+        "address": "Guillem de Anglesola - Av. Puerto",
+        "open": "T",
+        "available": 22,
+        "free": 3,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120531000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902200,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.341733277859402, 39.4628032786802]
+      },
+      "properties": {
+        "gid": 902200,
+        "name": "068_AVDA. DEL PUERTO IV",
+        "number": 68,
+        "address": "Av. Puerto - José Aguilar",
+        "open": "T",
+        "available": 12,
+        "free": 7,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120642000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902265,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.37333936513209, 39.4876563763563]
+      },
+      "properties": {
+        "gid": 902265,
+        "name": "134_C/ MAXIMILIANO THOUS",
+        "number": 134,
+        "address": "Maximiliano Thous - Luz Casanova",
+        "open": "T",
+        "available": 5,
+        "free": 15,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120696000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902266,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.378501384781564, 39.4857023719636]
+      },
+      "properties": {
+        "gid": 902266,
+        "name": "135_AVDA. CONSTITUCIÓN",
+        "number": 135,
+        "address": "Constitución - Reus",
+        "open": "T",
+        "available": 13,
+        "free": 7,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120521000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902267,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.37561037166808, 39.4899413844759]
+      },
+      "properties": {
+        "gid": 902267,
+        "name": "136_CALLE_ECONOMISTA_GAY",
+        "number": 136,
+        "address": "Economista Gay - Constitución",
+        "open": "T",
+        "available": 0,
+        "free": 20,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120419000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902288,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.327719226830143, 39.4666982851306]
+      },
+      "properties": {
+        "gid": 902288,
+        "name": "158_DR. LLUCH",
+        "number": 158,
+        "address": "Doctor Lluch - Virgen del Sufragio",
+        "open": "T",
+        "available": 13,
+        "free": 2,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120279000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902290,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.338981264709995, 39.4673362917695]
+      },
+      "properties": {
+        "gid": 902290,
+        "name": "160_JOSE MARIA DE HARO",
+        "number": 160,
+        "address": "José María de Haro - Justo y Pastor",
+        "open": "T",
+        "available": 16,
+        "free": 4,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120752000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902291,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.33172623872985, 39.4679692907387]
+      },
+      "properties": {
+        "gid": 902291,
+        "name": "161_MEDITERRANEO",
+        "number": 161,
+        "address": "Mediterráneo - Plaza Cruz de Cañamelar",
+        "open": "T",
+        "available": 2,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120464000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902295,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.32457021161509, 39.4714092990357]
+      },
+      "properties": {
+        "gid": 902295,
+        "name": "165_PAVIA 2",
+        "number": 165,
+        "address": "Pavía - Espadán",
+        "open": "T",
+        "available": 3,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120453000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902298,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.324645206348971, 39.4787853230819]
+      },
+      "properties": {
+        "gid": 902298,
+        "name": "169_PAVIA 4",
+        "number": 169,
+        "address": "Pavía (Instituto Isabel de Villena)",
+        "open": "T",
+        "available": 11,
+        "free": 9,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120653000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902319,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.380296422716548, 39.4460822413369]
+      },
+      "properties": {
+        "gid": 902319,
+        "name": "190_CTRA_MALILLA",
+        "number": 190,
+        "address": "Cra. Malilla - Bulevar Sur",
+        "open": "T",
+        "available": 6,
+        "free": 9,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120593000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902320,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.378866413884951, 39.4503292543495]
+      },
+      "properties": {
+        "gid": 902320,
+        "name": "191_CTRA_MALILLA",
+        "number": 191,
+        "address": "Esparraguera - Cra. Malilla",
+        "open": "T",
+        "available": 8,
+        "free": 7,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120244000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902142,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.38261041097634, 39.4708163239845]
+      },
+      "properties": {
+        "gid": 902142,
+        "name": "010_CALLE_DEL_HOSPITAL_FRENTE_CALLE_HORNO_DEL_HOSP",
+        "number": 10,
+        "address": "Hospital - Horno del Hospital",
+        "open": "T",
+        "available": 4,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120715000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902144,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.374010286297796, 39.4719672234373]
+      },
+      "properties": {
+        "gid": 902144,
+        "name": "012_CALLE_MINYANA",
+        "number": 12,
+        "address": "Calle Salvá - Calle Poeta Querol",
+        "open": "T",
+        "available": 11,
+        "free": 9,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120695000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902146,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.379724402222954, 39.4689673164935]
+      },
+      "properties": {
+        "gid": 902146,
+        "name": "014_BARÓN CARCER",
+        "number": 14,
+        "address": "Huesca - Barón de Cárcer",
+        "open": "T",
+        "available": 2,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120719000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902148,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.370433369372059, 39.4700923161923]
+      },
+      "properties": {
+        "gid": 902148,
+        "name": "016_COLON I",
+        "number": 16,
+        "address": "Colón, 60",
+        "open": "T",
+        "available": 8,
+        "free": 11,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120568000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902324,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.384281424812974, 39.4593842872085]
+      },
+      "properties": {
+        "gid": 902324,
+        "name": "195_CALLE_GIORGETA",
+        "number": 195,
+        "address": "Giorgeta - Roig de Corella",
+        "open": "T",
+        "available": 4,
+        "free": 12,
+        "total": 16,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120284000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902340,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.3977574716661, 39.4587262917139]
+      },
+      "properties": {
+        "gid": 902340,
+        "name": "211_CALLE_FRAY_JUNÍPERO_SERRA_ESQ_CALLE_VALL_D'UIX",
+        "number": 211,
+        "address": "Fray Junípero Serra - Vall d'Uixó",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120266000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902203,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.333531251223082, 39.4603802668653]
+      },
+      "properties": {
+        "gid": 902203,
+        "name": "071_AVDA DEL PUERTO VI",
+        "number": 71,
+        "address": "Av. Puerto - Plaza Tribunal de les Aigües",
+        "open": "T",
+        "available": 0,
+        "free": 20,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120411000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902205,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.342879278649677, 39.4662592905475]
+      },
+      "properties": {
+        "gid": 902205,
+        "name": "073_JERONIMO MONSORIU",
+        "number": 73,
+        "address": "Jerónimo Monsoriu - Industria",
+        "open": "T",
+        "available": 4,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120654000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902294,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.324634214986203, 39.4684602890318]
+      },
+      "properties": {
+        "gid": 902294,
+        "name": "164_PAVIA 1",
+        "number": 164,
+        "address": "Pavía - Columbretes",
+        "open": "T",
+        "available": 15,
+        "free": 2,
+        "total": 17,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120756000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902300,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.329008218062021, 39.4830603398034]
+      },
+      "properties": {
+        "gid": 902300,
+        "name": "171_CALLE GRAN CANARIA",
+        "number": 171,
+        "address": "Gran Canaria - Ingeniero Manuel Maese",
+        "open": "T",
+        "available": 12,
+        "free": 3,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120309000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902304,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.382712394333396, 39.4925893964237]
+      },
+      "properties": {
+        "gid": 902304,
+        "name": "175_CALLE_JUAN_XXIII",
+        "number": 175,
+        "address": "Juan XXIII - Domingo Gómez",
+        "open": "T",
+        "available": 3,
+        "free": 12,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120442000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902306,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.373488362052813, 39.4935453960795]
+      },
+      "properties": {
+        "gid": 902306,
+        "name": "177_CALLE_ALCUDIA",
+        "number": 177,
+        "address": "Alcudia de Crespins - Pedro Patricio Mey",
+        "open": "T",
+        "available": 1,
+        "free": 13,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120578000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902313,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.365570366364552, 39.4527822562936]
+      },
+      "properties": {
+        "gid": 902313,
+        "name": "184_CALLE_BOMBER_RAMON_DUART",
+        "number": 184,
+        "address": "Bombero Ramón Duart - Hermanos Maristas",
+        "open": "T",
+        "available": 4,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120264000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902352,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.401187467780358, 39.47855835894]
+      },
+      "properties": {
+        "gid": 902352,
+        "name": "223_CALLE_VALLE_BALLESTERA_ESQ_PLAZA_POLICIA_LOCAL",
+        "number": 223,
+        "address": "Valle de la Ballestera - Hospital Nueve de Octubre",
+        "open": "T",
+        "available": 2,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120413000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902356,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.402931464226814, 39.4902483984432]
+      },
+      "properties": {
+        "gid": 902356,
+        "name": "227_CALLE_SAN_CLEMENTE_ENTRA_HOSPITAL_ARNAU_VILANO",
+        "number": 227,
+        "address": "San Clemente - Hospital Arnau de Vilanova",
+        "open": "T",
+        "available": 4,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120200000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902376,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.40557349147287, 39.4674103239358]
+      },
+      "properties": {
+        "gid": 902376,
+        "name": "247_AVDA_TRES_CRUCES_MUSICO_AYLLON",
+        "number": 247,
+        "address": "Tres Cruces - Músico Ayllón",
+        "open": "T",
+        "available": 4,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120246000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902143,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.376784390341645, 39.4711863228368]
+      },
+      "properties": {
+        "gid": 902143,
+        "name": "011_PZA_AYTO_CON_CALLE_COTANDA",
+        "number": 11,
+        "address": "Plaza Ayuntamiento - Cotanda",
+        "open": "T",
+        "available": 2,
+        "free": 25,
+        "total": 27,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120449000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902145,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.370874369640853, 39.4720623227334]
+      },
+      "properties": {
+        "gid": 902145,
+        "name": "013_PZA. ALFONSO MAGNANIMO_CON_CALLE_LA_NAVE",
+        "number": 13,
+        "address": "Alfonso el Magnánimo - Nave",
+        "open": "T",
+        "available": 16,
+        "free": 8,
+        "total": 24,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120525000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902147,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.375637388043407, 39.4690883153338]
+      },
+      "properties": {
+        "gid": 902147,
+        "name": "015_RIBERA",
+        "number": 15,
+        "address": "Ribera - Plaza Ayuntamiento",
+        "open": "T",
+        "available": 9,
+        "free": 25,
+        "total": 34,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120691000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902149,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.377259395180612, 39.4674683109919]
+      },
+      "properties": {
+        "gid": 902149,
+        "name": "017_ESTACION RENFE I",
+        "number": 17,
+        "address": "Xátiva - Bailén (Estación del Norte)",
+        "open": "T",
+        "available": 7,
+        "free": 23,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120753000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902378,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.402740488333166, 39.4595062958752]
+      },
+      "properties": {
+        "gid": 902378,
+        "name": "249_AVDA_TRES_CRUCES_SEGUNDA_REPUBLICA_ESPAÑOLA",
+        "number": 249,
+        "address": "Tres Cruces - Segunda República Española",
+        "open": "T",
+        "available": 4,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120186000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902380,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.404413497272129, 39.455830285051]
+      },
+      "properties": {
+        "gid": 902380,
+        "name": "251_ARQUITECTO_SEGURA_LAGO_CAMINO_NUEVO_DE_PICAÑA",
+        "number": 251,
+        "address": "Arquitecto Segura del Lago - Camino Nuevo de Picaña",
+        "open": "T",
+        "available": 13,
+        "free": 2,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120687000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902151,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.391590438798602, 39.4743693405457]
+      },
+      "properties": {
+        "gid": 902151,
+        "name": "019_JUAN_LLORENS",
+        "number": 19,
+        "address": "Juan Llorens - Quart",
+        "open": "T",
+        "available": 4,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120293000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902153,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.390214435404911, 39.4723713328859]
+      },
+      "properties": {
+        "gid": 902153,
+        "name": "021_JUAN_LLORENS_29",
+        "number": 21,
+        "address": "Juan Llorens - Literato Gabriel Miró",
+        "open": "T",
+        "available": 13,
+        "free": 3,
+        "total": 16,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120260000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902226,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.351583301449261, 39.4753783246567]
+      },
+      "properties": {
+        "gid": 902226,
+        "name": "094_AVDA. BLASCO IBAÑEZ 5",
+        "number": 94,
+        "address": "Blasco Ibañez - Clariano",
+        "open": "T",
+        "available": 6,
+        "free": 14,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120739000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902302,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.394678441209281, 39.4845413753682]
+      },
+      "properties": {
+        "gid": 902302,
+        "name": "173_AVENIDA_PIO_XII_34",
+        "number": 173,
+        "address": "Pío XII - Monestir de Poblet",
+        "open": "T",
+        "available": 6,
+        "free": 14,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120508000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902309,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.370683382068801, 39.4560212692277]
+      },
+      "properties": {
+        "gid": 902309,
+        "name": "180_AVENIDA_DOCTOR_WAKSMAN",
+        "number": 180,
+        "address": "Doctor Waksman - Nieves",
+        "open": "T",
+        "available": 11,
+        "free": 9,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120320000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902315,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.374015397013742, 39.4503912524608]
+      },
+      "properties": {
+        "gid": 902315,
+        "name": "186_CALLE_INGENIERO_JOAQUIN_BENLLOCH",
+        "number": 186,
+        "address": "Benifairó de Valldigna - Joaquín Benlloch",
+        "open": "T",
+        "available": 2,
+        "free": 12,
+        "total": 14,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120342000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902357,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.398671446907537, 39.4936924079167]
+      },
+      "properties": {
+        "gid": 902357,
+        "name": "228_AVDA_NICASIO_BENLLOCH_ESQ_CALLE_L'HORTA_SUD",
+        "number": 228,
+        "address": "Doctor Nicasio Benlloch - L'Horta Sud",
+        "open": "T",
+        "available": 0,
+        "free": 15,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120264000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902359,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.386784406340011, 39.494750405604]
+      },
+      "properties": {
+        "gid": 902359,
+        "name": "230_CALLE_POETA_SERRANO_CLAVERO_EQ_GENERAL_LLORENS",
+        "number": 230,
+        "address": "Poeta Serrano Clavero - General Llorens",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120598000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902152,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.387847425326065, 39.4750343409905]
+      },
+      "properties": {
+        "gid": 902152,
+        "name": "020_FERNANDO_EL_CATOLICO_CALLE_QUART",
+        "number": 20,
+        "address": "Quart - Fernando el Católico",
+        "open": "T",
+        "available": 0,
+        "free": 16,
+        "total": 16,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120539000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902154,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.388353431320541, 39.4697873240492]
+      },
+      "properties": {
+        "gid": 902154,
+        "name": "022_JUAN_LLORENS_57",
+        "number": 22,
+        "address": "Angel Guimerá - Juan Llorens",
+        "open": "T",
+        "available": 5,
+        "free": 10,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120750000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902156,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.384027417338412, 39.4690773192125]
+      },
+      "properties": {
+        "gid": 902156,
+        "name": "024_GRAN_VIA_RAMON_Y_CAJAL",
+        "number": 24,
+        "address": "Fernando el Católico - Cuenca",
+        "open": "T",
+        "available": 8,
+        "free": 10,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120758000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902158,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.385864299391174, 39.4663352326894]
+      },
+      "properties": {
+        "gid": 902158,
+        "name": "026_CALLE_SAN_JOSE_DE_CALASANZ",
+        "number": 26,
+        "address": "San José de Calasanz - Salas Quiroga",
+        "open": "T",
+        "available": 5,
+        "free": 10,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120402000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902160,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.367751358800683, 39.4715823195814]
+      },
+      "properties": {
+        "gid": 902160,
+        "name": "028_NAVARRO REVERTE",
+        "number": 28,
+        "address": "Navarro Reverter - Grabador Esteve",
+        "open": "T",
+        "available": 20,
+        "free": 9,
+        "total": 29,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120742000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902361,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.3657533347315, 39.4946443959233]
+      },
+      "properties": {
+        "gid": 902361,
+        "name": "232_SAN_VICENTE_DE_PAUL_SANTIAGO_RUSIÑOL",
+        "number": 232,
+        "address": "San Vicente Paul - Santiago Rusiñol",
+        "open": "T",
+        "available": 0,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120296000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902363,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.373644359789115, 39.4964994056753]
+      },
+      "properties": {
+        "gid": 902363,
+        "name": "234_PLAZA MUSICO_ESPI_JOSE_ESTEVE",
+        "number": 234,
+        "address": "Plaza Músico Espí",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120291000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902365,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.382278390015838, 39.4950664049642]
+      },
+      "properties": {
+        "gid": 902365,
+        "name": "236_RIO_SEGRE_RAFAEL_COMPANY",
+        "number": 236,
+        "address": "Rio Segre - Rafael Company",
+        "open": "T",
+        "available": 0,
+        "free": 15,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120246000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902162,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.368499363655796, 39.4686013098849]
+      },
+      "properties": {
+        "gid": 902162,
+        "name": "030_CIRILO AMOROS",
+        "number": 30,
+        "address": "Cirilo Amorós - Jorge Juan (Mercado Colón)",
+        "open": "T",
+        "available": 11,
+        "free": 9,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120370000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902164,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.368247364994882, 39.4660063015645]
+      },
+      "properties": {
+        "gid": 902164,
+        "name": "032_C/ CONDE DE ALTEA",
+        "number": 32,
+        "address": "Conde Altea - Almirante Cadarso",
+        "open": "T",
+        "available": 1,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120710000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902308,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.366426367926376, 39.4554722661254]
+      },
+      "properties": {
+        "gid": 902308,
+        "name": "179_AVENIDA_DE_LA_PLATA_45",
+        "number": 179,
+        "address": "Av. de la Plata - Zapadores",
+        "open": "T",
+        "available": 8,
+        "free": 14,
+        "total": 23,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120254000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902311,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.374965397169784, 39.4554322693449]
+      },
+      "properties": {
+        "gid": 902311,
+        "name": "182_AVDA_AUSIAS_MARCH",
+        "number": 182,
+        "address": "Ausias March - Pianista Amparo Iturbi",
+        "open": "T",
+        "available": 9,
+        "free": 12,
+        "total": 21,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120311000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902367,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.394383429662934, 39.4974494183559]
+      },
+      "properties": {
+        "gid": 902367,
+        "name": "238_SAN_JOSE_ARTESANO_FRANCISCO_MOROTE_GREUS",
+        "number": 238,
+        "address": "San Jose Artesano - Francisco Morote Greus",
+        "open": "T",
+        "available": 2,
+        "free": 13,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120678000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902163,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.36502835310869, 39.4673653046226]
+      },
+      "properties": {
+        "gid": 902163,
+        "name": "031_CALLE SALAMANCA",
+        "number": 31,
+        "address": "Salamanca - Conde Altea",
+        "open": "T",
+        "available": 6,
+        "free": 9,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120418000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902165,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.373990385623103, 39.4648183002389]
+      },
+      "properties": {
+        "gid": 902165,
+        "name": "033_GRAN_VIA_GERMANIAS_ESQ_CALLE_RUZAFA",
+        "number": 33,
+        "address": "Germanías - Ruzafa",
+        "open": "T",
+        "available": 9,
+        "free": 11,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120725000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902167,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.366994363400595, 39.4637492934114]
+      },
+      "properties": {
+        "gid": 902167,
+        "name": "35_C/ DUQUE DE CALABRIA",
+        "number": 35,
+        "address": "Regne de Valencia - Almirante Cadarso",
+        "open": "T",
+        "available": 9,
+        "free": 0,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120414000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902369,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.401547456081351, 39.4950044139733]
+      },
+      "properties": {
+        "gid": 902369,
+        "name": "240_CAMP_DEL_TURIA_AVDA_CORTES_VALENCIANAS",
+        "number": 240,
+        "address": "Camp del Turia - Corts Valencianes",
+        "open": "T",
+        "available": 5,
+        "free": 15,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120456000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902371,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.404197471232619, 39.4879073914105]
+      },
+      "properties": {
+        "gid": 902371,
+        "name": "242_LA_SAFOR_AVDA_MAESTRO_RODRIGO",
+        "number": 242,
+        "address": "La Safor - Maestro Rodrigo",
+        "open": "T",
+        "available": 8,
+        "free": 7,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120286000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902391,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.4092255068829, 39.4634723129034]
+      },
+      "properties": {
+        "gid": 902391,
+        "name": "262_AVDA_TRES_FORQUES_COLONIA_ESPANOLA_DE_MEXICO",
+        "number": 262,
+        "address": "Tres Forques - Colonia Española de Mexico",
+        "open": "T",
+        "available": 9,
+        "free": 9,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120259000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902169,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.366440625001756, 39.4609378000284]
+      },
+      "properties": {
+        "gid": 902169,
+        "name": "37_AVDA. PERIS Y VALERO",
+        "number": 37,
+        "address": "Peris y Valero - Luis Santángel",
+        "open": "T",
+        "available": 1,
+        "free": 19,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120691000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902171,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.373931391667319, 39.4578542772612]
+      },
+      "properties": {
+        "gid": 902171,
+        "name": "39_AVDA. PERIS Y VALERO",
+        "number": 39,
+        "address": "Peris y Valero - Cuba",
+        "open": "T",
+        "available": 5,
+        "free": 14,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120528000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902228,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.348214291263764, 39.4735543168842]
+      },
+      "properties": {
+        "gid": 902228,
+        "name": "096_AVDA. BLASCO IBAÑEZ 6",
+        "number": 96,
+        "address": "Blasco Ibañez - Yecla",
+        "open": "T",
+        "available": 12,
+        "free": 9,
+        "total": 21,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120737000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902230,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.348442294427372, 39.4696803039961]
+      },
+      "properties": {
+        "gid": 902230,
+        "name": "098_SANTOS JUSTO Y PASTOR",
+        "number": 98,
+        "address": "Justo y Pastor - Duque de Gaeta",
+        "open": "T",
+        "available": 5,
+        "free": 10,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120705000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902236,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.347275284540561, 39.4783863329785]
+      },
+      "properties": {
+        "gid": 902236,
+        "name": "104_ALBALAT DELS TARONGERS",
+        "number": 104,
+        "address": "Albalat dels Tarongers - Paseo Facultades",
+        "open": "T",
+        "available": 16,
+        "free": 4,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120322000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902240,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.333510238808486, 39.4768193210939]
+      },
+      "properties": {
+        "gid": 902240,
+        "name": "109_AVDA. NARANJOS",
+        "number": 109,
+        "address": "Naranjos - Ingeniero Fausto Elio",
+        "open": "T",
+        "available": 3,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120759000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902244,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.343611269446236, 39.4812763408952]
+      },
+      "properties": {
+        "gid": 902244,
+        "name": "113_ETS CAMINOS",
+        "number": 113,
+        "address": "UPV Caminos",
+        "open": "T",
+        "available": 10,
+        "free": 28,
+        "total": 38,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120676000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902173,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.364776359089792, 39.4589122764264]
+      },
+      "properties": {
+        "gid": 902173,
+        "name": "41_AVDA. GRAL. URRUTIA",
+        "number": 41,
+        "address": "General Urrutia - Granada",
+        "open": "T",
+        "available": 5,
+        "free": 15,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120234000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902175,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.361153345836436, 39.4594772762594]
+      },
+      "properties": {
+        "gid": 902175,
+        "name": "43_C/ DE ORIENTE",
+        "number": 43,
+        "address": "Escultor José Capuz - Oriente",
+        "open": "T",
+        "available": 18,
+        "free": 1,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120282000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902239,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.33391526790311, 39.4738261907701]
+      },
+      "properties": {
+        "gid": 902239,
+        "name": "108_ LUIS PEIXO",
+        "number": 108,
+        "address": "Luís Peixó 20",
+        "open": "T",
+        "available": 14,
+        "free": 1,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120339000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902241,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.336680246234625, 39.4807403357171]
+      },
+      "properties": {
+        "gid": 902241,
+        "name": "110_KISSHOMARU",
+        "number": 110,
+        "address": "UPV Trinquet",
+        "open": "T",
+        "available": 26,
+        "free": 3,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120471000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902255,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.361955325960036, 39.4885013731901]
+      },
+      "properties": {
+        "gid": 902255,
+        "name": "124_C/ AZAGADOR DE ALBORAYA",
+        "number": 124,
+        "address": "Azagador de Alboraya - Dolores Marqués",
+        "open": "T",
+        "available": 3,
+        "free": 22,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120636000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902259,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.367544345093534, 39.4887663769327]
+      },
+      "properties": {
+        "gid": 902259,
+        "name": "128_C/ ALFAUIR",
+        "number": 128,
+        "address": "Alfahuir - Peñiscola",
+        "open": "T",
+        "available": 1,
+        "free": 24,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120553000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902382,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.401101487936059, 39.4527262727809]
+      },
+      "properties": {
+        "gid": 902382,
+        "name": "253_PLAZA_JOSE_MELIA_CASTELLO_CAMPOS_CRESPO",
+        "number": 253,
+        "address": "José Meliá Castelló - Campos Crespo",
+        "open": "T",
+        "available": 0,
+        "free": 15,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120187000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902384,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.386029440859011, 39.4477032490661]
+      },
+      "properties": {
+        "gid": 902384,
+        "name": "255_SAN_VICENTE_MARTIR_TOMAS_DE_VILLAROYA",
+        "number": 255,
+        "address": "Tomas de Villarroya - San Vicente",
+        "open": "T",
+        "available": 2,
+        "free": 16,
+        "total": 18,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120226000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902243,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.34227526701991, 39.4785803313741]
+      },
+      "properties": {
+        "gid": 902243,
+        "name": "112_AVDA. DE LOS NARANJOS",
+        "number": 112,
+        "address": "Manuel Broseta i Pont - Naranjos",
+        "open": "T",
+        "available": 31,
+        "free": 9,
+        "total": 40,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120478000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902245,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.346591279156021, 39.4818043438759]
+      },
+      "properties": {
+        "gid": 902245,
+        "name": "114_ADOLFO SUAREZ",
+        "number": 114,
+        "address": "UPV Informática",
+        "open": "T",
+        "available": 5,
+        "free": 24,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120740000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902247,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.357561315447181, 39.4832533535668]
+      },
+      "properties": {
+        "gid": 902247,
+        "name": "116_C/ DR. VICENTE ZARAGOZA",
+        "number": 116,
+        "address": "Doctor Vicente Zaragozá - Ramón Asensio",
+        "open": "T",
+        "available": 13,
+        "free": 1,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120747000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902249,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.360416326687808, 39.4804663457282]
+      },
+      "properties": {
+        "gid": 902249,
+        "name": "118_C/ DR. GOMEZ FERRER",
+        "number": 118,
+        "address": "Gómez Ferrer - Álvaro de Bazán",
+        "open": "T",
+        "available": 10,
+        "free": 10,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120681000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902251,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.362046329062811, 39.4848803612578]
+      },
+      "properties": {
+        "gid": 902251,
+        "name": "120_C_DR VICENTE ZARAGOZA",
+        "number": 120,
+        "address": "Doctor Vicente Zaragozá - Emilio Baró",
+        "open": "T",
+        "available": 14,
+        "free": 4,
+        "total": 18,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120756000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902253,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.354066302879456, 39.4844853560478]
+      },
+      "properties": {
+        "gid": 902253,
+        "name": "122_C_MÚSICO HIPÓLITO MARTÍNEZ",
+        "number": 122,
+        "address": "Músico Hipólito Martínez - Diógenes López Mecho",
+        "open": "T",
+        "available": 2,
+        "free": 13,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120501000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902177,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.361855352923431, 39.4538192575908]
+      },
+      "properties": {
+        "gid": 902177,
+        "name": "45_AVDA. GRAL. URRUTIA",
+        "number": 45,
+        "address": "Hermanos Maristas - General Urrutia",
+        "open": "T",
+        "available": 13,
+        "free": 2,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120748000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902179,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.355418328803628, 39.4565122644027]
+      },
+      "properties": {
+        "gid": 902179,
+        "name": "47_AVDA. AUTOPISTA DEL SALER",
+        "number": 47,
+        "address": "Autopista del Saler - Puente Monteolivete",
+        "open": "T",
+        "available": 2,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120308000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902248,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.357065317141581, 39.4792513399289]
+      },
+      "properties": {
+        "gid": 902248,
+        "name": "117_PRIMADO REIG",
+        "number": 117,
+        "address": "Gascó Oliag - Primado Reig",
+        "open": "T",
+        "available": 11,
+        "free": 18,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120574000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902250,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.363226334736764, 39.4825203542228]
+      },
+      "properties": {
+        "gid": 902250,
+        "name": "119_C/ JAIME ROIG",
+        "number": 119,
+        "address": "Jaime Roig - Bachiller",
+        "open": "T",
+        "available": 3,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120288000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902252,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.358771317481443, 39.4861823643541]
+      },
+      "properties": {
+        "gid": 902252,
+        "name": "121_C_MURTA",
+        "number": 121,
+        "address": "Murta - Sant Eperit",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120601000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902254,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.364841336095187, 39.4876713718147]
+      },
+      "properties": {
+        "gid": 902254,
+        "name": "123_C_ALBOCACER",
+        "number": 123,
+        "address": "Albocácer - Vinaroz",
+        "open": "T",
+        "available": 2,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120658000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902256,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.358618314234554, 39.4896933757754]
+      },
+      "properties": {
+        "gid": 902256,
+        "name": "125_C/ MASQUEFA",
+        "number": 125,
+        "address": "Masquefa, 42 - 44",
+        "open": "T",
+        "available": 5,
+        "free": 10,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120683000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902258,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.364446333330469, 39.4905913817791]
+      },
+      "properties": {
+        "gid": 902258,
+        "name": "127_C/ DUQUE DE MANDAS",
+        "number": 127,
+        "address": "Alfahuir - Duque de Mandas",
+        "open": "T",
+        "available": 3,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120433000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902270,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.382873399957192, 39.4857063740979]
+      },
+      "properties": {
+        "gid": 902270,
+        "name": "139_C/ REUS",
+        "number": 139,
+        "address": "Reus - Alquería de la Estrella",
+        "open": "T",
+        "available": 3,
+        "free": 12,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120438000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902272,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.385156409117421, 39.4832683672453]
+      },
+      "properties": {
+        "gid": 902272,
+        "name": "141_C/ GREGORIO GEA (PEATONAL)",
+        "number": 141,
+        "address": "Gregorio Gea - Padre Ferris",
+        "open": "T",
+        "available": 0,
+        "free": 20,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120391000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902292,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.32979523602243, 39.4636042757393]
+      },
+      "properties": {
+        "gid": 902292,
+        "name": "162_PZA. ARMADA ESPAÑOLA",
+        "number": 162,
+        "address": "Armada Española - Mariano Cuber",
+        "open": "T",
+        "available": 4,
+        "free": 14,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120377000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902317,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.375158323933607, 39.4446212251728]
+      },
+      "properties": {
+        "gid": 902317,
+        "name": "188_HOSPITAL_NUEVA_FE",
+        "number": 188,
+        "address": "Hospital Nueva Fe (consultas externas)",
+        "open": "T",
+        "available": 0,
+        "free": 40,
+        "total": 40,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120523000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902133,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.382929279733158, 39.4800422302064]
+      },
+      "properties": {
+        "gid": 902133,
+        "name": "001_GUILLEN_DE_CASTRO",
+        "number": 1,
+        "address": "C/GUILLEM DE CASTRO esquina con C/NA JORDANA",
+        "open": "T",
+        "available": 0,
+        "free": 24,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120331000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902134,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.379748393609002, 39.4798893533489]
+      },
+      "properties": {
+        "gid": 902134,
+        "name": "002_CALLE_SALVADOR_GINER_CALLE_MUSEO",
+        "number": 2,
+        "address": "Salvador Giner - C. Museo",
+        "open": "T",
+        "available": 3,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120650000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902135,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.380288397642486, 39.4768353435743]
+      },
+      "properties": {
+        "gid": 902135,
+        "name": "003_PLAZA_MUSICO_LOPEZ_CHAVARRI",
+        "number": 3,
+        "address": "Plaza del Musico López Chavarri",
+        "open": "T",
+        "available": 3,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120618000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902297,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.324610208845938, 39.4749083107428]
+      },
+      "properties": {
+        "gid": 902297,
+        "name": "167_PAVIA 3",
+        "number": 167,
+        "address": "Pavía - Acequia de la Cadena",
+        "open": "T",
+        "available": 9,
+        "free": 11,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120313000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902299,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.32533420529242, 39.4829733379109]
+      },
+      "properties": {
+        "gid": 902299,
+        "name": "170_PAVIA 5",
+        "number": 170,
+        "address": "Isabel de Villena - Mendizábal",
+        "open": "T",
+        "available": 13,
+        "free": 7,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120695000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902301,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.393345438657561, 39.4814623650463]
+      },
+      "properties": {
+        "gid": 902301,
+        "name": "172_AVENIDA_PIO_XII",
+        "number": 172,
+        "address": "Pío XII - Campanar",
+        "open": "T",
+        "available": 0,
+        "free": 19,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120664000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902321,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.378714411391963, 39.4526372616155]
+      },
+      "properties": {
+        "gid": 902321,
+        "name": "192_CTRA_MALILLA",
+        "number": 192,
+        "address": "Cra. Malilla - Oltá",
+        "open": "T",
+        "available": 1,
+        "free": 19,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120612000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902323,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.381799304487057, 39.4607722298068]
+      },
+      "properties": {
+        "gid": 902323,
+        "name": "194_ESTACION_AVE_JOAQUIN_SOROLLA",
+        "number": 194,
+        "address": "Estación AVE Joaquín Sorolla",
+        "open": "T",
+        "available": 5,
+        "free": 35,
+        "total": 40,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120287000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902325,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.388066437985473, 39.4595752895686]
+      },
+      "properties": {
+        "gid": 902325,
+        "name": "196_AVDA_GASPAR_AGUILAR",
+        "number": 196,
+        "address": "Jerónimo Muñoz - Gaspar Aguilar",
+        "open": "T",
+        "available": 2,
+        "free": 10,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120321000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902327,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.395316462028443, 39.4608802974005]
+      },
+      "properties": {
+        "gid": 902327,
+        "name": "198_CALLE_FONTANARS_DELS_AFORINS",
+        "number": 198,
+        "address": "Fontanars dels Aforins - Vall d'Uixó",
+        "open": "T",
+        "available": 3,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120429000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902337,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.388578446179311, 39.4516922637696]
+      },
+      "properties": {
+        "gid": 902337,
+        "name": "208_CALLE_CARTEROS_ESQ_CALLE_MOSSEN_FEBRER",
+        "number": 208,
+        "address": "Carteros - Mossen Febrer",
+        "open": "T",
+        "available": 5,
+        "free": 15,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120672000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902339,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.39671647037207, 39.4555532803653]
+      },
+      "properties": {
+        "gid": 902339,
+        "name": "210_CALLE_CAMPOS_CRESPO_ESQ_CALLE_JUAN_DE_GARAY",
+        "number": 210,
+        "address": "Campos Crespo - Juan de Garay",
+        "open": "T",
+        "available": 6,
+        "free": 9,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120310000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902386,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.38910445245389, 39.4452512423469]
+      },
+      "properties": {
+        "gid": 902386,
+        "name": "257_PLAZA_SALVADOR_SORIA_ESQ_PIO_X",
+        "number": 257,
+        "address": "Plaza Salvador Soria, 8",
+        "open": "T",
+        "available": 3,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120183000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902180,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.35855273823229, 39.4508073541841]
+      },
+      "properties": {
+        "gid": 902180,
+        "name": "48_AVDA. ANTONIO FERRANDIS",
+        "number": 48,
+        "address": "Antonio Ferrandis - General Urrutia",
+        "open": "T",
+        "available": 15,
+        "free": 5,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120363000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902182,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.352859322812816, 39.4533182525157]
+      },
+      "properties": {
+        "gid": 902182,
+        "name": "50_AVDA. AUTOPISTA DEL SALER",
+        "number": 50,
+        "address": "Autopista del Saler - Antonio Ferrandis (C.C. El Saler)",
+        "open": "T",
+        "available": 4,
+        "free": 36,
+        "total": 40,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120715000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902184,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.346340298094743, 39.4560342579737]
+      },
+      "properties": {
+        "gid": 902184,
+        "name": "52_C/ LUIS GARCIA BERLANGA",
+        "number": 52,
+        "address": "Luis García Berlanga Martí - Menorca",
+        "open": "T",
+        "available": 12,
+        "free": 13,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120736000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902186,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.352690317195174, 39.4597782736174]
+      },
+      "properties": {
+        "gid": 902186,
+        "name": "54_PASEO ALAMEDA",
+        "number": 54,
+        "address": "Plaza de Europa",
+        "open": "T",
+        "available": 18,
+        "free": 1,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120729000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902188,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.344405289392866, 39.4584212650914]
+      },
+      "properties": {
+        "gid": 902188,
+        "name": "56_AVDA. DE FRANCIA",
+        "number": 56,
+        "address": "Francia - Menorca",
+        "open": "T",
+        "available": 15,
+        "free": 0,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120615000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902190,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.381586410663838, 39.4662183084861]
+      },
+      "properties": {
+        "gid": 902190,
+        "name": "058_PLAZA DE ESPAÑA",
+        "number": 58,
+        "address": "Plaza España",
+        "open": "T",
+        "available": 3,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120713000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902192,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.351776312526146, 39.462231281028]
+      },
+      "properties": {
+        "gid": 902192,
+        "name": "060_AVDA.BALEARES II",
+        "number": 60,
+        "address": "Baleares - Lebón",
+        "open": "T",
+        "available": 11,
+        "free": 8,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120346000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902194,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.342152281293148, 39.4598112684225]
+      },
+      "properties": {
+        "gid": 902194,
+        "name": "062_MENORCA",
+        "number": 62,
+        "address": "Menorca - Baleares",
+        "open": "T",
+        "available": 20,
+        "free": 0,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120501000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902206,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.353734312495747, 39.4699493075468]
+      },
+      "properties": {
+        "gid": 902206,
+        "name": "074_PLAZA SAN FELIPE NERI",
+        "number": 74,
+        "address": "Plaza San Felipe Neri (Mercado Algirós)",
+        "open": "T",
+        "available": 4,
+        "free": 15,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120713000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902296,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.328811224957879, 39.4733493075756]
+      },
+      "properties": {
+        "gid": 902296,
+        "name": "166_PROGRESO",
+        "number": 166,
+        "address": "Don Vicente Guillot - Progreso",
+        "open": "T",
+        "available": 0,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120468000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902326,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.392333454364473, 39.4581842867372]
+      },
+      "properties": {
+        "gid": 902326,
+        "name": "197_CALLE_FONTANARS_DELS_AFORINS",
+        "number": 197,
+        "address": "Fontanars dels Aforins - Jacinto Labaila",
+        "open": "T",
+        "available": 9,
+        "free": 6,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120245000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902210,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.358688329939162, 39.4699453105094]
+      },
+      "properties": {
+        "gid": 902210,
+        "name": "078_AVDA. ARAGÓN I",
+        "number": 78,
+        "address": "Aragón - Vicente Sancho Tello",
+        "open": "T",
+        "available": 4,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120758000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902212,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.36229833944736, 39.4737423244491]
+      },
+      "properties": {
+        "gid": 902212,
+        "name": "080_AMADEO SAVOIA",
+        "number": 80,
+        "address": "Amadeo de Saboya (frente Ayuntamiento)",
+        "open": "T",
+        "available": 8,
+        "free": 17,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120761000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902181,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.357110419882636, 39.4529869323974]
+      },
+      "properties": {
+        "gid": 902181,
+        "name": "49_C/ RICARDO MUÑOZ SUAY",
+        "number": 49,
+        "address": "Ricardo Muñoz Suay - María José Victoria Fuster (C.C. El Saler)",
+        "open": "T",
+        "available": 13,
+        "free": 12,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120482000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902183,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.347227304906047, 39.452183245525]
+      },
+      "properties": {
+        "gid": 902183,
+        "name": "51_PSO. DE LAS MORERAS",
+        "number": 51,
+        "address": "Moreras (Oceanográfico)",
+        "open": "T",
+        "available": 0,
+        "free": 20,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120253000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902185,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.348139304004801, 39.4567642614168]
+      },
+      "properties": {
+        "gid": 902185,
+        "name": "53_C/ LUIS GARCIA BERLANGA",
+        "number": 53,
+        "address": "Alameda - Pintor Maella",
+        "open": "T",
+        "available": 25,
+        "free": 0,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120503000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902187,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.348686304115956, 39.4593432697542]
+      },
+      "properties": {
+        "gid": 902187,
+        "name": "55_AVDA. DE FRANCIA",
+        "number": 55,
+        "address": "Francia - Pintor Maella",
+        "open": "T",
+        "available": 25,
+        "free": 0,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120343000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902189,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.358256332431525, 39.464476291792]
+      },
+      "properties": {
+        "gid": 902189,
+        "name": "057_CALLE PINTOR MONLEON",
+        "number": 57,
+        "address": "Alameda - Pintor Monleón",
+        "open": "T",
+        "available": 7,
+        "free": 12,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120753000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902193,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.347830298867431, 39.4612932759996]
+      },
+      "properties": {
+        "gid": 902193,
+        "name": "061_VICENTE VIDAL",
+        "number": 61,
+        "address": "Vicent Vidal - Pintor Maella",
+        "open": "T",
+        "available": 15,
+        "free": 5,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120754000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902195,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.358414330727018, 39.4677793028598]
+      },
+      "properties": {
+        "gid": 902195,
+        "name": "063_AVDA. DEL PUERTO I",
+        "number": 63,
+        "address": "Av Puerto 19 (Telefónica)",
+        "open": "T",
+        "available": 4,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120761000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902197,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.350837306195181, 39.465516292011]
+      },
+      "properties": {
+        "gid": 902197,
+        "name": "065_AVDA. DEL PUERTO III",
+        "number": 65,
+        "address": "Av. Puerto - Doctor Manuel Candela",
+        "open": "T",
+        "available": 8,
+        "free": 11,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120708000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902199,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.336798263040223, 39.4588602632038]
+      },
+      "properties": {
+        "gid": 902199,
+        "name": "067_JUAN VERDEGUER",
+        "number": 67,
+        "address": "Juan Verdeguer - Toneleros",
+        "open": "T",
+        "available": 3,
+        "free": 11,
+        "total": 14,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120388000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902201,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.338721267987512, 39.461952273845]
+      },
+      "properties": {
+        "gid": 902201,
+        "name": "069_AVDA. DEL PUERTO",
+        "number": 69,
+        "address": "Av. Puerto - Serrería",
+        "open": "T",
+        "available": 9,
+        "free": 16,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120692000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902207,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.351701304202951, 39.4721133138539]
+      },
+      "properties": {
+        "gid": 902207,
+        "name": "075_CAMPOAMOR I",
+        "number": 75,
+        "address": "República Argentina - Campoamor",
+        "open": "T",
+        "available": 0,
+        "free": 18,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120293000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902208,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.343461277578989, 39.4700833034736]
+      },
+      "properties": {
+        "gid": 902208,
+        "name": "076_CAMPOAMOR II",
+        "number": 76,
+        "address": "Campoamor - Músico Ginés",
+        "open": "T",
+        "available": 15,
+        "free": 1,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120702000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902211,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.357242322435451, 39.4727793187067]
+      },
+      "properties": {
+        "gid": 902211,
+        "name": "079_AVDA. ARAGON II",
+        "number": 79,
+        "address": "Aragón - Ernesto Ferrer",
+        "open": "T",
+        "available": 3,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120534000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902213,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.360978333546597, 39.4751283285118]
+      },
+      "properties": {
+        "gid": 902213,
+        "name": "081_DOCTOR FORNOS",
+        "number": 81,
+        "address": "Micer Mascó - Rodriguez Fornos",
+        "open": "T",
+        "available": 1,
+        "free": 19,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120436000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902264,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.375882378270238, 39.4827563607926]
+      },
+      "properties": {
+        "gid": 902264,
+        "name": "133_C/ ALFAMBRA",
+        "number": 133,
+        "address": "Alfambra - Poeta Monmeneu",
+        "open": "T",
+        "available": 7,
+        "free": 8,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120289000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902341,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.400396478237462, 39.4614843013095]
+      },
+      "properties": {
+        "gid": 902341,
+        "name": "212_CALLE_FRAY_JUANÍPERO_SERRA_ESQ_CALLE_TORRENTE",
+        "number": 212,
+        "address": "Fray Juanípero Serra - Torrente",
+        "open": "T",
+        "available": 5,
+        "free": 10,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120263000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902345,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.399461300725476, 39.4691622436341]
+      },
+      "properties": {
+        "gid": 902345,
+        "name": "216_AVDA_DEL_CID_ESQ_CALLE_BURGOS",
+        "number": 216,
+        "address": "Av. del Cid - Burgos",
+        "open": "T",
+        "available": 2,
+        "free": 15,
+        "total": 17,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120673000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902347,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.397384461471041, 39.4707403307855]
+      },
+      "properties": {
+        "gid": 902347,
+        "name": "218_CALLE_OLIMPIA AROZENA TORRES_ESQ_JUAN BAPTISTA",
+        "number": 218,
+        "address": "Olimpia Arozena Torres - Juan Bautista Vives",
+        "open": "T",
+        "available": 0,
+        "free": 15,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120300000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902349,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.398321462395744, 39.4738553420804]
+      },
+      "properties": {
+        "gid": 902349,
+        "name": "220_CALLE_CASTAN_TOBEÑAS_ESQ_CALLE_DE_GOYA",
+        "number": 220,
+        "address": "Castán Tobeñas - Patriques",
+        "open": "T",
+        "available": 5,
+        "free": 11,
+        "total": 16,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120468000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902351,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.397282456099208, 39.4768933517477]
+      },
+      "properties": {
+        "gid": 902351,
+        "name": "222_AVDA_MAESTRO_RODRIGO_ESQ_AVDA_MANUEL_DE_FALLA",
+        "number": 222,
+        "address": "Maestro Rodrigo - Manuel de Falla",
+        "open": "T",
+        "available": 8,
+        "free": 12,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120490000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902353,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.403588474355279, 39.4805683669649]
+      },
+      "properties": {
+        "gid": 902353,
+        "name": "224_PLAZA_JOSE_MONFORTE_TUDELA_ESQ_CALLE_HERNANDEZ",
+        "number": 224,
+        "address": "Jorge Comin (Metge) - Terrateig",
+        "open": "T",
+        "available": 0,
+        "free": 20,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120250000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902355,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.398859450565426, 39.4908643991833]
+      },
+      "properties": {
+        "gid": 902355,
+        "name": "226_CALLE_SAFOR_ESQ_AVDA_DE_LAS_CORTES_VALENCIANAS",
+        "number": 226,
+        "address": "Corts Valencianes - La Safor",
+        "open": "T",
+        "available": 0,
+        "free": 30,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120339000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902214,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.383914410405702, 39.4760563423863]
+      },
+      "properties": {
+        "gid": 902214,
+        "name": "082_GUILLEN_DE_CASTRO_TORRES_DE_QUART",
+        "number": 82,
+        "address": "Guillem de Castro (Torres de Quart)",
+        "open": "T",
+        "available": 2,
+        "free": 12,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120587000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902358,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.394806434247495, 39.4931044039917]
+      },
+      "properties": {
+        "gid": 902358,
+        "name": "229_CALLE_AITANA_ESQ_AVDA_BURJASSOT",
+        "number": 229,
+        "address": "Aitana - Florista",
+        "open": "T",
+        "available": 0,
+        "free": 16,
+        "total": 16,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120215000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902360,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.378621377264418, 39.4950724029845]
+      },
+      "properties": {
+        "gid": 902360,
+        "name": "231_CALLE_DE_ALCAÑIZ_ESQ_CALLE_CAMBRILS",
+        "number": 231,
+        "address": "Alcañiz - Cambrils",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120363000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.369437345173843, 39.4971604060392]
+      },
+      "properties": {
+        "gid": 902362,
+        "name": "233_SAN_JUAN_BOSCO_SANTIAGO_RUSIÑOL",
+        "number": 233,
+        "address": "San Juan Bosco - Santiago Rusiñol",
+        "open": "T",
+        "available": 2,
+        "free": 13,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120731000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902364,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.377203370325594, 39.4980454120554]
+      },
+      "properties": {
+        "gid": 902364,
+        "name": "235_CONDE_DE_TORREFIEL_CECILIO_PLA",
+        "number": 235,
+        "address": "Conde Torrefiel - Cecilio Plá",
+        "open": "T",
+        "available": 0,
+        "free": 15,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120172000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902366,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.391038420635871, 39.4947584077764]
+      },
+      "properties": {
+        "gid": 902366,
+        "name": "237_LEVANTE_UD_AVDA_ECUADOR",
+        "number": 237,
+        "address": "Levante U.D. - Ecuador",
+        "open": "T",
+        "available": 9,
+        "free": 6,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120194000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902368,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.399964449531073, 39.4969854198013]
+      },
+      "properties": {
+        "gid": 902368,
+        "name": "239_LA_FLORISTA_TRANVIA_PALACIO_CONGRESOS",
+        "number": 239,
+        "address": "Florista - T4 (Palau de Congressos)",
+        "open": "T",
+        "available": 17,
+        "free": 3,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120187000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902370,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.401890458664212, 39.4929784071115]
+      },
+      "properties": {
+        "gid": 902370,
+        "name": "241_VALL_DE_ALBAIDA_PEATONAL",
+        "number": 241,
+        "address": "La Vall d'Albaida - Corts Valencianes",
+        "open": "T",
+        "available": 6,
+        "free": 9,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120233000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902372,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.384542423661157, 39.4628202990106]
+      },
+      "properties": {
+        "gid": 902372,
+        "name": "243_ALBACETE_ESQ_MALUQUER",
+        "number": 243,
+        "address": "Albacete - Maluquer",
+        "open": "T",
+        "available": 0,
+        "free": 17,
+        "total": 18,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120282000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902374,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.405270299364341, 39.4721302480601]
+      },
+      "properties": {
+        "gid": 902374,
+        "name": "245_9_DE_OCTUBRE_CIEZA",
+        "number": 245,
+        "address": "Nueve de Octubre - Cieza",
+        "open": "T",
+        "available": 4,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120498000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902215,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.366970351991476, 39.4775853392959]
+      },
+      "properties": {
+        "gid": 902215,
+        "name": "83_PZA. DE LA LEGIÓN ESPAÑOLA",
+        "number": 83,
+        "address": "General Elio - Llano del Real",
+        "open": "T",
+        "available": 23,
+        "free": 2,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120726000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902216,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.335225976865908, 39.4671230923945]
+      },
+      "properties": {
+        "gid": 902216,
+        "name": "84_SERRERIA_ESQ_PINTOR FERRER CALATAYUD",
+        "number": 84,
+        "address": "Serrería, 67",
+        "open": "T",
+        "available": 7,
+        "free": 8,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120696000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902217,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.364715342268441, 39.4794643450228]
+      },
+      "properties": {
+        "gid": 902217,
+        "name": "085_AVDA_BLASCO IBAÑEZ 1",
+        "number": 85,
+        "address": "Blasco Ibañez - Jaime Roig",
+        "open": "T",
+        "available": 13,
+        "free": 10,
+        "total": 23,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120488000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902218,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.391193451915756, 39.4552402764855]
+      },
+      "properties": {
+        "gid": 902218,
+        "name": "86_AVDA_GASPAR_AGUILAR_ESQ_VICENTE_PARRA",
+        "number": 86,
+        "address": "Gaspar Aguilar - Vicente Parra",
+        "open": "T",
+        "available": 4,
+        "free": 16,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120365000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902219,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.3618803335786, 39.4785183401911]
+      },
+      "properties": {
+        "gid": 902219,
+        "name": "87_AVDA BLASCO IBAÑEZ 2",
+        "number": 87,
+        "address": "Blasco Ibañez - Doctor Gómez Ferrer (Clínico)",
+        "open": "T",
+        "available": 11,
+        "free": 17,
+        "total": 33,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120749000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902220,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.361142332483774, 39.4775123360968]
+      },
+      "properties": {
+        "gid": 902220,
+        "name": "088_AVDA. BLASCO IBAÑEZ 3",
+        "number": 88,
+        "address": "Blasco Ibañez, 28 (F. Geografía e Historia)",
+        "open": "T",
+        "available": 32,
+        "free": 8,
+        "total": 40,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120460000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902221,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.359318325908927, 39.4778023368974]
+      },
+      "properties": {
+        "gid": 902221,
+        "name": "89_AVDA. BLASCO IBAÑEZ",
+        "number": 89,
+        "address": "Blasco Ibañez, 23 (F. Filosofía y Psicología)",
+        "open": "T",
+        "available": 23,
+        "free": 7,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120718000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902222,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.358967325446734, 39.476734332981]
+      },
+      "properties": {
+        "gid": 902222,
+        "name": "90_AVDA. BLASCO IBAÑEZ",
+        "number": 90,
+        "address": "Blasco Ibañez, 32 (F. Filología)",
+        "open": "T",
+        "available": 35,
+        "free": 5,
+        "total": 40,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120638000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902223,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.367573379697031, 39.4441252288742]
+      },
+      "properties": {
+        "gid": 902223,
+        "name": "091_CALLE_GRABADOR_JORDAN_46_PLAZA_ESCULTOR_PASTOR",
+        "number": 91,
+        "address": "Grabador Jordan - Escultor Pastor",
+        "open": "T",
+        "available": 8,
+        "free": 6,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120379000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902224,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.355968315835597, 39.4758603288354]
+      },
+      "properties": {
+        "gid": 902224,
+        "name": "092_AVDA. DE ARAGON, 4 - ESQ AVDA BLASCO IBAÑEZ",
+        "number": 92,
+        "address": "Blasco Ibañez - Aragón",
+        "open": "T",
+        "available": 6,
+        "free": 12,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120745000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902225,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.343809277423822, 39.4722823106708]
+      },
+      "properties": {
+        "gid": 902225,
+        "name": "93_AVADA_BLASCO_IBAÑEZ_DESP_C_POETA_DURAN_TORTAJAD",
+        "number": 93,
+        "address": "Blasco Ibañez - Poeta Durán Tortajada",
+        "open": "T",
+        "available": 17,
+        "free": 21,
+        "total": 38,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120665000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902287,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.387366432507832, 39.4640523041609]
+      },
+      "properties": {
+        "gid": 902287,
+        "name": "157_AVENIDA_PEREZ_GALDOS",
+        "number": 157,
+        "address": "Pérez Galdós - Marqués de Zenete",
+        "open": "T",
+        "available": 0,
+        "free": 20,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120279000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902289,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.334722253248553, 39.4634492768664]
+      },
+      "properties": {
+        "gid": 902289,
+        "name": "159_FRANCISCO CUBELLS",
+        "number": 159,
+        "address": "Francisco Cubells - San José de la Vega",
+        "open": "T",
+        "available": 2,
+        "free": 14,
+        "total": 17,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120761000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902231,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.340484266099, 39.4713443063502]
+      },
+      "properties": {
+        "gid": 902231,
+        "name": "099_AVDA. BLASCO IBAÑEZ 166_PINTOR JOSÉ MONGRELL",
+        "number": 99,
+        "address": "Blasco Ibañez 166 - Pintor José Mongrell",
+        "open": "T",
+        "available": 8,
+        "free": 13,
+        "total": 21,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120546000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902233,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.334842281112213, 39.4702289917274]
+      },
+      "properties": {
+        "gid": 902233,
+        "name": "101_AVDA. BLASCO IBAÑEZ 10",
+        "number": 101,
+        "address": "Marino Blas de Lezo (estación Cabañal Adif)",
+        "open": "T",
+        "available": 7,
+        "free": 21,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120550000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902235,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.352371301745389, 39.4784533356726]
+      },
+      "properties": {
+        "gid": 902235,
+        "name": "103_RUBEN DARIO",
+        "number": 103,
+        "address": "Rubén Darío - Plaza Fray Luis Colomer",
+        "open": "T",
+        "available": 3,
+        "free": 12,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120588000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902399,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.392889423121417, 39.5000754264904]
+      },
+      "properties": {
+        "gid": 902399,
+        "name": "270_CALLE_NINOT_ESQ_PZA_REGINO_MAS",
+        "number": 270,
+        "address": "Ninot - Regino Mas",
+        "open": "T",
+        "available": 11,
+        "free": 5,
+        "total": 16,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120655000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902237,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.341387265226881, 39.4767443246628]
+      },
+      "properties": {
+        "gid": 902237,
+        "name": "106_AVDA. DE LOS NARANJOS",
+        "number": 106,
+        "address": "Albalat dels Tarongers - Professor Ernest Lluch",
+        "open": "T",
+        "available": 11,
+        "free": 13,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120635000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902257,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.360104316048953, 39.4930983878884]
+      },
+      "properties": {
+        "gid": 902257,
+        "name": "126_C/ ALFAUIR",
+        "number": 126,
+        "address": "Alfahuir - José Chabas Bordehore",
+        "open": "T",
+        "available": 3,
+        "free": 17,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120333000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902277,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.380207400154532, 39.4732013310791]
+      },
+      "properties": {
+        "gid": 902277,
+        "name": "147_CALLE_PIE_DE_LA_CRUZ_CALLE_DE_LA_REJA",
+        "number": 147,
+        "address": "Pie de la Cruz - Rejas",
+        "open": "T",
+        "available": 0,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120655000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902279,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.361795346004997, 39.4629342879471]
+      },
+      "properties": {
+        "gid": 902279,
+        "name": "149_AVDA. PERIS Y VALERO",
+        "number": 149,
+        "address": "Peris y Valero - Salamanca",
+        "open": "T",
+        "available": 15,
+        "free": 5,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120686000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902281,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.337117260314212, 39.4646692824222]
+      },
+      "properties": {
+        "gid": 902281,
+        "name": "151_JERONIMO MONSORIU",
+        "number": 151,
+        "address": "Jerónimo Monsoriu - Alcalde Cano Coloma",
+        "open": "T",
+        "available": 8,
+        "free": 12,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120747000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902283,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.380591274533159, 39.4830582280529]
+      },
+      "properties": {
+        "gid": 902283,
+        "name": "153_C/ LLANO DE ZAIDA",
+        "number": 153,
+        "address": "Llano de la Zaidía - Doctor Olóriz",
+        "open": "T",
+        "available": 12,
+        "free": 12,
+        "total": 24,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120677000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902285,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.363078348426716, 39.4649532957482]
+      },
+      "properties": {
+        "gid": 902285,
+        "name": "155_C/ SALAMANCA",
+        "number": 155,
+        "address": "Salamanca - Reina Doña Germana",
+        "open": "T",
+        "available": 15,
+        "free": 1,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120271000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902284,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.329554230565128, 39.469876296229]
+      },
+      "properties": {
+        "gid": 902284,
+        "name": "154_PESCADORES",
+        "number": 154,
+        "address": "Pescadores - Progreso",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120721000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902232,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.338150258534457, 39.4716343056469]
+      },
+      "properties": {
+        "gid": 902232,
+        "name": "100_AVDA. BLASCO IBAÑEZ 9",
+        "number": 100,
+        "address": "Blasco Ibañez - Mestre Ripoll",
+        "open": "T",
+        "available": 9,
+        "free": 11,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120602000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902234,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.346720283882565, 39.4758333239409]
+      },
+      "properties": {
+        "gid": 902234,
+        "name": "102_AVDA.RAMON LLUL",
+        "number": 102,
+        "address": "Ramón Llull - Serpis",
+        "open": "T",
+        "available": 8,
+        "free": 12,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120668000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902238,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.336224249092253, 39.4752453171364]
+      },
+      "properties": {
+        "gid": 902238,
+        "name": "107_C/ CAMPILLO ALTO BUEY",
+        "number": 107,
+        "address": "Campillo de Altobuey (Polideportivo)",
+        "open": "T",
+        "available": 12,
+        "free": 3,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120571000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902242,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.339508261334133, 39.4806641950416]
+      },
+      "properties": {
+        "gid": 902242,
+        "name": "111_UNIVERSIDAD POLITECNICA – JUNTO PISTAS DEPORTI",
+        "number": 111,
+        "address": "UPV Galileo",
+        "open": "T",
+        "available": 27,
+        "free": 3,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120723000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902246,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.352148298520947, 39.4815623455981]
+      },
+      "properties": {
+        "gid": 902246,
+        "name": "115_C/ DR. VICENTE ZARAGOZA",
+        "number": 115,
+        "address": "Cataluña - Doctor Vicente Zaragozá",
+        "open": "T",
+        "available": 1,
+        "free": 15,
+        "total": 16,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120300000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902260,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.369945355774191, 39.4859753690895]
+      },
+      "properties": {
+        "gid": 902260,
+        "name": "129_C_ALMAZORA",
+        "number": 129,
+        "address": "Almazora - Benimuslem",
+        "open": "T",
+        "available": 1,
+        "free": 19,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120341000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902262,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.372912273221524, 39.4814172217003]
+      },
+      "properties": {
+        "gid": 902262,
+        "name": "131_CALLE SANTA AMALIA  2",
+        "number": 131,
+        "address": "CALLE SANTA AMALIA  2, esquina POETA BODRIA",
+        "open": "T",
+        "available": 2,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120691000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902276,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.398395456094638, 39.4815473675982]
+      },
+      "properties": {
+        "gid": 902276,
+        "name": "145_PLAZA_BADAJOZ",
+        "number": 145,
+        "address": "Plaza Badajoz",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120259000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902278,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.375378293738875, 39.467145224613]
+      },
+      "properties": {
+        "gid": 902278,
+        "name": "148_XÀTIVA_PLAZA_DE_TOROS",
+        "number": 148,
+        "address": "C/Xàtiva 30-32",
+        "open": "T",
+        "available": 22,
+        "free": 13,
+        "total": 35,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120554000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902280,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.350609303645443, 39.4677212985667]
+      },
+      "properties": {
+        "gid": 902280,
+        "name": "150_DR. MANUEL CANDELA",
+        "number": 150,
+        "address": "Manuel Candela - Rodriguez de Cepeda",
+        "open": "T",
+        "available": 7,
+        "free": 18,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120638000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902282,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.372705384923121, 39.4609252867697]
+      },
+      "properties": {
+        "gid": 902282,
+        "name": "152_C/ LITERATO AZORÍN",
+        "number": 152,
+        "address": "Reina Doña María - Cádiz",
+        "open": "T",
+        "available": 4,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120324000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902286,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.37634539681841, 39.4609642882977]
+      },
+      "properties": {
+        "gid": 902286,
+        "name": "156_C/ CUBA",
+        "number": 156,
+        "address": "Puerto Rico - Cuba",
+        "open": "T",
+        "available": 15,
+        "free": 0,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120674000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902350,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.402853476038636, 39.4752703486378]
+      },
+      "properties": {
+        "gid": 902350,
+        "name": "221_AVDA_MANUEL_DE_FALLA_ESQ_CALLE_HERNANDEZ_LAZAR",
+        "number": 221,
+        "address": "Manuel de Falla - Hernández Lázaro",
+        "open": "T",
+        "available": 2,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120635000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902303,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.386647409576449, 39.489438388167]
+      },
+      "properties": {
+        "gid": 902303,
+        "name": "174_CALLE_MONDUBER",
+        "number": 174,
+        "address": "Monduber - Peset Aleixandre",
+        "open": "T",
+        "available": 4,
+        "free": 15,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120307000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902305,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.378853381402734, 39.4920173931073]
+      },
+      "properties": {
+        "gid": 902305,
+        "name": "176_CAMINO_DE_MONCADA_52",
+        "number": 176,
+        "address": "Cno. Moncada - Pedro Patricio Mey",
+        "open": "T",
+        "available": 5,
+        "free": 15,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120432000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902307,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.370506352266527, 39.4922163901779]
+      },
+      "properties": {
+        "gid": 902307,
+        "name": "178_CALLE_REIG_GENOVES",
+        "number": 178,
+        "address": "Reig Genovés - Ramón Contreras Mongrell",
+        "open": "T",
+        "available": 2,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120706000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902329,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.393214449737618, 39.4677373190459]
+      },
+      "properties": {
+        "gid": 902329,
+        "name": "200_AVDA_DEL_CID",
+        "number": 200,
+        "address": "Av. del Cid - Julián Peña",
+        "open": "T",
+        "available": 0,
+        "free": 15,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120280000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902331,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.393334443044171, 39.4762223475372]
+      },
+      "properties": {
+        "gid": 902331,
+        "name": "202_PASEO_PECHINA",
+        "number": 202,
+        "address": "Pechina - Teruel",
+        "open": "T",
+        "available": 12,
+        "free": 8,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120631000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902333,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.396587446130787, 39.4858433805942]
+      },
+      "properties": {
+        "gid": 902333,
+        "name": "204_AVDA_GENERAL_AVILES",
+        "number": 204,
+        "address": "Corts Valencianes - General Avilés",
+        "open": "T",
+        "available": 6,
+        "free": 14,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120695000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902335,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.389007415242801, 39.4927123999043]
+      },
+      "properties": {
+        "gid": 902335,
+        "name": "206_CALLE_PERIODISTA_GIL_SUMBIELA",
+        "number": 206,
+        "address": "Periodista Gil Sumbiela - Poeta Serrano Clavero",
+        "open": "T",
+        "available": 2,
+        "free": 12,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120493000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902342,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.396972465917639, 39.4631653059126]
+      },
+      "properties": {
+        "gid": 902342,
+        "name": "213_CALLE_ARCHIDUQUE_CARLOS_ESQ_CALLE_JOSE_MA_MOR",
+        "number": 213,
+        "address": "Archiduque Carlos - José María Mortes Lerma",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120239000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902344,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.396748462548829, 39.4656713141437]
+      },
+      "properties": {
+        "gid": 902344,
+        "name": "215_CALLE_MUSICO_AYLLON_ESQ_CALLE_FRANCISCO_DOLZ",
+        "number": 215,
+        "address": "Músico Ayllón - Francisco Dolz",
+        "open": "T",
+        "available": 4,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120215000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902346,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.404596486528656, 39.4703283332136]
+      },
+      "properties": {
+        "gid": 902346,
+        "name": "217_CALLE_9_DE_OCTUBRE_ESQ_CALLE_PINTOR_STOLZ",
+        "number": 217,
+        "address": "Pintor Stolz - Nueve de Octubre",
+        "open": "T",
+        "available": 2,
+        "free": 23,
+        "total": 25,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120225000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902348,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.403030297990242, 39.4726572461055]
+      },
+      "properties": {
+        "gid": 902348,
+        "name": "219_CALLE_CASTAN_TOBEÑAS_ESQ_CALLE_VELAZQUEZ",
+        "number": 219,
+        "address": "Castán Tobeñas - Rincon de Ademuz",
+        "open": "T",
+        "available": 0,
+        "free": 18,
+        "total": 18,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120206000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902403,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.333188259306343, 39.448070225765]
+      },
+      "properties": {
+        "gid": 902403,
+        "name": "274_MANUEL_ANDRES_CASTELL_DE_POLOP",
+        "number": 274,
+        "address": "San Francisco de Paula - Castell de Pop",
+        "open": "T",
+        "available": 8,
+        "free": 7,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120460000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902405,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.323765216558426, 39.4619752668271]
+      },
+      "properties": {
+        "gid": 902405,
+        "name": "276_EDIFICIO_VELES_E_VENTS",
+        "number": 276,
+        "address": "Veles e Vents",
+        "open": "T",
+        "available": 9,
+        "free": 8,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120413000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902310,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.368191371323359, 39.4579992750971]
+      },
+      "properties": {
+        "gid": 902310,
+        "name": "181_CALLE_DEL_SALINAR",
+        "number": 181,
+        "address": "Zapadores, 23",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120196000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902312,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.372284389941703, 39.4526202591335]
+      },
+      "properties": {
+        "gid": 902312,
+        "name": "183 - AVDA AUSIAS MARCH",
+        "number": 183,
+        "address": "Ausias March - Av. de la Plata",
+        "open": "T",
+        "available": 11,
+        "free": 7,
+        "total": 18,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120550000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902314,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.370503385018667, 39.4500442494892]
+      },
+      "properties": {
+        "gid": 902314,
+        "name": "185_AVDA_AUSIAS_MARCH",
+        "number": 185,
+        "address": "Ebanista Caselles - Ausias March",
+        "open": "T",
+        "available": 11,
+        "free": 4,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1778805293000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902316,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.36881838093618, 39.4479602415185]
+      },
+      "properties": {
+        "gid": 902316,
+        "name": "187_AVDA_AUSIAS_MARCH",
+        "number": 187,
+        "address": "Ángel Villena - Ausias March",
+        "open": "T",
+        "available": 10,
+        "free": 5,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120679000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902318,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.377065324157876, 39.4447792270187]
+      },
+      "properties": {
+        "gid": 902318,
+        "name": "189_HOSPITAL_NUEVA_FE",
+        "number": 189,
+        "address": "Hospital Nueva Fe (administración)",
+        "open": "T",
+        "available": 22,
+        "free": 8,
+        "total": 30,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120235000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902328,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.391558448239758, 39.4615882980114]
+      },
+      "properties": {
+        "gid": 902328,
+        "name": "199_CALLE_BEATO_NICOLAS_FACTOR",
+        "number": 199,
+        "address": "Beato Nicolás Factor - Convento de Jesús",
+        "open": "T",
+        "available": 8,
+        "free": 6,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120354000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902330,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.393668447248941, 39.4717123328975]
+      },
+      "properties": {
+        "gid": 902330,
+        "name": "201_AVDA_PEREZ_GALDOS",
+        "number": 201,
+        "address": "Perez Galdós - Nou Moles",
+        "open": "T",
+        "available": 1,
+        "free": 19,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120742000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902332,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.401182462974041, 39.4846093788336]
+      },
+      "properties": {
+        "gid": 902332,
+        "name": "203_CALLE_REINA_VIOLANTE",
+        "number": 203,
+        "address": "Reina Violante - Escultor García Mas",
+        "open": "T",
+        "available": 13,
+        "free": 2,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120562000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902334,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.393090432354716, 39.4892873905354]
+      },
+      "properties": {
+        "gid": 902334,
+        "name": "205_CALLE_NICASIO_BENLLOCH",
+        "number": 205,
+        "address": "Nicasio Benlloch - Amics dels Corpus",
+        "open": "T",
+        "available": 2,
+        "free": 22,
+        "total": 24,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120516000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902336,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.381905420300487, 39.4553932729466]
+      },
+      "properties": {
+        "gid": 902336,
+        "name": "207_CALLE_MILLARES_ESQ_CALLE_FEDERICO_GARCA_LORCA",
+        "number": 207,
+        "address": "Giorgeta, 64",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120229000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902343,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.40057647639885, 39.4649323130283]
+      },
+      "properties": {
+        "gid": 902343,
+        "name": "214_CALLE_SANTA_CRUZ_DE_TENERIFE_ESQ_CALLE_LLOMBA",
+        "number": 214,
+        "address": "Santa Cruz de Tenerife, 21",
+        "open": "T",
+        "available": 6,
+        "free": 9,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120255000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902354,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.401142460191724, 39.4881073904205]
+      },
+      "properties": {
+        "gid": 902354,
+        "name": "225_CALLE_PADRE_BARRANCO_DESPUES_CALLE_BENIFAIRO",
+        "number": 225,
+        "address": "Padre Barranco - Carlos Ruano Llopis (Pintor)",
+        "open": "T",
+        "available": 2,
+        "free": 18,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120355000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902388,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.393015466080391, 39.4454602451497]
+      },
+      "properties": {
+        "gid": 902388,
+        "name": "259_CALLE_PIO_IX_POLIDEPORTIVO_RAMBLETA",
+        "number": 259,
+        "address": "Pio IX - Músico Cabanilles",
+        "open": "T",
+        "available": 16,
+        "free": 4,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120255000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902390,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.350377295881688, 39.4766763283452]
+      },
+      "properties": {
+        "gid": 902390,
+        "name": "261_PZA_XUQUER_ESQ_VINALOPO",
+        "number": 261,
+        "address": "Plaza Xuquer - Vinalopó",
+        "open": "T",
+        "available": 12,
+        "free": 7,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120660000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902392,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.409644505654129, 39.4670433246485]
+      },
+      "properties": {
+        "gid": 902392,
+        "name": "263_PADRE ESTEBAN_PERNET_ANTES_CASA_MISERICORDIA",
+        "number": 263,
+        "address": "Padre Esteban Pernet - Casa Misericordia",
+        "open": "T",
+        "available": 6,
+        "free": 12,
+        "total": 18,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120758000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902394,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.408117498169774, 39.4709733371674]
+      },
+      "properties": {
+        "gid": 902394,
+        "name": "265_C_ALCASSER_POETA_ALBERTO_LISTA",
+        "number": 265,
+        "address": "Alcasser - Poeta Alberto Lista",
+        "open": "T",
+        "available": 5,
+        "free": 10,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120307000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902396,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.40592947160643, 39.4941684127515]
+      },
+      "properties": {
+        "gid": 902396,
+        "name": "267_C_BENIFERRI_VICENTE_TOMAS_MARTI",
+        "number": 267,
+        "address": "Beniferri - Vicent Tomás Martí",
+        "open": "T",
+        "available": 6,
+        "free": 9,
+        "total": 16,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120185000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902398,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.426263536784448, 39.4999074416024]
+      },
+      "properties": {
+        "gid": 902398,
+        "name": "269_CAMPAMENTO_81",
+        "number": 269,
+        "address": "Campamento, 81",
+        "open": "T",
+        "available": 3,
+        "free": 12,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120192000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902400,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.389891412673049, 39.499279422679]
+      },
+      "properties": {
+        "gid": 902400,
+        "name": "271_CALLE_SALVADOR_CERVERÓ_CALLE_CARLOS_CORTINA",
+        "number": 271,
+        "address": "Salvador Cerveró - Carlos Cortina",
+        "open": "T",
+        "available": 1,
+        "free": 14,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120189000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902373,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.406136485549704, 39.4785063608841]
+      },
+      "properties": {
+        "gid": 902373,
+        "name": "244_AVDA_PIO_BAROJA_VALLE_DE_LA_BALLESTERA",
+        "number": 244,
+        "address": "Valle de la Ballestera - Pio Baroja",
+        "open": "T",
+        "available": 0,
+        "free": 20,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120288000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902375,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.406509494141216, 39.4690903300034]
+      },
+      "properties": {
+        "gid": 902375,
+        "name": "246_AVDA_TRES_CRUCES_ENTRADA_HOSPITAL_GENERAL",
+        "number": 246,
+        "address": "Tres Cruces - Hospital General",
+        "open": "T",
+        "available": 8,
+        "free": 12,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120433000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902377,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.404969493828934, 39.462840308858]
+      },
+      "properties": {
+        "gid": 902377,
+        "name": "248_AVDA_TRES_CRUCES_JOSE_MARIA_MORTES_LERMA",
+        "number": 248,
+        "address": "Tres Cruces - Jose Maria Mortes Lerma",
+        "open": "T",
+        "available": 11,
+        "free": 9,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120338000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902379,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.400807018119894, 39.4563522455771]
+      },
+      "properties": {
+        "gid": 902379,
+        "name": "250_AVDA_TRES_CRUCES_PIO_XI",
+        "number": 250,
+        "address": "Tres Cruces - Pio XI",
+        "open": "T",
+        "available": 0,
+        "free": 15,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120276000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902381,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.403574498435971, 39.4502882657071]
+      },
+      "properties": {
+        "gid": 902381,
+        "name": "252_DE_LOS_GREMIOS_CAMPOS_CRESPO",
+        "number": 252,
+        "address": "Dels Gremis - Campos Crespo",
+        "open": "T",
+        "available": 12,
+        "free": 8,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120465000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902383,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.389917453687409, 39.4477142511586]
+      },
+      "properties": {
+        "gid": 902383,
+        "name": "254_AVDA_DR_TOMAS_SALA_CARTEROS",
+        "number": 254,
+        "address": "Doctor Tomás Sala - Carteros",
+        "open": "T",
+        "available": 13,
+        "free": 6,
+        "total": 19,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120544000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902385,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.39223544845538, 39.4639633065693]
+      },
+      "properties": {
+        "gid": 902385,
+        "name": "256_AVDA_TRES_FORQUES_TURIS",
+        "number": 256,
+        "address": "Tres Forques - Turís",
+        "open": "T",
+        "available": 4,
+        "free": 11,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120287000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902387,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.389137457531211, 39.4398282241368]
+      },
+      "properties": {
+        "gid": 902387,
+        "name": "258_PINTOR_RAFAEL_SOLVES_ESQ_JOSE_SOTO_MICO",
+        "number": 258,
+        "address": "Pintor Rafael Solves - Jose Soto Mico",
+        "open": "T",
+        "available": 10,
+        "free": 4,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120250000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902389,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.407217503983267, 39.4595562987309]
+      },
+      "properties": {
+        "gid": 902389,
+        "name": "260_DELS_FERRERS_ESQ_TRAGINERS",
+        "number": 260,
+        "address": "Traginers - Pedrapiquers",
+        "open": "T",
+        "available": 14,
+        "free": 6,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120472000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902393,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.41443252044503, 39.4691603337362]
+      },
+      "properties": {
+        "gid": 902393,
+        "name": "264_AVDA_CID_ANTES_MARCONI",
+        "number": 264,
+        "address": "Av. del Cid - Marconi",
+        "open": "T",
+        "available": 6,
+        "free": 14,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120288000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902395,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.406371476423202, 39.4902894001426]
+      },
+      "properties": {
+        "gid": 902395,
+        "name": "266_PLANA_ALTA_ESQ_AVDA_MAESTRO_RODRIGO",
+        "number": 266,
+        "address": "Canal de Navarrés - Maestro Rodrigo",
+        "open": "T",
+        "available": 14,
+        "free": 4,
+        "total": 18,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120245000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902397,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.418493509270463, 39.5014454429802]
+      },
+      "properties": {
+        "gid": 902397,
+        "name": "268_PZA_LUIS_CANO_5",
+        "number": 268,
+        "address": "Plaza Luis Cano, 5",
+        "open": "T",
+        "available": 3,
+        "free": 7,
+        "total": 10,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120225000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902402,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.33327225845953, 39.4503052325249]
+      },
+      "properties": {
+        "gid": 902402,
+        "name": "273_CALLE_MORAIRA_CALLE_DALT_DE_LA_MAR",
+        "number": 273,
+        "address": "Moraira - Alta del Mar",
+        "open": "T",
+        "available": 5,
+        "free": 10,
+        "total": 15,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120559000
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 902404,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.335065263321813, 39.452305240225]
+      },
+      "properties": {
+        "gid": 902404,
+        "name": "275_CAMINO_DE_LAS_MORERAS_ESQ_RONDA_DE_NAZARET",
+        "number": 275,
+        "address": "Moreras - Rona de Nazaret",
+        "open": "T",
+        "available": 8,
+        "free": 11,
+        "total": 20,
+        "ticket": "F",
+        "updated_at": "18/05/2026 18:12:53",
+        "update_jcd": 1779120304000
+      }
+    }
+  ]
+}

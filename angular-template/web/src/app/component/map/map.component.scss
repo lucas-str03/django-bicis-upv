@@ -19,6 +19,15 @@
   z-index: 1000; 
   
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Aquí está la magia: los pone en horizontal */
+  align-items: center; /* Los centra verticalmente para que queden alineados */
   gap: 8px;
+}
+
+/* El estilo de la nueva barra vertical separadora */
+.vertical-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #999;
+  margin: 0 4px;
 }
