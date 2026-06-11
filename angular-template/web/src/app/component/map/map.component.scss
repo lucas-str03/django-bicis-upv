@@ -1,7 +1,6 @@
 .map-wrapper {
   position: relative;
   width: 100%;
-  /* Restamos espacio para que no haga scroll raro con el menú y footer. Ajusta a tu gusto */
   height: calc(100vh - 160px); 
   min-height: 500px;
 }
@@ -9,7 +8,7 @@
 .map-container {
   width: 100%;
   height: 100%;
-  background-color: #e5e3df; /* Un color de fondo por si tardan en cargar las capas */
+  background-color: #e5e3df; 
 }
 
 .draw-controls-panel {
@@ -17,17 +16,84 @@
   top: 15px;
   left: 60px; 
   z-index: 1000; 
-  
   display: flex;
-  flex-direction: row; /* Aquí está la magia: los pone en horizontal */
-  align-items: center; /* Los centra verticalmente para que queden alineados */
+  flex-direction: row; 
+  align-items: center; 
   gap: 8px;
 }
 
-/* El estilo de la nueva barra vertical separadora */
 .vertical-divider {
   width: 1px;
   height: 24px;
   background-color: #999;
   margin: 0 4px;
+}
+
+/* --- NUEVO POSICIONAMIENTO BAJO DIBUJAR ESTACION --- */
+
+.layer-selector-wrapper {
+  position: absolute;
+  top: 60px; 
+  left: 60px; 
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.layer-selector-btn {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+.layer-selector-panel {
+  margin-top: 5px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 210px;
+}
+
+.layer-panel-title {
+  margin: 0 0 4px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 6px;
+}
+
+.layer-option {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #333333;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  &:hover span {
+    color: #000000;
+  }
 }

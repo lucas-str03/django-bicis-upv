@@ -1,14 +1,11 @@
 import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Necesario para el *ngIf
+import { CommonModule } from '@angular/common'; 
 import { MapService } from '../../services/map.service';
-import { AuthService } from '../../services/auth.service'; // <-- CAMBIO 1: Importamos TU servicio
+import { AuthService } from '../../services/auth.service'; 
 
-// Botones de dibujo
 import { DrawEstacionComponent } from '../draw-estacion/draw-estacion.component';
 import { DrawBarrioComponent } from '../draw-barrio/draw-barrio.component';
 import { DrawCarrilComponent } from '../draw-carril/draw-carril.component';
-
-// Importamos las dos nuevas interacciones
 import { SelectInteractionComponent } from '../select-interaction/select-interaction.component';
 import { EditInteractionComponent } from '../edit-interaction/edit-interaction.component';
 
@@ -29,7 +26,16 @@ import { EditInteractionComponent } from '../edit-interaction/edit-interaction.c
 export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('mapContainer', { static: true }) mapContainer!: ElementRef;
 
-  // CAMBIO 2: Inyectamos el AuthService como 'public' igual que en tu Menú
+  public isLayerMenuOpen: boolean = false;
+
+  // Estado inicial de visualizacion de los cuatro componentes basicos
+  public layersState: { [key: string]: boolean } = {
+    wms: true,
+    poligono: true,
+    lineas: true,
+    puntos: true
+  };
+
   constructor(
     public mapService: MapService,
     public authService: AuthService 
@@ -40,6 +46,29 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     console.log('mapComponent initialized');
     this.mapService.map.setTarget(this.mapContainer.nativeElement);
+  }
+
+  toggleLayerMenu(): void {
+    this.isLayerMenuOpen = !this.isLayerMenuOpen;
+  }
+
+  toggleLayer(layerName: string, event: Event): void {
+    const isChecked = (event.target as HTMLInputElement).checked;
+    this.layersState[layerName] = isChecked;
+
+    // Control de la capa raiz en el mapa
+    this.mapService.map.getLayers().forEach(layer => {
+      if (layer.get('name') === layerName) {
+        layer.setVisible(isChecked);
+      }
+    });
+
+    // Control de las capas secundarias inyectadas dentro del grupo principal
+    this.mapService.myLayersGroup.getLayers().forEach(layer => {
+      if (layer.get('name') === layerName) {
+        layer.setVisible(isChecked);
+      }
+    });
   }
 
   ngOnDestroy(): void {

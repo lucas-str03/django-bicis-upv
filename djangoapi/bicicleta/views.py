@@ -171,6 +171,7 @@ def selectall_view(request):
         for b in Barrio.objects.all():
             if b.geom:
                 barrios_data.append({
+                    "objectid": b.objectid,
                     "codigo_barrio": b.codigo_barrio,
                     "nombre": b.nombre,
                     "wkt": b.geom.wkt
@@ -214,6 +215,10 @@ def selectall_view(request):
 def actualizar_estaciones_view(request):
     if request.method != 'POST':
         return JsonResponse({"ok": False, "message": "Método no permitido", "data": []}, status=405)
+    
+    # CORRECCIÓN DE SEGURIDAD: Comprobar autenticación manualmente
+    if not request.user.is_authenticated:
+        return JsonResponse({"ok": False, "message": "No autorizado. Debes iniciar sesión.", "data": []}, status=401)
     
     try:
         url = "https://geoportal.valencia.es/server/rest/services/OPENDATA/Trafico/MapServer/228/query?where=1=1&outFields=*&f=json"

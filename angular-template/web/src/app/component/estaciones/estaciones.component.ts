@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpParams } from '@angular/common/http';
 import { ApiService } from '../../services/api.service';
-import { ActivatedRoute } from '@angular/router'; // Import necesario
+import { ActivatedRoute } from '@angular/router'; // Import necesario para el seleccionar elemento
 
 @Component({
   selector: 'app-estaciones',
@@ -37,17 +37,29 @@ export class EstacionesComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Captura automática desde URL
+    // 1. MODO SELECCIÓN / EDICIÓN (Viene de hacer clic en el mapa -> /estaciones/:id)
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      if (id) {
+        // Metemos el ID en el formulario
+        this.estacionForm.patchValue({ numero: id });
+        this.mensaje = "Buscando datos de la estación...";
+        // Llamamos a tu función para que traiga los datos de PostgreSQL
+        this.selectOne(); 
+      }
+    });
+
+    // 2. MODO DIBUJO / CREACIÓN (Viene de dibujar un punto nuevo -> ?geom=...)
     this.route.queryParams.subscribe(params => {
       const geom = params['geom'];
       if (geom) {
         this.estacionForm.patchValue({ geom: geom });
-        this.mensaje = "Coordenada de estación cargada desde el mapa.";
+        this.mensaje = "Coordenada de estación cargada desde el mapa. Rellena el resto de datos.";
       }
     });
   }
 
-  // ... (tus otros métodos se mantienen igual)
+  // --- TUS MÉTODOS SE MANTIENEN INTACTOS ---
 
   selectOne() {
     const num = this.estacionForm.value.numero;
@@ -57,12 +69,13 @@ export class EstacionesComponent implements OnInit {
       next: (res) => {
         if (res.ok && res.data.length > 0) {
           const estacion = res.data[0];
+          // Tu lógica de transformación de geometría intacta
           if (estacion.geom && typeof estacion.geom === 'object') {
             const coords = estacion.geom.coordinates;
             estacion.geom = `POINT(${coords[0]} ${coords[1]})`;
           }
           this.estacionForm.patchValue(estacion);
-          this.mensaje = "Estación recuperada con éxito";
+          this.mensaje = "Estación recuperada con éxito lista para editar";
         } else { this.mensaje = "No encontrada"; }
       },
       error: (err) => { this.mensaje = "Error: " + err.message; }

@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { EventService } from '../../services/event.service';
-
-
+import { MapService } from '../../services/map.service'; // <-- NUEVO
 
 @Component({
   selector: 'app-select-interaction',
@@ -16,16 +15,25 @@ export class SelectInteractionComponent implements OnInit, OnDestroy {
   private sub!: Subscription;
   readonly TOOL_NAME = 'select-interaction';
 
-  constructor(private eventService: EventService) {}
+  // Añadimos el MapService al constructor
+  constructor(private eventService: EventService, private mapService: MapService) {}
 
   ngOnInit() {
     this.sub = this.eventService.currentInteraction$.subscribe((activeTool: string) => {
-      if (activeTool !== this.TOOL_NAME) this.isActive = false;
+      // Si alguien activa otra herramienta, me apago a mí mismo y limpio el mapa
+      if (activeTool !== this.TOOL_NAME) {
+        this.isActive = false;
+        this.mapService.toggleSelectInteraction(false);
+      }
     });
   }
 
   toggleSelect() {
     this.isActive = !this.isActive;
+    
+    // Le decimos a OpenLayers que encienda/apague la interacción
+    this.mapService.toggleSelectInteraction(this.isActive);
+
     if (this.isActive) {
       this.eventService.activateInteraction(this.TOOL_NAME);
       console.log('Modo Selección: ACTIVADO');
@@ -37,5 +45,7 @@ export class SelectInteractionComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     if (this.sub) this.sub.unsubscribe();
+    // Por seguridad, si destruimos el botón, apagamos la herramienta del mapa
+    this.mapService.toggleSelectInteraction(false); 
   }
 }

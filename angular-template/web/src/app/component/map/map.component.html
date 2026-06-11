@@ -13,5 +13,37 @@
     </div>
   }
 
+  <div class="layer-selector-wrapper">
+    <button class="layer-selector-btn" (click)="toggleLayerMenu()">
+      Control de Capas ▼
+    </button>
+    
+    @if (isLayerMenuOpen) {
+      <div class="layer-selector-panel">
+        <h4 class="layer-panel-title">Visualización</h4>
+        
+        <label class="layer-option">
+          <input type="checkbox" [checked]="layersState['wms']" (change)="toggleLayer('wms', $event)">
+          <span>Capas GeoServer (WMS)</span>
+        </label>
+        
+        <label class="layer-option">
+          <input type="checkbox" [checked]="layersState['poligono']" (change)="toggleLayer('poligono', $event)">
+          <span>Barrios (Polígonos)</span>
+        </label>
+        
+        <label class="layer-option">
+          <input type="checkbox" [checked]="layersState['lineas']" (change)="toggleLayer('lineas', $event)">
+          <span>Carriles Bici (Líneas)</span>
+        </label>
+        
+        <label class="layer-option">
+          <input type="checkbox" [checked]="layersState['puntos']" (change)="toggleLayer('puntos', $event)">
+          <span>Estaciones (Puntos)</span>
+        </label>
+      </div>
+    }
+  </div>
+
   <div #mapContainer class="map-container"></div>
 </div>

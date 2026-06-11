@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { EventService } from '../../services/event.service';
-
-
+import { MapService } from '../../services/map.service';
 
 @Component({
   selector: 'app-edit-interaction',
@@ -16,26 +15,36 @@ export class EditInteractionComponent implements OnInit, OnDestroy {
   private sub!: Subscription;
   readonly TOOL_NAME = 'edit-interaction';
 
-  constructor(private eventService: EventService) {}
+  constructor(
+    private eventService: EventService,
+    private mapService: MapService 
+  ) {}
 
   ngOnInit() {
     this.sub = this.eventService.currentInteraction$.subscribe((activeTool: string) => {
-      if (activeTool !== this.TOOL_NAME) this.isActive = false;
+      if (activeTool !== this.TOOL_NAME) {
+        this.isActive = false;
+        this.mapService.toggleEditInteraction(false); 
+      }
     });
   }
 
   toggleEdit() {
     this.isActive = !this.isActive;
+    
+    this.mapService.toggleEditInteraction(this.isActive);
+
     if (this.isActive) {
       this.eventService.activateInteraction(this.TOOL_NAME);
-      console.log('Modo Edición: ACTIVADO');
+      console.log('Modo Edicion: ACTIVADO');
     } else {
       this.eventService.activateInteraction('none');
-      console.log('Modo Edición: DESACTIVADO');
+      console.log('Modo Edicion: DESACTIVADO');
     }
   }
 
   ngOnDestroy() {
     if (this.sub) this.sub.unsubscribe();
+    this.mapService.toggleEditInteraction(false);
   }
 }
