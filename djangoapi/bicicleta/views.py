@@ -216,9 +216,14 @@ def actualizar_estaciones_view(request):
     if request.method != 'POST':
         return JsonResponse({"ok": False, "message": "Método no permitido", "data": []}, status=405)
     
-    # CORRECCIÓN DE SEGURIDAD: Comprobar autenticación manualmente
+    # CORRECCIÓN DE SEGURIDAD 1: Comprobar autenticación
     if not request.user.is_authenticated:
         return JsonResponse({"ok": False, "message": "No autorizado. Debes iniciar sesión.", "data": []}, status=401)
+    
+    # CORRECCIÓN DE SEGURIDAD 2: Comprobar grupo editor o admin
+    user_groups = list(request.user.groups.values_list('name', flat=True))
+    if not (request.user.is_superuser or 'editor' in user_groups):
+        return JsonResponse({"ok": False, "message": "Permisos insuficientes. Solo los editores pueden sincronizar con el Geoportal.", "data": []}, status=403)
     
     try:
         url = "https://geoportal.valencia.es/server/rest/services/OPENDATA/Trafico/MapServer/228/query?where=1=1&outFields=*&f=json"

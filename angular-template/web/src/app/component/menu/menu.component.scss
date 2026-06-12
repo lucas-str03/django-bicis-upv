@@ -2,55 +2,54 @@
   display: flex;
   align-items: center;
   padding: 0 20px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
   height: 64px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* La sombra mágica */
-  position: relative;
-  z-index: 1000; /* Asegura que flote sobre el mapa */
-
-  .nav-links {
-    display: flex;
-    gap: 10px;
-    
-    button {
-      font-weight: 500;
-      color: #333;
-      mat-icon {
-        margin-right: 5px;
-        color: #666;
-      }
-    }
-  }
-
-  .spacer {
-    flex: 1 1 auto; /* Empuja los elementos a los lados */
-  }
-
-  .auth-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    .user-badge {
-      display: flex;
-      align-items: center;
-      background: #f0f4f8;
-      padding: 5px 15px;
-      border-radius: 20px;
-      
-      .user-icon {
-        margin-right: 8px;
-        color: #3f51b5;
-      }
-      .username {
-        font-weight: bold;
-        color: #2c3e50;
-      }
-    }
-
-    .login-text {
-      color: #666;
-      font-size: 0.9rem;
-    }
-  }
+  width: 100%;
+  box-sizing: border-box;
 }
+
+.hamburger-btn { 
+  display: flex; // Forzamos que se vea
+  margin-right: 15px; 
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.spacer { flex: 1 1 auto; }
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-badge {
+  display: flex;
+  align-items: center; /* Centra el icono y el texto perfectamente en la vertical */
+  gap: 8px;            /* Añade una separación de 8px entre el icono y el nombre */
+  font-weight: 500;    /* Un poco de grosor para que el nombre destaque */
+  color: #333333;
+  padding: 4px 12px;   /* Un poco de aire alrededor */
+  background-color: #f5f5f5; /* (Opcional) Un fondo grisecito para que parezca una "pastilla" */
+  border-radius: 20px; /* Bordes redondeados para la pastilla */
+}
+
+/* Si quieres asegurarte de que el icono en sí no hace cosas raras */
+.user-badge mat-icon {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* En escritorio, si quieres que no se vea la hamburguesa, descomenta esto */
+/*
+@media (min-width: 769px) {
+  .hamburger-btn { display: none; }
+}
+*/

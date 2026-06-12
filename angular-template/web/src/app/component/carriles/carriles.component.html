@@ -1,17 +1,27 @@
-<div style="padding: 20px; max-width: 600px; margin: auto;">
-  <h2 style="color: #ff9800;">Formulario de Carriles Bici</h2>
+<div class="form-container">
+  <div class="form-header">
+    <h2 class="modern-title">Gestión de Carriles Bici</h2>
+    <p class="subtitle">Añade o modifica los tramos de la red ciclista</p>
+  </div>
 
-  <form [formGroup]="carrilForm" style="display: flex; flex-direction: column; gap: 15px;">
+  <form [formGroup]="carrilForm" class="form-body">
     
-    <div style="display: flex; gap: 15px;">
-      <mat-form-field appearance="outline" style="flex: 1;">
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="flex-1">
         <mat-label>ID del Carril</mat-label>
         <input matInput formControlName="id" type="number" placeholder="Ej: 1">
+        <mat-error *ngIf="carrilForm.get('id')?.hasError('required')">El ID es obligatorio</mat-error>
       </mat-form-field>
 
-      <mat-form-field appearance="outline" style="flex: 2;">
+      <mat-form-field appearance="outline" class="flex-2">
         <mat-label>Tipo de Carril</mat-label>
-        <input matInput formControlName="tipo" placeholder="Ej: Ciclocalle o Carril-bici">
+        <input type="text" matInput formControlName="tipo" placeholder="Escribe para buscar..." [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let opcion of filteredTipos | async" [value]="opcion">
+            {{ opcion }}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="carrilForm.get('tipo')?.hasError('required')">El tipo es obligatorio</mat-error>
       </mat-form-field>
     </div>
 
@@ -23,20 +33,27 @@
     <mat-form-field appearance="outline">
       <mat-label>Geometría (MULTILINESTRING WKT)</mat-label>
       <textarea matInput formControlName="geom" rows="3" placeholder="Ej: MULTILINESTRING((Lon Lat, Lon Lat))"></textarea>
+      <mat-error *ngIf="carrilForm.get('geom')?.hasError('required')">La geometria WKT es obligatoria</mat-error>
     </mat-form-field>
 
-    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-      <button type="button" mat-raised-button color="primary" (click)="insert()">Insertar</button>
-      <button type="button" mat-raised-button color="accent" (click)="selectOne()">Select One</button>
-      <button type="button" mat-raised-button color="accent" (click)="selectAll()">Select All</button>
-      <button type="button" mat-raised-button style="background-color: #ff9800; color: white;" (click)="update()">Actualizar</button>
-      <button type="button" mat-raised-button color="warn" (click)="delete()">Borrar</button>
+    <div class="form-actions">
+      @if(authService.isEditor()) {
+        <button type="button" mat-raised-button color="primary" [disabled]="carrilForm.invalid" (click)="insert()">Insertar</button>
+        <button type="button" mat-raised-button class="btn-update" [disabled]="carrilForm.invalid" (click)="update()">Actualizar</button>
+        <button type="button" mat-raised-button color="warn" (click)="delete()">Borrar</button>
+      } @else {
+        <div style="padding: 10px; background-color: #f5f5f5; border-radius: 4px; font-style: italic; color: #666; font-size: 13px;">
+          <mat-icon style="font-size: 16px; height: 16px; width: 16px; vertical-align: middle;">visibility</mat-icon> Modo lectura (inicia sesión como editor para modificar)
+        </div>
+      }
+      
+      <button type="button" mat-raised-button color="accent" (click)="selectOne()">Buscar por ID</button>
       <button type="button" mat-stroked-button (click)="clean()">Limpiar</button>
     </div>
 
   </form>
 
-  <div *ngIf="mensaje" style="margin-top: 20px; padding: 10px; background: #fff3e0; border-radius: 5px; color: #e65100;">
+  <div *ngIf="mensaje" class="status-message">
     <strong>Estado:</strong> {{ mensaje }}
   </div>
 </div>

@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-
-// Importamos el servicio de autenticación
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -15,6 +13,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  // Inyectamos el servicio en el constructor como 'public'
+  @Output() toggleSidenav = new EventEmitter<void>();
+
   constructor(public authService: AuthService) { } 
 }

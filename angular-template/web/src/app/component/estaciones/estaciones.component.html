@@ -1,54 +1,75 @@
-<div style="padding: 20px; max-width: 600px; margin: auto;">
-  <h2 style="color: #3f51b5;">Formulario de Estaciones</h2>
+<div class="form-container">
+  <div class="form-header">
+    <h2 class="modern-title">Gestión de Estaciones</h2>
+    <p class="subtitle">Añade o modifica los puntos de anclaje de la red</p>
+  </div>
 
-  <form [formGroup]="estacionForm" style="display: flex; flex-direction: column; gap: 15px;">
+  <form [formGroup]="estacionForm" class="form-body">
     
-    <mat-form-field appearance="outline">
-      <mat-label>Número de Estación (ID)</mat-label>
-      <input matInput formControlName="numero" type="number" placeholder="Ej: 1">
-    </mat-form-field>
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Número (ID)</mat-label>
+        <input matInput formControlName="numero" type="number" placeholder="Ej: 12">
+        <mat-error *ngIf="estacionForm.get('numero')?.hasError('required')">El numero es obligatorio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="flex-2">
+        <mat-label>Nombre de la Estación</mat-label>
+        <input type="text" matInput formControlName="nombre" placeholder="Escribe para buscar..." [matAutocomplete]="autoEstacion">
+        <mat-autocomplete #autoEstacion="matAutocomplete">
+          <mat-option *ngFor="let estacion of filteredEstaciones | async" [value]="estacion">
+            {{ estacion }}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="estacionForm.get('nombre')?.hasError('required')">El nombre es obligatorio</mat-error>
+      </mat-form-field>
+    </div>
 
     <mat-form-field appearance="outline">
-      <mat-label>Nombre</mat-label>
-      <input matInput formControlName="nombre" placeholder="Ej: Estación UPV">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Geometría (WKT)</mat-label>
+      <mat-label>Geometría (POINT WKT)</mat-label>
       <input matInput formControlName="geom" placeholder="Ej: POINT(-0.33 39.48)">
+      <mat-error *ngIf="estacionForm.get('geom')?.hasError('required')">La geometria WKT es obligatoria</mat-error>
     </mat-form-field>
 
-    <div style="display: flex; gap: 15px;">
-      <mat-form-field appearance="outline" style="flex: 1;">
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="flex-1">
         <mat-label>Capacidad</mat-label>
         <input matInput formControlName="capacidad" type="number">
       </mat-form-field>
 
-      <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-form-field appearance="outline" class="flex-1">
         <mat-label>Bicis Disp.</mat-label>
         <input matInput formControlName="bicis_disponibles" type="number">
       </mat-form-field>
 
-      <mat-form-field appearance="outline" style="flex: 1;">
+      <mat-form-field appearance="outline" class="flex-1">
         <mat-label>Bornes Libres</mat-label>
         <input matInput formControlName="bornes_libres" type="number">
       </mat-form-field>
     </div>
 
-    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-      <button type="button" mat-raised-button color="primary" (click)="insert()">Insertar</button>
-      <button type="button" mat-raised-button color="accent" (click)="selectOne()">Select One</button>
+    <div class="form-actions">
+      @if(authService.isEditor()) {
+        <button type="button" mat-raised-button color="primary" [disabled]="estacionForm.invalid" (click)="insert()">Insertar</button>
+        <button type="button" mat-raised-button class="btn-update" [disabled]="estacionForm.invalid" (click)="update()">Actualizar</button>
+        <button type="button" mat-raised-button color="warn" (click)="delete()">Borrar</button>
+        
+        <button type="button" mat-raised-button style="background-color: #4caf50; color: white; width: 100%; margin-top: 10px;" (click)="sincronizarValenbisi()">
+          <mat-icon>sync</mat-icon> Sincronizar ValenBisi
+        </button>
+      } @else {
+        <div style="padding: 10px; background-color: #f5f5f5; border-radius: 4px; font-style: italic; color: #666; font-size: 13px; width: 100%;">
+          <mat-icon style="font-size: 16px; height: 16px; width: 16px; vertical-align: middle;">visibility</mat-icon> Modo lectura (inicia sesión como editor para modificar o sincronizar)
+        </div>
+      }
       
-      <button type="button" mat-raised-button color="accent" (click)="selectAll()">Select All</button>
-
-      <button type="button" mat-raised-button style="background-color: #ff9800; color: white;" (click)="update()">Actualizar</button>
-      <button type="button" mat-raised-button color="warn" (click)="delete()">Borrar</button>
+      <button type="button" mat-raised-button color="accent" (click)="selectOne()">Buscar por Nombre</button>
       <button type="button" mat-stroked-button (click)="clean()">Limpiar</button>
     </div>
 
   </form>
 
-  <div *ngIf="mensaje" style="margin-top: 20px; padding: 10px; background: #e8eaf6; border-radius: 5px; color: #1a237e;">
+  <div *ngIf="mensaje" class="status-message">
     <strong>Estado:</strong> {{ mensaje }}
   </div>
 </div>

@@ -1,0 +1,9 @@
+.sidenav-container {
+  height: 100vh;
+}
+.sidenav {
+  width: 250px;
+}
+.main-content {
+  min-height: calc(100vh - 120px); // Espacio para cabecera y footer
+}

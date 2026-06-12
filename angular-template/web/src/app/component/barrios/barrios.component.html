@@ -1,37 +1,55 @@
-<div style="padding: 20px; max-width: 600px; margin: auto;">
-  <h2 style="color: #4caf50;">Formulario de Barrios</h2>
+<div class="form-container">
+  <div class="form-header">
+    <h2 class="modern-title">Gestión de Barrios</h2>
+    <p class="subtitle">Añade o modifica la cartografía de las zonas urbanas</p>
+  </div>
 
-  <form [formGroup]="barrioForm" style="display: flex; flex-direction: column; gap: 15px;">
+  <form [formGroup]="barrioForm" class="form-body">
     
-    <div style="display: flex; gap: 15px;">
-      <mat-form-field appearance="outline" style="flex: 1;">
-        <mat-label>Código de Barrio (ID)</mat-label>
-        <input matInput formControlName="codigo_barrio" placeholder="Ej: B01">
+    <input type="hidden" formControlName="objectid">
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="flex-2">
+        <mat-label>Nombre del Barrio</mat-label>
+        <input type="text" matInput formControlName="nombre" placeholder="Escribe para buscar..." [matAutocomplete]="autoBarrio">
+        <mat-autocomplete #autoBarrio="matAutocomplete">
+          <mat-option *ngFor="let barrio of filteredBarrios | async" [value]="barrio">
+            {{ barrio }}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="barrioForm.get('nombre')?.hasError('required')">El nombre es obligatorio</mat-error>
       </mat-form-field>
 
-      <mat-form-field appearance="outline" style="flex: 2;">
-        <mat-label>Nombre del Barrio</mat-label>
-        <input matInput formControlName="nombre" placeholder="Ej: Benimaclet">
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Cód. Dist-Barrio</mat-label>
+        <input matInput formControlName="coddistbar" placeholder="Ej: 133">
       </mat-form-field>
     </div>
 
     <mat-form-field appearance="outline">
       <mat-label>Geometría (MULTIPOLYGON WKT)</mat-label>
       <textarea matInput formControlName="geom" rows="4" placeholder="Ej: MULTIPOLYGON(((...)))"></textarea>
+      <mat-error *ngIf="barrioForm.get('geom')?.hasError('required')">La geometría WKT es obligatoria</mat-error>
     </mat-form-field>
 
-    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-      <button type="button" mat-raised-button color="primary" (click)="insert()">Insertar</button>
-      <button type="button" mat-raised-button color="accent" (click)="selectOne()">Select One</button>
-      <button type="button" mat-raised-button color="accent" (click)="selectAll()">Select All</button>
-      <button type="button" mat-raised-button style="background-color: #ff9800; color: white;" (click)="update()">Actualizar</button>
-      <button type="button" mat-raised-button color="warn" (click)="delete()">Borrar</button>
+    <div class="form-actions">
+      @if(authService.isEditor()) {
+        <button type="button" mat-raised-button color="primary" [disabled]="barrioForm.invalid" (click)="insert()">Insertar</button>
+        <button type="button" mat-raised-button class="btn-update" [disabled]="barrioForm.invalid" (click)="update()">Actualizar</button>
+        <button type="button" mat-raised-button color="warn" (click)="delete()">Borrar</button>
+      } @else {
+        <div style="padding: 10px; background-color: #f5f5f5; border-radius: 4px; font-style: italic; color: #666; font-size: 13px;">
+          <mat-icon style="font-size: 16px; height: 16px; width: 16px; vertical-align: middle;">visibility</mat-icon> Modo lectura (inicia sesión como editor para modificar)
+        </div>
+      }
+      
+      <button type="button" mat-raised-button color="accent" (click)="selectOne()">Buscar por Nombre</button>
       <button type="button" mat-stroked-button (click)="clean()">Limpiar</button>
     </div>
 
   </form>
 
-  <div *ngIf="mensaje" style="margin-top: 20px; padding: 10px; background: #e8f5e9; border-radius: 5px; color: #1b5e20;">
+  <div *ngIf="mensaje" class="status-message">
     <strong>Estado:</strong> {{ mensaje }}
   </div>
 </div>

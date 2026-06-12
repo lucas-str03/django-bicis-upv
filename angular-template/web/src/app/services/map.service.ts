@@ -111,7 +111,11 @@ export class MapService {
           // 1. Cargar Barrios
           const barriosFeatures = response.data.barrios.map((b: any) => {
             const feature = wktFormat.readFeature(b.wkt, readOptions) as Feature;
-            feature.setProperties({ id: b.objectid, codigo_barrio: b.codigo_barrio, nombre: b.nombre, _layerName: 'barrios' });
+            // Asignamos el nombre del barrio como ID principal para el Router
+            feature.setProperties({ 
+              id: b.nombre, 
+              _layerName: 'barrios' 
+            });
             return feature;
           });
           this.barriosVectorSource.addFeatures(barriosFeatures);
@@ -131,7 +135,8 @@ export class MapService {
           // 3. Cargar Estaciones
           const estacionesFeatures = response.data.estaciones.map((e: any) => {
             const feature = wktFormat.readFeature(e.wkt, readOptions) as Feature;
-            feature.setProperties({ id: e.numero, nombre: e.nombre, _layerName: 'estaciones' });
+            // Asignamos el nombre en vez del numero como identificador de ruta
+            feature.setProperties({ id: e.nombre, numero: e.numero, _layerName: 'estaciones' });
             return feature;
           });
           this.estacionesVectorSource.addFeatures(estacionesFeatures);
@@ -204,6 +209,10 @@ export class MapService {
         console.log(`Mapa detecta clic en: ${layerName} con ID: ${id}`);
 
         if (id !== undefined) {
+          // CLAVE DEL ARREGLO: Limpiamos la seleccion internamente antes de navegar
+          // Asi el proximo click estara libre para coger una nueva geometria
+          this.selectInteraction.getFeatures().clear();
+          
           this.router.navigate([`/${layerName}`, id]);
         }
       }
@@ -245,6 +254,9 @@ export class MapService {
         console.log(`Vértice modificado en: ${layerName} con ID: ${id}`);
 
         if (id !== undefined) {
+          // Limpiamos la seleccion de edicion para no dejarla enganchada
+          this.editSelectInteraction.getFeatures().clear();
+          
           this.router.navigate([`/${layerName}`, id]);
         }
       }

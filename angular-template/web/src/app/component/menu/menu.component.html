@@ -1,5 +1,9 @@
 <nav class="modern-header">
-  <div class="nav-links">
+  <button mat-icon-button class="hamburger-btn" (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <div class="nav-links desktop-only">
     <button mat-button routerLink="map"><mat-icon>map</mat-icon> Mapa</button>
     <button mat-button routerLink="estaciones"><mat-icon>pedal_bike</mat-icon> Estaciones</button>
     <button mat-button routerLink="barrios"><mat-icon>location_city</mat-icon> Barrios</button>
@@ -10,18 +14,13 @@
 
   <div class="auth-section">
     @if(authService.isAuthenticated) {
-      <div class="user-badge">
-        <mat-icon class="user-icon">account_circle</mat-icon>
+      <div class="user-badge desktop-only">
+        <mat-icon>account_circle</mat-icon>
         <span class="username">{{authService.username}}</span>
       </div>
-      <button mat-icon-button color="warn" routerLink="logout-form" title="Cerrar sesión">
-        <mat-icon>logout</mat-icon>
-      </button>
+      <button mat-icon-button color="warn" routerLink="logout-form"><mat-icon>logout</mat-icon></button>
     } @else {
-      <span class="login-text">No has iniciado sesión</span>
-      <button mat-icon-button color="primary" routerLink="login-form" title="Iniciar sesión">
-        <mat-icon>login</mat-icon>
-      </button>
+      <button mat-icon-button color="primary" routerLink="login-form"><mat-icon>login</mat-icon></button>
     }
   </div>
 </nav>

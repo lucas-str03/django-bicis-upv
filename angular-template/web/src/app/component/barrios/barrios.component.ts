@@ -4,9 +4,14 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatIconModule } from '@angular/material/icon'; // Importante para el icono del modo lectura
 import { HttpParams } from '@angular/common/http';
 import { ApiService } from '../../services/api.service';
+import { AuthService } from '../../services/auth.service'; // Servicio de roles
 import { ActivatedRoute } from '@angular/router'; 
+import { Observable } from 'rxjs';
+import { startWith, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-barrios',
@@ -16,7 +21,9 @@ import { ActivatedRoute } from '@angular/router';
     ReactiveFormsModule, 
     MatInputModule, 
     MatFormFieldModule, 
-    MatButtonModule
+    MatButtonModule,
+    MatAutocompleteModule,
+    MatIconModule // Añadido a los imports del componente
   ],
   templateUrl: './barrios.component.html',
   styleUrl: './barrios.component.scss'
@@ -25,32 +32,53 @@ export class BarriosComponent implements OnInit {
   barrioForm: FormGroup;
   mensaje: string = '';
 
-  constructor(private api: ApiService, private route: ActivatedRoute) { 
+  opcionesBarrios: string[] = [
+    'La Seu', 'La Xerea', 'El Carme', 'El Pilar', 'El Mercat', 'Sant Francesc',
+    'Russafa', 'El Pla Del Remei', 'La Gran Via', 'Ruzafa',
+    'El Botanic', 'La Roqueta', 'La Petxina', 'Arrancapins',
+    'Campanar', 'Les Tendetes', 'El Calvari', 'Sant Pau',
+    'Marxalenes', 'Morvedre', 'Trinitat', 'Tormos', 'Sant Antoni',
+    'Els Orriols', 'Torrefiel', 'Sant Llorens',
+    'Nou Moles', 'Soternes', 'Tres Forques', 'La Fontsanta', 'La Llum',
+    'Patraix', 'Sant Isidre', 'Vara De Quart', 'Safranar', 'Favara',
+    'La Raiosa', 'L\'Hort De Senabre', 'La Creu Coberta', 'Sant Marcel.li', 'Cami Real',
+    'En Corts', 'Malilla', 'La Fonteta S.Lluis', 'Na Rovella', 'La Punta', 'Ciutat De Les Arts I De Les Ciencies',
+    'El Grau', 'Cabanyal-Canyamelar', 'La Malva-Rosa', 'Betero', 'Natzaret',
+    'Aiora', 'Albors', 'La Creu Del Grau', 'Cami Fondo', 'Penya-Roja',
+    'La Vega Baixa', 'L\'Illa Perduda', 'Ciutat Jardi', 'L\'Amistat', 'La Carrasca',
+    'Benimaclet', 'Cami De Vera',
+    'Exposicio', 'Mestalla', 'Jaume Roig', 'Ciutat Universitaria',
+    'Benicalap', 'Ciutat Fallera',
+    'Benimamet', 'Beniferri', 'Carpesa', 'Poble Nou', 'Massarrojos', 'El Forn D\'Alcedo', 'La Torre', 'Pinedo', 'El Saler', 'El Palmar', 'El Perellonet', 'Mahuella-Tauladella', 'Rafalell-Vistabella', 'Borboto'
+  ];
+
+  filteredBarrios!: Observable<string[]>;
+
+  // Inyectamos authService como public
+  constructor(private api: ApiService, private route: ActivatedRoute, public authService: AuthService) { 
     this.barrioForm = new FormGroup({
-      objectid: new FormControl(''), // ⚠️ Clave primaria real en PostgreSQL
-      codigo_barrio: new FormControl('', [Validators.required]),
-      nombre: new FormControl(''),
-      coddistbar: new FormControl(''),
-      geom: new FormControl('', [Validators.required])
+      objectid: new FormControl(''),
+      coddistbar: new FormControl(''), 
+      nombre: new FormControl('', [Validators.required]),
+      geom: new FormControl('', [Validators.required]) 
     });
   }
 
-  // Manejo del modo selección por ID (/barrios/:id) y modo dibujo (?geom=...)
   ngOnInit() {
-    // 1. MODO SELECCIÓN: Capturamos el objectid de la barra de direcciones
+    this.filteredBarrios = this.barrioForm.get('nombre')!.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filterBarrios(value || ''))
+    );
+
     this.route.paramMap.subscribe(params => {
-      const id = params.get('id');
-      if (id) {
-        // Guardamos el objectid en el control del formulario
-        this.barrioForm.patchValue({ objectid: id });
-        this.mensaje = "Buscando datos del barrio en PostGIS...";
-        
-        // Lanzamos la búsqueda automática
+      const idNombre = params.get('id');
+      if (idNombre) {
+        this.barrioForm.patchValue({ nombre: idNombre });
+        this.mensaje = `Buscando barrio: ${idNombre}...`;
         this.selectOne();
       }
     });
 
-    // 2. MODO DIBUJO: Capturamos la geometría si venimos de pintar en el mapa
     this.route.queryParams.subscribe(params => {
       const geom = params['geom'];
       if (geom) {
@@ -60,20 +88,43 @@ export class BarriosComponent implements OnInit {
     });
   }
 
-  // 1. SELECT ONE (GET) - Adaptado para barrios con objectid
+  private _filterBarrios(value: string): string[] {
+    const filterValue = this.normalizeStr(value);
+    return this.opcionesBarrios.filter(option => this.normalizeStr(option).includes(filterValue));
+  }
+
+  private normalizeStr(str: string): string {
+    if (!str) return '';
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  }
+
   selectOne() {
-    const objId = this.barrioForm.value.objectid;
-    if (!objId) return;
+    const nombreBarrio = this.barrioForm.value.nombre;
+    if (!nombreBarrio) {
+      this.mensaje = "Error: Escribe o selecciona un Nombre de Barrio para buscar.";
+      return;
+    }
 
-    // El parámetro enviado se llama estrictamente 'objectid'
-    const parametros = new HttpParams().set('objectid', objId.toString());
+    this.mensaje = "Consultando base de datos...";
 
-    this.api.get('barrios', parametros).subscribe({
+    // Pedimos todos los barrios y filtramos en cliente para evitar problemas de tildes con Django
+    this.api.get('barrios').subscribe({
       next: (res) => {
         if (res.ok && res.data.length > 0) {
-          const barrio = res.data[0];
+          
+          const nombreBuscado = this.normalizeStr(nombreBarrio);
 
-          // Traductor de GeoJSON a WKT para MultiPolygon
+          let barrio = res.data.find((b: any) => this.normalizeStr(b.nombre) === nombreBuscado);
+          
+          if (!barrio) {
+            barrio = res.data.find((b: any) => this.normalizeStr(b.nombre).includes(nombreBuscado));
+          }
+
+          if (!barrio) {
+            this.mensaje = `Barrio '${nombreBarrio}' no encontrado en la base de datos.`;
+            return;
+          }
+
           if (barrio.geom && typeof barrio.geom === 'object') {
             try {
               if (barrio.geom.type === 'MultiPolygon' && barrio.geom.coordinates) {
@@ -87,11 +138,10 @@ export class BarriosComponent implements OnInit {
             }
           }
 
-          // Rellenamos el formulario con los datos reales devueltos por Django
           this.barrioForm.patchValue(barrio);
           this.mensaje = `Barrio [${barrio.nombre}] recuperado con éxito.`;
         } else {
-          this.mensaje = "Barrio no encontrado en la base de datos.";
+          this.mensaje = "No se pudieron recuperar los barrios de la base de datos.";
         }
       },
       error: (err) => {
@@ -101,48 +151,31 @@ export class BarriosComponent implements OnInit {
   }
 
   insert() {
+    if (this.barrioForm.invalid) {
+      this.mensaje = "Error: Revisa los campos marcados en rojo.";
+      return;
+    }
     this.api.post('barrios', this.barrioForm.value).subscribe({
-      next: (res) => { 
-        if (res.ok) { 
-          this.mensaje = "Barrio creado correctamente"; 
-        } else { 
-          this.mensaje = "Error al crear: " + res.message; 
-        } 
-      },
-      error: (err) => { 
-        this.mensaje = "Django dice: " + (err.error?.data ? JSON.stringify(err.error.data) : err.message); 
-      }
+      next: (res) => { if (res.ok) this.mensaje = "Barrio creado correctamente"; else this.mensaje = "Error al crear: " + res.message; },
+      error: (err) => { this.mensaje = "Django dice: " + (err.error?.data ? JSON.stringify(err.error.data) : err.message); }
     });
   }
 
   update() {
+    if (this.barrioForm.invalid) {
+      this.mensaje = "Error: Revisa los campos marcados en rojo.";
+      return;
+    }
     this.api.put('barrios', this.barrioForm.value).subscribe({
-      next: (res) => { 
-        if (res.ok) { 
-          this.mensaje = "Barrio actualizado correctamente"; 
-        } else { 
-          this.mensaje = "Error al actualizar: " + res.message; 
-        } 
-      },
-      error: (err) => { 
-        this.mensaje = "Django dice: " + (err.error?.data ? JSON.stringify(err.error.data) : err.message); 
-      }
+      next: (res) => { if (res.ok) this.mensaje = "Barrio actualizado correctamente"; else this.mensaje = "Error al actualizar: " + res.message; },
+      error: (err) => { this.mensaje = "Django dice: " + (err.error?.data ? JSON.stringify(err.error.data) : err.message); }
     });
   }
 
   delete() {
     this.api.delete('barrios', this.barrioForm.value).subscribe({
-      next: (res) => { 
-        if (res.ok) { 
-          this.mensaje = "Barrio borrado correctamente"; 
-          this.barrioForm.reset(); 
-        } else { 
-          this.mensaje = "Error al borrar: " + res.message; 
-        } 
-      },
-      error: (err) => { 
-        this.mensaje = "Error de conexión: " + err.message; 
-      }
+      next: (res) => { if (res.ok) { this.mensaje = "Barrio borrado correctamente"; this.barrioForm.reset(); } else this.mensaje = "Error al borrar: " + res.message; },
+      error: (err) => { this.mensaje = "Error de conexión: " + err.message; }
     });
   }
 
@@ -153,14 +186,8 @@ export class BarriosComponent implements OnInit {
 
   selectAll() {
     this.api.get('barrios').subscribe({
-      next: (res) => { 
-        if (res.ok) { 
-          this.mensaje = `Select All: Se han recuperado ${res.data.length} barrios con éxito.`; 
-        } 
-      },
-      error: (err) => { 
-        this.mensaje = "Error al recuperar barrios: " + err.message; 
-      }
+      next: (res) => { if (res.ok) this.mensaje = `Select All: Se han recuperado ${res.data.length} barrios con éxito.`; },
+      error: (err) => { this.mensaje = "Error al recuperar barrios: " + err.message; }
     });
   }
 }
