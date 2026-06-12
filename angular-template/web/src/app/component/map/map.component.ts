@@ -36,6 +36,17 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     puntos: true
   };
 
+  
+  public legendItems = [
+    { label: 'Carril Bici / Bus-Bici', color: '#ff0000', style: 'solid' },
+    { label: 'Ciclo Carrers / Ciclo Calles', color: '#0066ff', style: 'solid' },
+    { label: 'Carrers de Vianants', color: '#ff6600', style: 'solid' },
+    { label: 'Carril Bici Jardí del Túria', color: '#009926', style: 'solid' },
+    { label: 'Senda Ciclable', color: '#00734c', style: 'solid' },
+    { label: 'Ciclobarrio', color: '#ffff00', style: 'solid' },
+    { label: 'Tallat per obres', color: '#000000', style: 'dashed' }
+];
+
   constructor(
     public mapService: MapService,
     public authService: AuthService 
