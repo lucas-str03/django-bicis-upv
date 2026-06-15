@@ -21,25 +21,26 @@ import { click } from 'ol/events/condition';
 import { Router } from '@angular/router'; 
 import { Modify, Snap } from 'ol/interaction';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class MapService {
-  map: Map;
-  myLayersGroup: LayerGroup;
+  // --- CORE DE OPENLAYERS ---
+  map: Map; // El lienzo principal
+  myLayersGroup: LayerGroup; // Carpeta organizadora para encender/apagar capas de golpe
 
+  // --- ALMACENES DE MEMORIA (Sources) ---
   barriosVectorSource = new VectorSource();
   carrilesVectorSource = new VectorSource();
   estacionesVectorSource = new VectorSource();
 
+  // --- REPRESENTACIÓN VISUAL (Layers) ---
   barriosVectorLayer: VectorLayer<VectorSource>;
   carrilesVectorLayer: VectorLayer<VectorSource>;
   estacionesVectorLayer: VectorLayer<VectorSource>;
 
+  // --- HERRAMIENTAS INTERACTIVAS ---
   selectInteraction!: Select;
-
-  // Variables para la edicion
   editSelectInteraction!: Select;
   modifyInteraction!: Modify;
   snapInteractions: Snap[] = [];
@@ -49,18 +50,16 @@ export class MapService {
     private http: HttpClient,
     private router: Router
   ) {
-    // 1. Estilo para BARRIOS
+    // 1. ESTILOS VECTORIALES
     const barriosStyle = new Style({
       fill: new Fill({ color: 'rgba(144, 238, 144, 0.6)' }), 
       stroke: new Stroke({ color: 'rgba(34, 139, 34, 0.8)', width: 2 })
     });
 
-    // 2. Estilo para CARRILES
     const carrilesStyle = new Style({
-      stroke: new Stroke({ color: 'rgba(0, 0, 0, 1)', width: 4 }) 
+      stroke: new Stroke({ color: 'rgba(50, 50, 50, 0.6)', width: 1.5 }) 
     });
 
-    // 3. Estilo para ESTACIONES
     const bikeSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.8-10l2.4-2.4.8.8c1.3 1.3 3 2.1 5.1 2.1V9c-1.5 0-2.7-.6-3.6-1.5l-1.9-1.9c-.5-.4-1-.6-1.6-.6s-1.1.2-1.4.6L7.8 8.4c-.4.4-.6 1-.6 1.6 0 .6.2 1.1.6 1.6L11 14.8V19h1.5v-5l-1.7-3.5zM19 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>';
     const estacionesStyle = new Style({
       image: new Icon({
@@ -69,7 +68,7 @@ export class MapService {
       })
     });
 
-    // Inicializamos las capas
+    // 2. VINCULACIÓN: SOURCE + LAYER + STYLE
     this.barriosVectorLayer = new VectorLayer({ 
       source: this.barriosVectorSource, 
       style: barriosStyle, 
@@ -91,12 +90,13 @@ export class MapService {
       properties: { title: 'Estaciones vector', name: 'puntos' } 
     });    
 
-    this.myLayersGroup = this.createMyLayers();
-    this.map = this.createMap();
+    // 3. SECUENCIA DE ARRANQUE
+    this.myLayersGroup = this.createMyLayers(); 
+    this.map = this.createMap(); 
     
-    this.initSelectInteraction();
-    this.initEditInteractions();
-    this.loadVectorData();
+    this.initSelectInteraction(); 
+    this.initEditInteractions();  
+    this.loadVectorData(); 
   }
 
   loadVectorData(): void {
@@ -105,43 +105,29 @@ export class MapService {
     this.http.get<any>(url).subscribe({
       next: (response) => {
         if (response.ok) {
-          const wktFormat = new WKT();
+          const wktFormat = new WKT(); 
           const readOptions = { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:25830' };
 
-          // 1. Cargar Barrios
           const barriosFeatures = response.data.barrios.map((b: any) => {
             const feature = wktFormat.readFeature(b.wkt, readOptions) as Feature;
-            // Asignamos el nombre del barrio como ID principal para el Router
-            feature.setProperties({ 
-              id: b.nombre, 
-              _layerName: 'barrios' 
-            });
+            feature.setProperties({ id: b.nombre, _layerName: 'barrios' });
             return feature;
           });
           this.barriosVectorSource.addFeatures(barriosFeatures);
 
-          // 2. Cargar Carriles
           const carrilesFeatures = response.data.carriles.map((c: any) => {
             const feature = wktFormat.readFeature(c.wkt, readOptions) as Feature;
-            feature.setProperties({ 
-              id: c.id,          
-              estado: c.tipo,
-              _layerName: 'carriles' 
-            });
+            feature.setProperties({ id: c.id, estado: c.tipo, _layerName: 'carriles' });
             return feature;
           });
           this.carrilesVectorSource.addFeatures(carrilesFeatures);
 
-          // 3. Cargar Estaciones
           const estacionesFeatures = response.data.estaciones.map((e: any) => {
             const feature = wktFormat.readFeature(e.wkt, readOptions) as Feature;
-            // Asignamos el nombre en vez del numero como identificador de ruta
             feature.setProperties({ id: e.nombre, numero: e.numero, _layerName: 'estaciones' });
             return feature;
           });
           this.estacionesVectorSource.addFeatures(estacionesFeatures);
-
-          console.log('Capas vectoriales cargadas e inyectadas en el mapa.');
         }
       },
       error: (err) => console.error('Error cargando geometrías:', err)
@@ -206,13 +192,8 @@ export class MapService {
         const layerName = props['_layerName']; 
         const id = props['id']; 
 
-        console.log(`Mapa detecta clic en: ${layerName} con ID: ${id}`);
-
         if (id !== undefined) {
-          // CLAVE DEL ARREGLO: Limpiamos la seleccion internamente antes de navegar
-          // Asi el proximo click estara libre para coger una nueva geometria
           this.selectInteraction.getFeatures().clear();
-          
           this.router.navigate([`/${layerName}`, id]);
         }
       }
@@ -243,6 +224,7 @@ export class MapService {
     this.modifyInteraction.setActive(false);
     this.snapInteractions.forEach(snap => snap.setActive(false));
 
+    // CORRECCIÓN AQUÍ: Captura el WKT modificado y lo envía por queryParams
     this.modifyInteraction.on('modifyend', (e) => {
       const features = e.features.getArray();
       if (features.length > 0) {
@@ -251,25 +233,30 @@ export class MapService {
         const layerName = props['_layerName'];
         const id = props['id'];
 
-        console.log(`Vértice modificado en: ${layerName} con ID: ${id}`);
-
         if (id !== undefined) {
-          // Limpiamos la seleccion de edicion para no dejarla enganchada
+          const wktFormat = new WKT();
+          // Traduce la geometría visual (25830) a texto geográfico (4326) para la Base de Datos
+          const newGeomWkt = wktFormat.writeGeometry(feature.getGeometry()!, {
+            dataProjection: 'EPSG:4326',
+            featureProjection: 'EPSG:25830'
+          });
+
           this.editSelectInteraction.getFeatures().clear();
           
-          this.router.navigate([`/${layerName}`, id]);
+          // Navega inyectando la nueva geometría modificada en la URL
+          this.router.navigate([`/${layerName}`, id], {
+            queryParams: { geom: newGeomWkt }
+          });
         }
       }
     });
   }
 
-  // --- INTERRUPTOR DEL BOTÓN DE SELECCIONAR ---
   toggleSelectInteraction(active: boolean): void {
     this.selectInteraction.setActive(active);
     if (!active) this.selectInteraction.getFeatures().clear(); 
   }
 
-  // --- INTERRUPTOR DEL BOTÓN DE EDITAR ---
   toggleEditInteraction(active: boolean): void {
     this.editSelectInteraction.setActive(active);
     this.modifyInteraction.setActive(active);

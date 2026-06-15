@@ -5,10 +5,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatIconModule } from '@angular/material/icon'; // Importante para el icono del modo lectura
-import { HttpParams } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon'; 
 import { ApiService } from '../../services/api.service';
-import { AuthService } from '../../services/auth.service'; // Servicio de roles
+import { AuthService } from '../../services/auth.service'; 
 import { ActivatedRoute } from '@angular/router'; 
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
@@ -23,7 +22,7 @@ import { startWith, map } from 'rxjs/operators';
     MatFormFieldModule, 
     MatButtonModule,
     MatAutocompleteModule,
-    MatIconModule // Añadido a los imports del componente
+    MatIconModule 
   ],
   templateUrl: './barrios.component.html',
   styleUrl: './barrios.component.scss'
@@ -54,7 +53,6 @@ export class BarriosComponent implements OnInit {
 
   filteredBarrios!: Observable<string[]>;
 
-  // Inyectamos authService como public
   constructor(private api: ApiService, private route: ActivatedRoute, public authService: AuthService) { 
     this.barrioForm = new FormGroup({
       objectid: new FormControl(''),
@@ -107,13 +105,10 @@ export class BarriosComponent implements OnInit {
 
     this.mensaje = "Consultando base de datos...";
 
-    // Pedimos todos los barrios y filtramos en cliente para evitar problemas de tildes con Django
     this.api.get('barrios').subscribe({
       next: (res) => {
         if (res.ok && res.data.length > 0) {
-          
           const nombreBuscado = this.normalizeStr(nombreBarrio);
-
           let barrio = res.data.find((b: any) => this.normalizeStr(b.nombre) === nombreBuscado);
           
           if (!barrio) {
@@ -138,8 +133,19 @@ export class BarriosComponent implements OnInit {
             }
           }
 
+          // 1. Carga los datos alfanuméricos guardados de la base de datos
           this.barrioForm.patchValue(barrio);
           this.mensaje = `Barrio [${barrio.nombre}] recuperado con éxito.`;
+
+          // CORRECCIÓN DE ASINCRONÍA (BLINDAJE):
+          // Si venimos de editar gráficamente el mapa, extrae el parámetro 'geom' de la URL
+          const geomDesdeMapa = this.route.snapshot.queryParams['geom'];
+          if (geomDesdeMapa) {
+            // Sobreescribe la geometría antigua de la BD con los nuevos vértices modificados
+            this.barrioForm.patchValue({ geom: geomDesdeMapa });
+            this.mensaje = `Barrio recuperado. ¡Nuevos vértices del mapa cargados listos para actualizar!`;
+          }
+
         } else {
           this.mensaje = "No se pudieron recuperar los barrios de la base de datos.";
         }

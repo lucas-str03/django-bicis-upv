@@ -134,8 +134,18 @@ export class EstacionesComponent implements OnInit {
             geom: estacion.geom
           };
 
+          // 1. Rellenamos el formulario con los datos recuperados de la BD
           this.estacionForm.patchValue(estacionParaFormulario);
           this.mensaje = `Estación recuperada con éxito.`;
+
+          // 2. CORRECCIÓN DE ASINCRONÍA (BLINDAJE):
+          // Rescatamos la nueva coordenada (POINT) si venimos del mapa de edición
+          const geomDesdeMapa = this.route.snapshot.queryParams['geom'];
+          if (geomDesdeMapa) {
+            this.estacionForm.patchValue({ geom: geomDesdeMapa });
+            this.mensaje = `Estación recuperada. ¡Nueva coordenada del mapa cargada y lista para actualizar!`;
+          }
+
         } else { 
           this.mensaje = "No se encontraron estaciones en la base de datos."; 
         }

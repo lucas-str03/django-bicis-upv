@@ -147,8 +147,18 @@ export class CarrilesComponent implements OnInit {
             }
           }
 
+          // 1. Rellenamos el formulario con los datos antiguos de la BD
           this.carrilForm.patchValue(carril);
           this.mensaje = `Carril [${carril.tipo}] recuperado con exito.`;
+
+          // 2. CORRECCIÓN DE ASINCRONÍA (BLINDAJE):
+          // Rescatamos la nueva geometría (MULTILINESTRING) si venimos de arrastrar sus vértices en el mapa
+          const geomDesdeMapa = this.route.snapshot.queryParams['geom'];
+          if (geomDesdeMapa) {
+            this.carrilForm.patchValue({ geom: geomDesdeMapa });
+            this.mensaje = `Carril bici recuperado. ¡Nuevos vértices cargados desde el mapa listos para guardar!`;
+          }
+
         } else {
           this.mensaje = "Carril bici no encontrado en la base de datos.";
         }
